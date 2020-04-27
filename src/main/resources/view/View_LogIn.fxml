@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.standardeleven.project.gui.controller.Controller_LogIn"
+            prefHeight="600.0" prefWidth="300.0">
+
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+            <Label text="Inicio de Sesión"/>
+            <TextField fx:id="fieldUsername" promptText="Matrícula"/>
+            <PasswordField fx:id="fieldPassword" promptText="Contraseña"/>
+            <Label fx:id="logInMessage"/>
+            <Button id="buttonLogIn" text="Iniciar Sesión" onAction="#logIn"/>
+            <padding>
+                <Insets topRightBottomLeft="30"/>
+            </padding>
+        </VBox>
+    </center>
+
+</BorderPane>
+

@@ -1,12 +1,17 @@
 package com.standardeleven.project.logical;
 
 public class Practitioner {
+    private String studentEnrollment;
     private String studentName;
     private String studentFatherSurname;
     private String studentMotherSurname;
     private String studentShift;
     private int studentGrade;
     private int personalProfessor;
+
+    public void setStudentEnrollment(String studentEnrollment) {
+        this.studentEnrollment = studentEnrollment;
+    }
 
     public void setStudentName(String studentName) {
         this.studentName = studentName;
@@ -30,6 +35,10 @@ public class Practitioner {
 
     public void setPersonalProfessor(int personalProfessor) {
         this.personalProfessor = personalProfessor;
+    }
+
+    public String getStudentEnrollment() {
+        return studentEnrollment;
     }
 
     public String getStudentName() {

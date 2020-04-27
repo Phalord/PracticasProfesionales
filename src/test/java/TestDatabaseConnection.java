@@ -1,11 +1,12 @@
-package com.npcstudio.sqlconnection;
+import com.npcstudio.sqlconnection.MySQLConnection;
 
 import java.sql.SQLException;
 
-public class ConnectionTest {
+public class TestDatabaseConnection {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         MySQLConnection connection = new MySQLConnection();
+        connection.readProperties();
         try {
             connection.getConnection();
             System.out.println("Conexión exitosa");

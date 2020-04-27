@@ -28,7 +28,7 @@ public class AccountDAO implements IAccountDAO {
 
     @Override
     public boolean logIn(String username, String password) {
-        boolean result = false;
+        boolean result;
         String query = "Select * from usuario where usuario=? && contraseña=?";
         try{
             connection = mySQLConnection.getConnection();

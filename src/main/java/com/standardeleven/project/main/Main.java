@@ -1,9 +1,10 @@
-package com.standardeleven.project.gui;
+package com.standardeleven.project.main;
 
+import com.standardeleven.project.gui.controller.Controller_LogIn;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class GUI_Main extends Application {
+public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -11,7 +12,7 @@ public class GUI_Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        new GUI_LogIn().display();
+        new Controller_LogIn().display();
 
     }
 }

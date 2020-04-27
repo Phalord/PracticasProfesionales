@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.standardeleven.project.gui.controller.Controller_ActivitySection">
+   <children>
+      <Label layoutX="223.0" layoutY="69.0" text="Autoevaluación">
+         <font>
+            <Font name="Consolas Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonGenerateActivity" layoutX="178.0" layoutY="119.0" mnemonicParsing="false" onAction="#generateActivity" prefHeight="27.0" prefWidth="244.0" text="Generar actividad">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonDeliveredActivities" layoutX="178.0" layoutY="186.0" mnemonicParsing="false" onAction="#showDeliveryActivities" prefHeight="27.0" prefWidth="244.0" text="Actividades entregadas">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonPresentationFormat" layoutX="178.0" layoutY="252.0" mnemonicParsing="false" onAction="#uploadPresentationFormat" prefHeight="27.0" prefWidth="244.0" text="Subir formato de presentación">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgHome" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="21.0" onMouseClicked="#returnHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Principios de Construccion de Software/Lel/SPP/src/com/standardeleven/project/gui/images/home.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

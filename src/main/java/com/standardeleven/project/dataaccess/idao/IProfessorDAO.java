@@ -5,8 +5,9 @@ import java.util.List;
 import com.standardeleven.project.logical.Professor;
 
 public interface IProfessorDAO {
-    public boolean addProfessor(Professor professor) throws SQLException, ClassNotFoundException;
-    public boolean updateProfessor(Professor professor) throws SQLException, ClassNotFoundException;
-    public boolean deleteProfessor(Professor professor) throws SQLException, ClassNotFoundException;
-    public List<Professor> getListProfessor() throws SQLException, ClassNotFoundException; 
+    List<Professor> getAllProfessors();
+    Professor getProfessor(String personalNumber);
+    boolean addProfessor(Professor professor);
+    boolean updateProfessor(Professor professor);
+    boolean deleteProfessor(Professor professor);
 }

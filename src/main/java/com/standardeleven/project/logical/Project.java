@@ -1,65 +1,74 @@
 package com.standardeleven.project.logical;
 
 public class Project {
+    private int projectID;
     private String projectName;
     private String projectDescription;
     private String projectResource;
     private String studentEnrollment;
-    private String professorNumberPersonal;
+    private String idProjectManager;
 
     public Project() {
         setProjectName("Default");
         setProjectDescription("Description");
         setProjectResource("ProjectResource");
         setStudentEnrollment("Student Enrollment");
-        setProfessorNumberPersonal("Professor NumberPersonal");
+        setIdProjectManager("ID Encargado");
     }
 
-    public Project(String projectName, String projectDescription, String projectResource, String studentEnrollment, String professorNumberPersonal) {
+    public Project(String projectName, String projectDescription, String projectResource, String studentEnrollment, String idProjectManager) {
         setProjectName(projectName);
         setProjectDescription(projectDescription);
         setProjectResource(projectResource);
         setStudentEnrollment(studentEnrollment);
-        setProfessorNumberPersonal(professorNumberPersonal);
+        setIdProjectManager(idProjectManager);
     }
 
-    public String getProjectName() {
-        return projectName;
+    public void setProjectID(int projectID) {
+        this.projectID = projectID;
     }
 
     public void setProjectName(String projectName) {
         this.projectName = projectName;
     }
 
-    public String getProjectDescription() {
-        return projectDescription;
-    }
-
     public void setProjectDescription(String projectDescription) {
         this.projectDescription = projectDescription;
-    }
-
-    public String getProjectResource() {
-        return projectResource;
     }
 
     public void setProjectResource(String projectResource) {
         this.projectResource = projectResource;
     }
 
-    public String getStudentEnrollment() {
-        return studentEnrollment;
-    }
-
     public void setStudentEnrollment(String studentEnrollment) {
         this.studentEnrollment = studentEnrollment;
     }
 
-    public String getProfessorNumberPersonal() {
-        return professorNumberPersonal;
+    public void setIdProjectManager(String idProjectManager) {
+        this.idProjectManager = idProjectManager;
     }
 
-    public void setProfessorNumberPersonal(String professorNumberPersonal) {
-        this.professorNumberPersonal = professorNumberPersonal;
+    public int getProjectID() {
+        return projectID;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public String getProjectDescription() {
+        return projectDescription;
+    }
+
+    public String getProjectResource() {
+        return projectResource;
+    }
+
+    public String getStudentEnrollment() {
+        return studentEnrollment;
+    }
+
+    public String getIdProjectManager() {
+        return idProjectManager;
     }
 }

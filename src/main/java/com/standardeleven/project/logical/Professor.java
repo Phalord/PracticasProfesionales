@@ -1,13 +1,11 @@
 package com.standardeleven.project.logical;
 
 public class Professor {
-    
+    private String professorNumberPersonal;
     private String professorNames;
     private String professorFatherSurname;
     private String professorMotherSurname;
     private String professorShift;
-    private String professorPassword;
-    private String professorNumberPersonal;
     
     public Professor(){}
 
@@ -16,7 +14,6 @@ public class Professor {
         this.setProfessorFatherSurname(professorFatherSurname);
         this.setProfessorMotherSurname(professorMotherSurname);
         this.setProfessorShift(professorShift);
-        this.setProfessorPassword(professorPassword);
         this.setProfessorNumberPersonal(professorNumberPersonal);
     }
 
@@ -34,10 +31,6 @@ public class Professor {
 
     public String getProfessorShift() {
         return professorShift;
-    }
-
-    public String getProfessorPassword() {
-        return professorPassword;
     }
 
     public String getProfessorNumberPersonal() {
@@ -60,17 +53,13 @@ public class Professor {
         this.professorShift = professorShift;
     }
 
-    public void setProfessorPassword(String professorPassword) {
-        this.professorPassword = professorPassword;
-    }
-
     public void setProfessorNumberPersonal(String professorNumberPersonal) {
         this.professorNumberPersonal = professorNumberPersonal;
     }
 
     @Override
     public String toString() {
-        return "Professor{" + "professorNames=" + professorNames + ", professorFatherSurname=" + professorFatherSurname + ", professorMotherSurname=" + professorMotherSurname + ", professorShift=" + professorShift + ", professorPassword=" + professorPassword + ", professorNumberPersonal=" + professorNumberPersonal + '}';
+        return "Professor{" + "professorNames=" + professorNames + ", professorFatherSurname=" + professorFatherSurname + ", professorMotherSurname=" + professorMotherSurname + ", professorShift=" + professorShift + ", professorNumberPersonal=" + professorNumberPersonal + '}';
     }
 }
     

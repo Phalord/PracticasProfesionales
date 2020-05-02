@@ -10,9 +10,9 @@ public class SelfAppraisal {
     public SelfAppraisal(){}
 
     public SelfAppraisal(int selfappraisalID, File selfappraisalFile, String studentEnrollment) {
-        this.setSelfappraisalID(selfappraisalID);
-        this.setSelfappraisalFile(selfappraisalFile);
-        this.setStudentEnrollment(studentEnrollment);
+        setSelfappraisalID(selfappraisalID);
+        setSelfappraisalFile(selfappraisalFile);
+        setStudentEnrollment(studentEnrollment);
     }
 
     public int getSelfappraisalID() {

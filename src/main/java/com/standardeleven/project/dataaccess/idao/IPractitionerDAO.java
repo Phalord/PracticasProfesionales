@@ -9,6 +9,8 @@ public interface IPractitionerDAO {
 
     List<Practitioner> getAllPractitioners();
     Practitioner getPractitioner(String studentEnrollment);
+    boolean addPractitioner(Practitioner practitioner);
+    boolean deletePractitioner(Practitioner practitioner);
 
 }
 

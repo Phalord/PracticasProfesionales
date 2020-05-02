@@ -10,9 +10,9 @@ public class Schedule {
     public Schedule(){}
 
     public Schedule(String scheduleID, File scheduleFile, String studentEnrollment) {
-        this.setScheduleID(scheduleID);
-        this.setScheduleFile(scheduleFile);
-        this.setStudentEnrollment(studentEnrollment);
+        setScheduleID(scheduleID);
+        setScheduleFile(scheduleFile);
+        setStudentEnrollment(studentEnrollment);
     }
 
     public void setScheduleID(String scheduleID) {

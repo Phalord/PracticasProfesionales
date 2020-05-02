@@ -7,7 +7,6 @@ import com.standardeleven.project.dataaccess.idao.IProjectDAO;
 import com.standardeleven.project.logical.Practitioner;
 import com.standardeleven.project.logical.Project;
 
-import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class TestProjectDao {
         deleteProject();
     }
 
-    public static void testGetAllProjects() {
+    private static void testGetAllProjects() {
         printTestTitle("Get All Projects");
         List<Project> projects = iProjectDAO.getAllProjects();
         for(Project project: projects) {
@@ -31,7 +30,7 @@ public class TestProjectDao {
         print("");
     }
 
-    public static void testGetProject() {
+    private static void testGetProject() {
         printTestTitle("Get Project");
         Project project = iProjectDAO.getProject(1);
         if (project != null) {
@@ -43,7 +42,7 @@ public class TestProjectDao {
         print("");
     }
 
-    public static void testAssignPractitioner() {
+    private static void testAssignPractitioner() {
         printTestTitle("Assign Practitioner");
         Practitioner practitioner;
         IPractitionerDAO iPractitionerDAO = new PractitionerDAO();
@@ -60,7 +59,7 @@ public class TestProjectDao {
         print("");
     }
 
-    public static void addProject() {
+    private static void addProject() {
         printTestTitle("Add Project");
         Project project = new Project("Proyecto de Prueba", "Descripción de prueba",
                 "Recursos de prueba", "", "1");
@@ -76,7 +75,7 @@ public class TestProjectDao {
         print("");
     }
 
-    public static void deleteProject() {
+    private static void deleteProject() {
         printTestTitle("Delete Project");
         Project project = iProjectDAO.getProject(18);
         try {
@@ -92,7 +91,7 @@ public class TestProjectDao {
         print("");
     }
 
-    public static boolean isAvailable() {
+    private static boolean isAvailable() {
         List<Project> projects = iProjectDAO.getAllAvailableProjects();
         boolean result = false;
         if(!projects.isEmpty()) {
@@ -101,10 +100,11 @@ public class TestProjectDao {
         return result;
     }
 
-    public static void print(String string) {
+    private static void print(String string) {
         System.out.println(string);
     }
-    public static void printTestTitle(String testTitle) {
+
+    private static void printTestTitle(String testTitle) {
         System.out.println(String.format("----- %s -----", testTitle));
     }
 }

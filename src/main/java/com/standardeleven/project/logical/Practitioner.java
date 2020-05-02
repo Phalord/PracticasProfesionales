@@ -1,7 +1,6 @@
 package com.standardeleven.project.logical;
 
-public class Practitioner {
-    private String studentEnrollment;
+public class Practitioner extends User{
     private String studentName;
     private String studentFatherSurname;
     private String studentMotherSurname;
@@ -9,8 +8,12 @@ public class Practitioner {
     private int studentGrade;
     private int personalProfessor;
 
-    public void setStudentEnrollment(String studentEnrollment) {
-        this.studentEnrollment = studentEnrollment;
+    public Practitioner() {
+        super();
+        setStudentName("studentName");
+        setStudentFatherSurname("studentFatherSurname");
+        setStudentMotherSurname("studentMotherSurname");
+        setStudentShift("studentShift");
     }
 
     public void setStudentName(String studentName) {
@@ -35,10 +38,6 @@ public class Practitioner {
 
     public void setPersonalProfessor(int personalProfessor) {
         this.personalProfessor = personalProfessor;
-    }
-
-    public String getStudentEnrollment() {
-        return studentEnrollment;
     }
 
     public String getStudentName() {

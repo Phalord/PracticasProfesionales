@@ -93,7 +93,7 @@ public class ProjectDAO implements IProjectDAO {
     @Override
     public boolean assignPractitioner(Practitioner practitioner, int idProject) {
         result = false;
-        String studentEnrollment = practitioner.getStudentEnrollment();
+        String studentEnrollment = practitioner.getUserName();
         String query = "UPDATE proyecto SET Matricula = ? WHERE proyecto.idProyecto = ?";
         try {
             connection = mySQLConnection.getConnection();
@@ -116,12 +116,12 @@ public class ProjectDAO implements IProjectDAO {
     @Override
     public boolean addProject(Project project) {
         result = false;
-        String sql = String
+        String query = String
                 .format("INSERT INTO proyecto(NombreProyecto,Descripcion,Recursos,%s",
                         "idResponsableProyecto) VALUES(?,?,?,?)");
         try {
             connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1,project.getProjectName());
             preparedStatement.setString(2,project.getProjectDescription());
             preparedStatement.setString(3,project.getProjectResource());
@@ -137,11 +137,11 @@ public class ProjectDAO implements IProjectDAO {
     @Override
     public boolean updateProject(Project project) {
         result = false;
-        String sql = String.format("UPDATE proyecto SET Descripcion=?, Recursos=?, Matricula=?,%s",
+        String query = String.format("UPDATE proyecto SET Descripcion=?, Recursos=?, Matricula=?,%s",
                 " NumeroPersonalCoordinador=? WHERE NombreProyecto=?");
         try {
             connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(5,project.getProjectName());
             preparedStatement.setString(1,project.getProjectDescription());
             preparedStatement.setString(2,project.getProjectResource());
@@ -157,10 +157,10 @@ public class ProjectDAO implements IProjectDAO {
     @Override
     public boolean deleteProject(Project project) {
         result = false;
+        String query = "DELETE FROM proyecto WHERE idProyecto = ?";
         try {
             connection = mySQLConnection.getConnection();
-            String sql = "DELETE FROM proyecto WHERE idProyecto = ?";
-            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1,project.getProjectID());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);
@@ -170,7 +170,7 @@ public class ProjectDAO implements IProjectDAO {
         return result;
     }
 
-    public void fillProject(ResultSet resultSet, Project project) throws SQLException {
+    private void fillProject(ResultSet resultSet, Project project) throws SQLException {
         project.setProjectID(resultSet.getInt("idProyecto"));
         project.setProjectName(resultSet.getString("NombreProyecto"));
         project.setProjectDescription(resultSet.getString("Descripcion"));

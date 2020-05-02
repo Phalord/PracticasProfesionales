@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Report {
     private String reportID;
-    private String reportTipe;
+    private String reportType;
     private String professorNumberPersonal;
     private Date reportDeliveryDate;
     private File reportFile;
@@ -13,21 +13,21 @@ public class Report {
 
     public Report(){}
 
-    public Report(String reportID, String reportTipe, Date reportDeliveryDate, File reportFile, int studentGrade, String professorNumberPersonal) {
-        this.setReportID(reportID);
-        this.setReportTipe(reportTipe);
-        this.setReportDeliveryDate(reportDeliveryDate);
-        this.setReportFile(reportFile);
-        this.setStudentGrade(studentGrade);
-        this.setProfessorNumberPersonal(professorNumberPersonal);
+    public Report(String reportID, String reportType, Date reportDeliveryDate, File reportFile, int studentGrade, String professorNumberPersonal) {
+        setReportID(reportID);
+        setReportType(reportType);
+        setReportDeliveryDate(reportDeliveryDate);
+        setReportFile(reportFile);
+        setStudentGrade(studentGrade);
+        setProfessorNumberPersonal(professorNumberPersonal);
     }
 
     public String getReportID() {
         return reportID;
     }
 
-    public String getReportTipe() {
-        return reportTipe;
+    public String getReportType() {
+        return reportType;
     }
 
     public String getProfessorNumberPersonal() {
@@ -50,8 +50,8 @@ public class Report {
         this.reportID = reportID;
     }
 
-    public void setReportTipe(String reportTipe) {
-        this.reportTipe = reportTipe;
+    public void setReportType(String reportType) {
+        this.reportType = reportType;
     }
 
     public void setProfessorNumberPersonal(String professorNumberPersonal) {
@@ -70,8 +70,4 @@ public class Report {
         this.studentGrade = studentGrade;
     }
 
-    @Override
-    public String toString() {
-        return "Report{" + "reportID=" + reportID + ", reportTipe=" + reportTipe + ", professorNumberPersonal=" + professorNumberPersonal + ", reportDeliveryDate=" + reportDeliveryDate + ", reportFile=" + reportFile + ", studentGrade=" + studentGrade + '}';
-    }
 }

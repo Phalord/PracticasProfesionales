@@ -11,12 +11,12 @@ public class ProjectResponsible {
     public ProjectResponsible(){}
 
     public ProjectResponsible(String responsibleFullName, String responsibleEmail, int responsiblePhone, String projectName, String companyName, int responsibleID) {
-        this.setResponsibleFullName(responsibleFullName);
-        this.setResponsibleEmail(responsibleEmail);
-        this.setResponsiblePhone(responsiblePhone);
-        this.setProjectName(projectName);
-        this.setCompanyName(companyName);
-        this.setResponsibleID(responsibleID);
+        setResponsibleFullName(responsibleFullName);
+        setResponsibleEmail(responsibleEmail);
+        setResponsiblePhone(responsiblePhone);
+        setProjectName(projectName);
+        setCompanyName(companyName);
+        setResponsibleID(responsibleID);
     }
 
     public String getResponsibleFullName() {

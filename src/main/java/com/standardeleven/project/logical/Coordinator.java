@@ -1,34 +1,44 @@
 package com.standardeleven.project.logical;
 
-public class Coordinator {
-    private String coordinatorFullName;
-    private String coordinatorNumberPersonal;
+public class Coordinator extends User{
+    private String coordinatorName;
+    private String coordinatorFatherSurname;
+    private String coordinatorMotherSurname;
 
-    public Coordinator(){}
-    
-    public Coordinator(String coordinatorNumberPersonal, String coordinatorFullName) {
-        this.setCoordinatorFullName(coordinatorFullName);
-        this.setCoordinatorNumberPersonal(coordinatorNumberPersonal);
+    public Coordinator(){
+        super();
+        setCoordinatorName("coordinatorName");
+        setCoordinatorFatherSurname("coordinatorFatherSurname");
+        setCoordinatorMotherSurname("coordinatorMotherSurname");
     }
 
-    public String getCoordinatorFullName() {
-        return coordinatorFullName;
+    public void setCoordinatorName(String coordinatorName) {
+        this.coordinatorName = coordinatorName;
     }
 
-    public String getCoordinatorNumberPersonal() {
-        return coordinatorNumberPersonal;
+    public void setCoordinatorFatherSurname(String coordinatorFatherSurname) {
+        this.coordinatorFatherSurname = coordinatorFatherSurname;
     }
 
-    public void setCoordinatorFullName(String coordinatorFullName) {
-        this.coordinatorFullName = coordinatorFullName;
+    public void setCoordinatorMotherSurname(String coordinatorMotherSurname) {
+        this.coordinatorMotherSurname = coordinatorMotherSurname;
     }
 
-    public void setCoordinatorNumberPersonal(String coordinatorNumberPersonal) {
-        this.coordinatorNumberPersonal = coordinatorNumberPersonal;
+    public String getCoordinatorName() {
+        return coordinatorName;
+    }
+
+    public String getCoordinatorFatherSurname() {
+        return coordinatorFatherSurname;
+    }
+
+    public String getCoordinatorMotherSurname() {
+        return coordinatorMotherSurname;
     }
 
     @Override
     public String toString() {
-        return "Coordinator{" + "coordinatorFullName=" + coordinatorFullName + ", coordinatorNumberPersonal=" + coordinatorNumberPersonal + '}';
+        return String.format(" %s | %s %s %s", super.getUserName(), getCoordinatorName(),
+                getCoordinatorFatherSurname(), getCoordinatorMotherSurname());
     }
 }

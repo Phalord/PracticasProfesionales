@@ -87,7 +87,7 @@ public class UserDAO implements IUserDAO {
         } catch (SQLException sqlException) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
         }
-        return  result;
+        return result;
     }
 
     @Override
@@ -97,6 +97,17 @@ public class UserDAO implements IUserDAO {
 
     @Override
     public boolean deleteUser(User user) {
-        throw new UnsupportedOperationException("Operation not yet supported");
+        result = false;
+        String query = "DELETE FROM usuario WHERE usuario = ?";
+        try {
+            connection = mySQLConnection.getConnection();
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, user.getUserName());
+            int numberRowsAffected = preparedStatement.executeUpdate();
+            result = (numberRowsAffected > 0);
+        } catch (SQLException sqlException) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
+        }
+        return result;
     }
 }

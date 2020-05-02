@@ -12,13 +12,13 @@ public class LinkedCompany {
     public LinkedCompany(){}
 
     public LinkedCompany(String companyName, String companyAddress, String companyCity, String companyState, String companySector, String companyEmail, int companyPhone) {
-        this.setCompanyName(companyName);
-        this.setCompanyAddress(companyAddress);
-        this.setCompanyCity(companyCity);
-        this.setCompanyState(companyState);
-        this.setCompanySector(companySector);
-        this.setCompanyEmail(companyEmail);
-        this.setCompanyPhone(companyPhone);
+        setCompanyName(companyName);
+        setCompanyAddress(companyAddress);
+        setCompanyCity(companyCity);
+        setCompanyState(companyState);
+        setCompanySector(companySector);
+        setCompanyEmail(companyEmail);
+        setCompanyPhone(companyPhone);
     }
 
     public String getCompanyName() {

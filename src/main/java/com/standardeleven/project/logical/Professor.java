@@ -1,20 +1,17 @@
 package com.standardeleven.project.logical;
 
-public class Professor {
-    private String professorNumberPersonal;
+public class Professor extends User {
     private String professorNames;
     private String professorFatherSurname;
     private String professorMotherSurname;
     private String professorShift;
     
-    public Professor(){}
-
-    public Professor(String professorNumberPersonal, String professorNames, String professorFatherSurname, String professorMotherSurname, String professorShift, String professorPassword) {
-        this.setProfessorNames(professorNames);
-        this.setProfessorFatherSurname(professorFatherSurname);
-        this.setProfessorMotherSurname(professorMotherSurname);
-        this.setProfessorShift(professorShift);
-        this.setProfessorNumberPersonal(professorNumberPersonal);
+    public Professor(){
+        super();
+        setProfessorNames("professorNames");
+        setProfessorFatherSurname("professorFatherSurname");
+        setProfessorMotherSurname("professorMotherSurname");
+        setProfessorShift("professorShift");
     }
 
     public String getProfessorNames() {
@@ -33,10 +30,6 @@ public class Professor {
         return professorShift;
     }
 
-    public String getProfessorNumberPersonal() {
-        return professorNumberPersonal;
-    }
-
     public void setProfessorNames(String professorNames) {
         this.professorNames = professorNames;
     }
@@ -53,13 +46,10 @@ public class Professor {
         this.professorShift = professorShift;
     }
 
-    public void setProfessorNumberPersonal(String professorNumberPersonal) {
-        this.professorNumberPersonal = professorNumberPersonal;
-    }
-
     @Override
     public String toString() {
-        return "Professor{" + "professorNames=" + professorNames + ", professorFatherSurname=" + professorFatherSurname + ", professorMotherSurname=" + professorMotherSurname + ", professorShift=" + professorShift + ", professorNumberPersonal=" + professorNumberPersonal + '}';
+        return String.format("| %s | %s | %s | %s | %s |", super.getUserName(), getProfessorNames(),
+                getProfessorFatherSurname(), getProfessorMotherSurname(), getProfessorShift());
     }
 }
     

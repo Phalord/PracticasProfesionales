@@ -2,7 +2,6 @@ package com.standardeleven.project.dataaccess.dao;
 
 import com.npcstudio.sqlconnection.MySQLConnection;
 import com.standardeleven.project.dataaccess.idao.IProfessorDAO;
-import com.standardeleven.project.dataaccess.idao.IUserDAO;
 import com.standardeleven.project.logical.Professor;
 
 import java.io.FileNotFoundException;
@@ -68,23 +67,16 @@ public class ProfessorDAO implements IProfessorDAO {
         }
         return professor;
     }
-
-    public void fillProfessor(ResultSet resultSet, Professor professor) throws SQLException{
-        professor.setProfessorNumberPersonal(resultSet.getString("NumeroPersonalProfesor"));
-        professor.setProfessorNames(resultSet.getString("Nombre"));
-        professor.setProfessorFatherSurname(resultSet.getString("ApellidoPaterno"));
-        professor.setProfessorMotherSurname(resultSet.getString("ApellidoMaterno"));
-        professor.setProfessorShift(resultSet.getString("Turno"));
-    }
     
     @Override
     public boolean addProfessor(Professor professor) {
         result = false;
+        String query = String.format("INSERT INTO Profesor(NumeroPersonalProfesor,Nombre,%s",
+                "ApellidoPaterno,ApellidoMaterno,Turno) VALUES(?,?,?,?,?)");
         try {
             connection = mySQLConnection.getConnection();
-            String sql = "INSERT INTO Profesor(NumeroPersonalProfesor,Nombre,ApellidoPaterno,ApellidoMaterno,Turno) VALUES(?,?,?,?,?)";
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,professor.getProfessorNumberPersonal());
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1,professor.getUserName());
             preparedStatement.setString(2,professor.getProfessorNames());
             preparedStatement.setString(3,professor.getProfessorFatherSurname());
             preparedStatement.setString(4,professor.getProfessorMotherSurname());
@@ -100,15 +92,16 @@ public class ProfessorDAO implements IProfessorDAO {
     @Override
     public boolean updateProfessor(Professor professor) {
         result = false;
+        String query = String.format("UPDATE profesor SET Nombre=?, ApellidoPaterno=?,%s",
+                " ApellidoMaterno=?, Turno=? WHERE NumeroPersonalProfesor=?");
         try {
             connection = mySQLConnection.getConnection();
-            String sql = "UPDATE profesor SET Nombre=?, ApellidoPaterno=?, ApellidoMaterno=?, Turno=? WHERE NumeroPersonalProfesor=?";
-            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1,professor.getProfessorNames());
             preparedStatement.setString(2,professor.getProfessorFatherSurname());
             preparedStatement.setString(3,professor.getProfessorMotherSurname());
             preparedStatement.setString(4,professor.getProfessorShift());
-            preparedStatement.setString(5,professor.getProfessorNumberPersonal());
+            preparedStatement.setString(5,professor.getUserName());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);
         } catch (SQLException sqlException) {
@@ -120,16 +113,24 @@ public class ProfessorDAO implements IProfessorDAO {
     @Override
     public boolean deleteProfessor(Professor professor) {
         result = false;
+        String query = "DELETE FROM profesor WHERE NumeroPersonalProfesor = ?";
         try {
             connection = mySQLConnection.getConnection();
-            String sql = "DELETE FROM profesor WHERE NumeroPersonalProfesor = ?";
-            PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1,professor.getProfessorNumberPersonal());
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1,professor.getUserName());
             int numberRowsAffected = statement.executeUpdate();
             result = (numberRowsAffected > 0);
         } catch (SQLException sqlException) {
             Logger.getLogger(ProfessorDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
         }
         return result;
+    }
+
+    private void fillProfessor(ResultSet resultSet, Professor professor) throws SQLException {
+        professor.setUserName(resultSet.getString("NumeroPersonalProfesor"));
+        professor.setProfessorNames(resultSet.getString("Nombre"));
+        professor.setProfessorFatherSurname(resultSet.getString("ApellidoPaterno"));
+        professor.setProfessorMotherSurname(resultSet.getString("ApellidoMaterno"));
+        professor.setProfessorShift(resultSet.getString("Turno"));
     }
 }

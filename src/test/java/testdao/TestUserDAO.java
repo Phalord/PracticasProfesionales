@@ -4,17 +4,16 @@ import com.standardeleven.project.dataaccess.dao.UserDAO;
 import com.standardeleven.project.dataaccess.idao.IUserDAO;
 import com.standardeleven.project.logical.User;
 
-import java.util.List;
-
 public class TestUserDAO {
     private final static IUserDAO iUserDAO = new UserDAO();
 
     public static void main(String[] args) {
         testAddUser();
         testGetUser();
+        testDeleteUser();
     }
 
-    public static void testGetUser() {
+    private static void testGetUser() {
         printTestTitle("Get User");
         User user = iUserDAO.getUserByEnrollment("c11556677");
         if(user != null) {
@@ -25,10 +24,10 @@ public class TestUserDAO {
         print("");
     }
 
-    public static void testAddUser() {
+    private static void testAddUser() {
         printTestTitle("Add User");
         User user = new User();
-        user.setUserName("c11556677");
+        user.setUserName("p11556677");
         user.setUserPassword("password");
         user.setUserType("profesor");
         if(iUserDAO.addUser(user)) {
@@ -39,11 +38,26 @@ public class TestUserDAO {
         print("");
     }
 
-    public static void print(String string) {
+    private static void testDeleteUser() {
+        printTestTitle("Delete User");
+        User user = iUserDAO.getUserByEnrollment("c11556677");
+        if(user != null) {
+            if(iUserDAO.deleteUser(user)) {
+                print("User deleted successfully");
+            } else {
+                print("Unable to delete user");
+            }
+        } else {
+            print("User not found");
+        }
+        print("");
+    }
+
+    private static void print(String string) {
         System.out.println(string);
     }
 
-    public static void printTestTitle(String testTitle) {
+    private static void printTestTitle(String testTitle) {
         System.out.println(String.format("----- %s -----", testTitle));
     }
 }

@@ -10,9 +10,9 @@ public class Timetable {
     public Timetable(){}
 
     public Timetable(String timetableID, File timetableFile, String studentEnrollment) {
-        this.setTimetableID(timetableID);
-        this.setTimetableFile(timetableFile);
-        this.setStudentEnrollment(studentEnrollment);
+        setTimetableID(timetableID);
+        setTimetableFile(timetableFile);
+        setStudentEnrollment(studentEnrollment);
     }
 
     public void setTimetableID(String timetableID) {

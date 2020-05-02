@@ -19,6 +19,7 @@ public class PractitionerDAO implements IPractitionerDAO {
     private Connection connection;
     private PreparedStatement preparedStatement;
     private ResultSet resultSet;
+    private boolean result;
 
     public PractitionerDAO() {
         mySQLConnection = new MySQLConnection();
@@ -41,7 +42,6 @@ public class PractitionerDAO implements IPractitionerDAO {
             } else {
                 preparedStatement = connection.prepareStatement(query);
                 resultSet = preparedStatement.executeQuery();
-                System.out.println("I was here");
                 while(resultSet.next()) {
                     Practitioner practitioner = new Practitioner();
                     fillPractitioner(practitioner, resultSet);
@@ -78,8 +78,45 @@ public class PractitionerDAO implements IPractitionerDAO {
         return practitioner;
     }
 
-    public static void fillPractitioner(Practitioner practitioner, ResultSet resultSet) throws SQLException{
-        practitioner.setStudentEnrollment(resultSet.getString("Matricula"));
+    @Override
+    public boolean addPractitioner(Practitioner practitioner) {
+        result = false;
+        String query = String.format("INSERT INTO practicante(Matricula,Nombre,ApellidoPaterno,%s",
+                "ApellidoMaterno,Turno) VALUES(?,?,?,?,?)");
+        try {
+            connection = mySQLConnection.getConnection();
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, practitioner.getUserName());
+            preparedStatement.setString(2, practitioner.getStudentName());
+            preparedStatement.setString(3, practitioner.getStudentFatherSurname());
+            preparedStatement.setString(4, practitioner.getStudentMotherSurname());
+            preparedStatement.setString(5, practitioner.getStudentShift());
+            int numberRowsAffected = preparedStatement.executeUpdate();
+            result = (numberRowsAffected > 0);
+        } catch (SQLException sqlException) {
+            Logger.getLogger(PractitionerDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
+        }
+        return result;
+    }
+
+    @Override
+    public boolean deletePractitioner(Practitioner practitioner) {
+        result = false;
+        String query = "DELETE FROM practicante WHERE matricula = ?";
+        try {
+            connection = mySQLConnection.getConnection();
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, practitioner.getUserName());
+            int numberRowsAffected = preparedStatement.executeUpdate();
+            result = (numberRowsAffected > 0);
+        } catch (SQLException sqlException) {
+            Logger.getLogger(PractitionerDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
+        }
+        return result;
+    }
+
+    private static void fillPractitioner(Practitioner practitioner, ResultSet resultSet) throws SQLException{
+        practitioner.setUserName(resultSet.getString("Matricula"));
         practitioner.setStudentName(resultSet.getString("Nombre"));
         practitioner.setStudentFatherSurname(resultSet.getString("ApellidoPaterno"));
         practitioner.setStudentMotherSurname(resultSet.getString("ApellidoMaterno"));

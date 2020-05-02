@@ -1,16 +1,20 @@
 package com.standardeleven.project.logical;
 
 public class User {
-    private String userName;
-    private String userPassword;
-    private String userType;
+    protected String userName;
+    protected String userPassword;
+    protected String userType;
 
-    public User(){}
+    public User(){
+        setUserName("userName");
+        setUserPassword("userPassword");
+        setUserType("userType");
+    }
 
     public User(String userName, String userPassword, String userType) {
-        this.setUserName(userName);
-        this.setUserPassword(userPassword);
-        this.setUserType(userType);
+        setUserName(userName);
+        setUserPassword(userPassword);
+        setUserType(userType);
     }
 
     public String getUserName() {

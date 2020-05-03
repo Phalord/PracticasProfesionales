@@ -6,7 +6,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DatabaseProperties {
-    Properties properties = new Properties();
+    private Properties properties = new Properties();
 
     public DatabaseProperties() {
         setURL("127.0.0.0:3306/database");

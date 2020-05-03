@@ -1,73 +1,69 @@
 package com.standardeleven.project.logical;
 
-import java.io.File;
-import java.util.Date;
+import java.util.List;
 
 public class Report {
-    private String reportID;
-    private String reportType;
-    private String professorNumberPersonal;
-    private Date reportDeliveryDate;
-    private File reportFile;
-    private int studentGrade;
+    private String educationalExperienceNRC;
+    private String educationalExperiencePeriod;
+    private int projectHoursCovered;
+    private int projectReportNumber;
+    private int reportID;
+    private List<Activity> activitiesAccomplished;
 
-    public Report(){}
-
-    public Report(String reportID, String reportType, Date reportDeliveryDate, File reportFile, int studentGrade, String professorNumberPersonal) {
-        setReportID(reportID);
-        setReportType(reportType);
-        setReportDeliveryDate(reportDeliveryDate);
-        setReportFile(reportFile);
-        setStudentGrade(studentGrade);
-        setProfessorNumberPersonal(professorNumberPersonal);
+    public Report() {
+        setReportID(0);
+        setEducationalExperienceNRC("educationalExperienceNRC");
+        setEducationalExperiencePeriod("educationalExperiencePeriod");
+        setProjectHoursCovered(0);
+        setProjectReportNumber(0);
+        setActivitiesAccomplished(null);
     }
 
-    public String getReportID() {
-        return reportID;
+    public void setEducationalExperienceNRC(String educationalExperienceNRC) {
+        this.educationalExperienceNRC = educationalExperienceNRC;
     }
 
-    public String getReportType() {
-        return reportType;
+    public void setEducationalExperiencePeriod(String educationalExperiencePeriod) {
+        this.educationalExperiencePeriod = educationalExperiencePeriod;
     }
 
-    public String getProfessorNumberPersonal() {
-        return professorNumberPersonal;
+    public void setProjectHoursCovered(int projectHoursCovered) {
+        this.projectHoursCovered = projectHoursCovered;
     }
 
-    public Date getReportDeliveryDate() {
-        return reportDeliveryDate;
+    public void setProjectReportNumber(int projectReportNumber) {
+        this.projectReportNumber = projectReportNumber;
     }
 
-    public File getReportFile() {
-        return reportFile;
-    }
-
-    public int getStudentGrade() {
-        return studentGrade;
-    }
-
-    public void setReportID(String reportID) {
+    public void setReportID(int reportID) {
         this.reportID = reportID;
     }
 
-    public void setReportType(String reportType) {
-        this.reportType = reportType;
+    public void setActivitiesAccomplished(List<Activity> activitiesAccomplished) {
+        this.activitiesAccomplished = activitiesAccomplished;
     }
 
-    public void setProfessorNumberPersonal(String professorNumberPersonal) {
-        this.professorNumberPersonal = professorNumberPersonal;
+    public String getEducationalExperienceNRC() {
+        return educationalExperienceNRC;
     }
 
-    public void setReportDeliveryDate(Date reportDeliveryDate) {
-        this.reportDeliveryDate = reportDeliveryDate;
+    public String getEducationalExperiencePeriod() {
+        return educationalExperiencePeriod;
     }
 
-    public void setReportFile(File reportFile) {
-        this.reportFile = reportFile;
+    public int getProjectHoursCovered() {
+        return projectHoursCovered;
     }
 
-    public void setStudentGrade(int studentGrade) {
-        this.studentGrade = studentGrade;
+    public int getProjectReportNumber() {
+        return projectReportNumber;
     }
 
+    public int getReportID() {
+        return reportID;
+    }
+
+    public List<Activity> getActivitiesAccomplished() {
+        return activitiesAccomplished;
+    }
 }

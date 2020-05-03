@@ -31,7 +31,7 @@ public class ActivityDAO implements IActivityDAO {
     }
 
     @Override
-    public List<Activity> getAllActivityDescription() {
+    public List<Activity> getAllActivities() {
         List<Activity> activities = new ArrayList<>();
         String query = "SELECT * FROM actividad";
         try {
@@ -50,7 +50,7 @@ public class ActivityDAO implements IActivityDAO {
     }
 
     @Override
-    public Activity getActivityDescriptionByID(int idActivity) {
+    public Activity getActivityByID(int idActivity) {
         Activity activity = null;
         String query = "SELECT * FROM actividad WHERE idActividad = ?";
         try {
@@ -69,16 +69,49 @@ public class ActivityDAO implements IActivityDAO {
     }
 
     @Override
-    public void addActivity(Activity activity) {
-
+    public boolean addActivity(Activity activity) {
+        result = false;
+        String query = String.format("INSERT INTO actividad(tituloActividad,idProyecto,matriculaEstudiante,%s",
+                "descripcionActividad,fechaEntregaActividad, estadoActividad) VALUES (?,?,?,?,?,?)");
+        try {
+            connection = mySQLConnection.getConnection();
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, activity.getActivityTitle());
+            preparedStatement.setInt(2, activity.getProjectID());
+            preparedStatement.setString(3, activity.getStudentEnrollment());
+            preparedStatement.setString(4, activity.getActivityDescription());
+            preparedStatement.setDate(5, null);
+            preparedStatement.setBoolean(6, activity.getActivityStatus());
+            int numberRowsAffected = preparedStatement.executeUpdate();
+            result = (numberRowsAffected > 0);
+        } catch (SQLException sqlException) {
+            Logger.getLogger(ActivityDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
+        }
+        return result;
     }
 
     @Override
-    public void deleteActivity0(Activity activity) {
-
+    public boolean deleteActivity(Activity activity) {
+        result = false;
+        String query = "DELETE FROM actividad WHERE idActividad = ?";
+        try {
+            connection = mySQLConnection.getConnection();
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, activity.getActivityID());
+            int numberRowsAffected = preparedStatement.executeUpdate();
+            result = (numberRowsAffected > 0);
+        } catch (SQLException sqlException) {
+            Logger.getLogger(ActivityDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
+        }
+        return  result;
     }
 
     private void fillActivity(Activity activity) throws SQLException {
-        activity.setProjectID(resultSet.getInt("idActividad"));
+        activity.setActivityID(resultSet.getInt("idActividad"));
+        activity.setActivityTitle(resultSet.getString("tituloActividad"));
+        activity.setProjectID(resultSet.getInt("idProyecto"));
+        activity.setStudentEnrollment(resultSet.getString("matriculaEstudiante"));
+        activity.setActivityDeliveryDate(resultSet.getDate("fechaEntregaActividad"));
+        activity.setActivityStatus(resultSet.getBoolean("estadoActividad"));
     }
 }

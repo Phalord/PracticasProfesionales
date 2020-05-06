@@ -17,6 +17,7 @@
                     <target>13</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -46,6 +47,13 @@
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-controls</artifactId>
         <version>14</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.mindrot/jbcrypt -->
+    <dependency>
+        <groupId>org.mindrot</groupId>
+        <artifactId>jbcrypt</artifactId>
+        <version>0.4</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->

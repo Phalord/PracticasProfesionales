@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 public class MySQLConnection {
     private Connection connection = null;
-    private String driver = "jdbc:mysql://";
+    private final String driver = "jdbc:mysql://";
     private String database;
     private String username;
     private String password;

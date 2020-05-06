@@ -26,7 +26,7 @@ public class ActivityDAO implements IActivityDAO {
         try {
             mySQLConnection.readProperties();
         } catch (FileNotFoundException exception) {
-            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
+            Logger.getLogger(ActivityDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
         }
     }
 

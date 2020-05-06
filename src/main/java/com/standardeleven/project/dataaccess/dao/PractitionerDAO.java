@@ -26,7 +26,7 @@ public class PractitionerDAO implements IPractitionerDAO {
         try {
             mySQLConnection.readProperties();
         } catch (FileNotFoundException exception) {
-            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
+            Logger.getLogger(PractitionerDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
         }
     }
 

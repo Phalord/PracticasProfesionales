@@ -3,6 +3,7 @@ package com.standardeleven.project.dataaccess.dao;
 import com.npcstudio.sqlconnection.MySQLConnection;
 import com.standardeleven.project.dataaccess.idao.IUserDAO;
 import com.standardeleven.project.logical.User;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.FileNotFoundException;
 import java.sql.Connection;
@@ -26,7 +27,7 @@ public class UserDAO implements IUserDAO {
         try {
             mySQLConnection.readProperties();
         } catch (FileNotFoundException exception) {
-            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
         }
     }
 
@@ -41,7 +42,7 @@ public class UserDAO implements IUserDAO {
             while (resultSet.next()) {
                 User user = new User();
                 user.setUserName(resultSet.getString("usuario"));
-                user.setUserPassword(resultSet.getString("contraseña"));
+                user.setUserPassword(resultSet.getString("contraseñaHash"));
                 user.setUserType(resultSet.getString("tipoCuenta"));
                 users.add(user);
             }
@@ -63,7 +64,7 @@ public class UserDAO implements IUserDAO {
             while (resultSet.next()) {
                 user = new User();
                 user.setUserName(resultSet.getString("usuario"));
-                user.setUserPassword(resultSet.getString("contraseña"));
+                user.setUserPassword(resultSet.getString("contraseñaHash"));
                 user.setUserType(resultSet.getString("tipoCuenta"));
             }
         } catch (SQLException sqlException) {
@@ -75,12 +76,12 @@ public class UserDAO implements IUserDAO {
     @Override
     public boolean addUser(User user) {
         result = false;
-        String query = "INSERT INTO usuario(usuario,contraseña,tipoCuenta) VALUES(?,?,?)";
+        String query = "INSERT INTO usuario(usuario,contraseñaHash,tipoCuenta) VALUES(?,?,?)";
         try {
             connection = mySQLConnection.getConnection();
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, user.getUserName());
-            preparedStatement.setString(2, user.getUserPassword());
+            preparedStatement.setString(2, BCrypt.hashpw(user.getUserPassword(), BCrypt.gensalt(18)));
             preparedStatement.setString(3, user.getUserType());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);

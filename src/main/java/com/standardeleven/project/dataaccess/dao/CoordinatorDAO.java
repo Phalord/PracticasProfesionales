@@ -26,7 +26,7 @@ public class CoordinatorDAO implements ICoordinatorDAO {
         try {
             mySQLConnection.readProperties();
         } catch (FileNotFoundException exception) {
-            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
+            Logger.getLogger(CoordinatorDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
         }
     }
 

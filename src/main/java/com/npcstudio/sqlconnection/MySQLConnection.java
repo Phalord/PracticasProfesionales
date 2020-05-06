@@ -12,8 +12,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class MySQLConnection {
+    private final DatabaseProperties databaseProperties = new DatabaseProperties();
     private Connection connection = null;
-    private final String driver = "jdbc:mysql://";
     private String database;
     private String username;
     private String password;
@@ -36,7 +36,6 @@ public class MySQLConnection {
     }
 
     public void readProperties() throws FileNotFoundException {
-        DatabaseProperties databaseProperties = new DatabaseProperties();
         databaseProperties.loadProperties();
         Properties properties = databaseProperties.getProperties();
         setDatabase(properties.getProperty("url"));
@@ -44,7 +43,12 @@ public class MySQLConnection {
         setPassword(properties.getProperty("password"));
     }
 
+    public void saveProperties() throws FileNotFoundException{
+        databaseProperties.saveProperties();
+    }
+
     public void connect() throws SQLException {
+        String driver = "jdbc:mysql://";
         connection = DriverManager.getConnection(String.format("%s%s", driver, database), username, password);
     }
 

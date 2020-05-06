@@ -5,8 +5,9 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface IReportDAO {
-    public boolean addReport(Report report) throws SQLException, ClassNotFoundException;
-    public boolean updateReport(Report report) throws SQLException, ClassNotFoundException;
-    public boolean deleteReport(Report report) throws SQLException, ClassNotFoundException;
-    public List<Report> getListReport() throws SQLException, ClassNotFoundException; 
+    List<Report> getAllReports();
+    Report getReportByID(int reportID);
+    boolean addReport(Report report);
+    boolean updateReport(Report report);
+    boolean deleteReport(Report report);
 }

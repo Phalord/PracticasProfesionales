@@ -26,7 +26,7 @@ public class ProjectApplicationDAO implements IProjectApplicationDAO {
         try {
             mySQLConnection.readProperties();
         } catch (FileNotFoundException exception) {
-            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
+            Logger.getLogger(ProjectApplicationDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
         }
     }
 

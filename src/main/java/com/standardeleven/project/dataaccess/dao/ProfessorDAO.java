@@ -26,7 +26,7 @@ public class ProfessorDAO implements IProfessorDAO {
         try {
             mySQLConnection.readProperties();
         } catch (FileNotFoundException exception) {
-            Logger.getLogger(AccountDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
+            Logger.getLogger(ProfessorDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
         }
     }
 

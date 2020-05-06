@@ -6,10 +6,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DatabaseProperties {
-    Properties properties = new Properties();
+    private final Properties properties = new Properties();
 
     public DatabaseProperties() {
-        setURL("127.0.0.0:3306/database");
+        setURL("url:port/database");
         setUsername("username");
         setPassword("password");
     }
@@ -52,6 +52,7 @@ public class DatabaseProperties {
             setDatabaseConfig(properties.getProperty("url"), properties
                     .getProperty("username"), properties.getProperty("password"));
         } catch (IOException exception) {
+            saveProperties();
             Logger.getLogger(DatabaseProperties.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
         }
     }

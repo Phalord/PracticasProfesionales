@@ -1,9 +1,8 @@
 package com.standardeleven.project.gui.controller;
 
-import com.standardeleven.project.dataaccess.dao.AccountDAO;
-import com.standardeleven.project.dataaccess.idao.IAccountDAO;
+import com.standardeleven.project.dataaccess.dao.UserDAO;
+import com.standardeleven.project.dataaccess.idao.IUserDAO;
 import com.standardeleven.project.gui.GUI_Home;
-import com.standardeleven.project.gui.IWindowGUI;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.IOException;
 
@@ -25,17 +25,21 @@ public class Controller_LogIn {
     public void display() throws IOException {
         Parent viewFile = FXMLLoader.load(getClass().getResource("/view/View_LogIn.fxml"));
         window.setScene(new Scene(viewFile, 300, 600));
+        window.setResizable(false);
         window.show();
     }
 
     public void logIn() {
+        IUserDAO iUserDAO = new UserDAO();
         String username = fieldUsername.getText();
         String password = fieldPassword.getText();
-        IAccountDAO iAccountDAO = new AccountDAO();
-        if (iAccountDAO.logIn(username, password)){
-            GUI_Home gui_home = new GUI_Home(iAccountDAO.getAccountType(username));
-            window.close();
-            gui_home.display();
+        if (iUserDAO.getUserByEnrollment(username) != null) {
+            if (BCrypt.checkpw(password, iUserDAO.getUserByEnrollment(username).getUserPassword())) {
+                logInMessage.setTextFill(Color.rgb(39, 210, 30));
+                logInMessage.setText("Log in exitosos, pero no se ha implementado nada más");
+            } else {
+                incorrectCredentials();
+            }
         } else {
             incorrectCredentials();
         }

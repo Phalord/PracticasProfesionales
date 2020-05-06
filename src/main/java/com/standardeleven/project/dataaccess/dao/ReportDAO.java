@@ -8,23 +8,27 @@ import java.util.List;
 public class ReportDAO implements IReportDAO {
 
     @Override
-    public boolean addReport(Report report) throws SQLException, ClassNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public List<Report> getAllReports() {
+        return null;
     }
 
     @Override
-    public boolean updateReport(Report report) throws SQLException, ClassNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Report getReportByID(int reportID) {
+        return null;
     }
 
     @Override
-    public boolean deleteReport(Report report) throws SQLException, ClassNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public boolean addReport(Report report) {
+        return false;
     }
 
     @Override
-    public List<Report> getListReport() throws SQLException, ClassNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public boolean updateReport(Report report) {
+        return false;
     }
 
+    @Override
+    public boolean deleteReport(Report report) {
+        return false;
+    }
 }

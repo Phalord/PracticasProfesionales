@@ -10,7 +10,7 @@ import com.standardeleven.project.logical.User;
 import java.util.List;
 
 public class TestCoordinatorDAO {
-    private static ICoordinatorDAO iCoordinatorDAO = new CoordinatorDAO();
+    private final static ICoordinatorDAO iCoordinatorDAO = new CoordinatorDAO();
 
     public static void main(String[] args) {
         testGetAllCoordinators();
@@ -22,8 +22,12 @@ public class TestCoordinatorDAO {
     private static void testGetAllCoordinators() {
         printTestTitle("Get All Coordinators");
         List<Coordinator> coordinators = iCoordinatorDAO.getAllCoordinators();
-        for(Coordinator coordinator: coordinators) {
-            print(coordinator.toString());
+        if (!coordinators.isEmpty()) {
+            for (Coordinator coordinator: coordinators) {
+                print(coordinator.toString());
+            }
+        } else {
+            print("There are no Coordinators");
         }
         print("");
     }

@@ -19,7 +19,7 @@ public class Activity {
         setActivityTitle("activityTitle");
         setStudentEnrollment("studentEnrollment");
         setActivityDescription("ActivityDescription");
-        setActivityDeliveryDate(new Date());
+        setActivityDeliveryDate(null);
         setActivityStatus(false);
     }
 
@@ -86,7 +86,11 @@ public class Activity {
     }
 
     private String getDateFormat() {
-        DateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy HH:mm:ss");
-        return dateFormat.format(getActivityDeliveryDate());
+        String result = "No done, yet";
+        if (getActivityDeliveryDate() != null) {
+            DateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy HH:mm:ss");
+            return dateFormat.format(getActivityDeliveryDate());
+        }
+        return result;
     }
 }

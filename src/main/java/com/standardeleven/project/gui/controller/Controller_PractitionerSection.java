@@ -24,7 +24,7 @@ public class Controller_PractitionerSection implements Initializable {
     @FXML
     private void addPractitioner(ActionEvent event) { 
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/main/resources/view/View_AddPractitioner"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/View_AddPractitioner.fxml"));
             Parent root = loader.load();
             Controller_AddPractitioner addPractitionerController = loader.getController();
             Scene addPractitionerScene = new Scene(root);
@@ -32,7 +32,6 @@ public class Controller_PractitionerSection implements Initializable {
             addPractitionerStage.initModality(Modality.APPLICATION_MODAL);
             addPractitionerStage.setScene(addPractitionerScene);
             addPractitionerStage.show();
-            
         } catch (IOException ioException) {
             Logger.getLogger(Controller_PractitionerSection.class.getName()).log(Level.SEVERE, 
                     ioException.getMessage(), ioException);

@@ -77,11 +77,12 @@ public class UserDAO implements IUserDAO {
     public boolean addUser(User user) {
         result = false;
         String query = "INSERT INTO usuario(usuario,contraseñaHash,tipoCuenta) VALUES(?,?,?)";
+        String passwordAux = BCrypt.hashpw(user.getUserPassword(), BCrypt.gensalt(18));
         try {
             connection = mySQLConnection.getConnection();
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, user.getUserName());
-            preparedStatement.setString(2, BCrypt.hashpw(user.getUserPassword(), BCrypt.gensalt(18)));
+            preparedStatement.setString(2, passwordAux);
             preparedStatement.setString(3, user.getUserType());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);

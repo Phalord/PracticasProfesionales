@@ -76,7 +76,7 @@ public class CoordinatorDAO implements ICoordinatorDAO {
     @Override
     public boolean addCoordinator(Coordinator coordinator) {
         result = false;
-        String sql = String.format("INSERT INTO Coordinador(NumeroPersonalCoordinador,%s",
+        String sql = String.format("INSERT INTO coordinador(NumeroPersonalCoordinador,%s",
                 "Nombre,ApellidoPaterno,ApellidoMaterno) VALUES(?,?,?,?)");
         try {
             connection = mySQLConnection.getConnection();

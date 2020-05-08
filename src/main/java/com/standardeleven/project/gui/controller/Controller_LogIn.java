@@ -2,7 +2,6 @@ package com.standardeleven.project.gui.controller;
 
 import com.standardeleven.project.dataaccess.dao.UserDAO;
 import com.standardeleven.project.dataaccess.idao.IUserDAO;
-import com.standardeleven.project.gui.GUI_Home;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;

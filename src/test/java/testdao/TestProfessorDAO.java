@@ -17,8 +17,10 @@ public class TestProfessorDAO {
         testAddProfessor("p20513488","Freud","Smith"," Rodriguez","Matutino","'¿raCPttOA?ntA56o¡4R2ire");
         testAddProfessor("p20010145","Lois","Lane","Kent","Matutino","Ott564RAPirA?ne'¿raC2o¡t");
         testGetAllProfessors();
+        testDeleteProfessor("p20204865");
         testDeleteProfessor("p20010145");
-        testUpdateProfessor("p20010156");
+        testUpdateProfessor("p20553366", "Antonieta", "De las Aguas");
+        testUpdateProfessor("p20553386", "Joshua", "Kamikaze");
     }
 
     private static void testGetAllProfessors() {
@@ -65,13 +67,12 @@ public class TestProfessorDAO {
         print("");
     }
 
-    // FIXME: "Finish my implementation, please" -testUpdateProfessor(<same parameters as testAddProfessor>)
-    private static void testUpdateProfessor(String personalNumber) {
+    private static void testUpdateProfessor(String personalNumber, String professorName, String professorFatherSurname) {
         printTestTitle("Update Professor");
         Professor professor = iProfessorDAO.getProfessor(personalNumber);
         if (professor != null) {
-            professor.setProfessorFatherSurname("Azcarraga");
-            professor.setProfessorNames("Juan Gabriel");
+            professor.setProfessorNames(professorName);
+            professor.setProfessorFatherSurname(professorFatherSurname);
             if (iProfessorDAO.updateProfessor(professor)) {
                 print(String.format("Professor %s updated successfully", professor.getProfessorNames()));
             } else {

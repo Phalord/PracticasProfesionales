@@ -66,4 +66,11 @@ public class Report {
     public List<Activity> getActivitiesAccomplished() {
         return activitiesAccomplished;
     }
+
+    @Override
+    public String toString() {
+        return String.format(" %d | %s | %s | %d | %d | %d ", getReportID(),
+                getEducationalExperienceNRC(), getEducationalExperiencePeriod(),
+                getProjectHoursCovered(), getProjectReportNumber(),getActivitiesAccomplished().size());
+    }
 }

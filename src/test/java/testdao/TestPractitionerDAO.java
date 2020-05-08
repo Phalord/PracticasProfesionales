@@ -15,8 +15,10 @@ public class TestPractitionerDAO {
     public static void main(String[] args) {
         testGetAllPractitioners();
         testGetPractitioner();
-        testAddPractitioner();
-        testDeletePractitioner();
+        testAddPractitioner("s18012132", "Alejandro", "Sandoval" , "Bravo", "Vespertino", "min51!uEñar3Sco?'at63Pe¿S5r");
+        testAddPractitioner("s18012133", "Victor Arturo", "Ruiz" , "Cuervo", "Vespertino", "r3e6n5o?'a1Sc3P!u¿SEñ5mitar");
+        testAddPractitioner("s18012155", "Abner Jeffrey", "Tapia" , "Cruz", "Vespertino", "t63Pe¿SSco?'min515r!uEñar3a");
+        testDeletePractitioner("s18012135");
     }
 
     private static void testGetAllPractitioners() {
@@ -39,16 +41,17 @@ public class TestPractitionerDAO {
         print("");
     }
 
-    private static void testAddPractitioner() {
+    private static void testAddPractitioner(String userName, String studentName, String studentFatherSurname,
+                                            String studentMotherSurname, String studentShift, String password) {
         IUserDAO iUserDAO = new UserDAO();
         printTestTitle("Add Practitioner");
         Practitioner practitioner = new Practitioner();
-        practitioner.setUserName("s20012131");
-        practitioner.setStudentName("Pepe");
-        practitioner.setStudentFatherSurname("Pecas");
-        practitioner.setStudentMotherSurname("Picas");
-        practitioner.setStudentShift("Matutino");
-        User user = iUserDAO.getUserByEnrollment("s20012131");
+        practitioner.setUserName(userName);
+        practitioner.setStudentName(studentName);
+        practitioner.setStudentFatherSurname(studentFatherSurname);
+        practitioner.setStudentMotherSurname(studentMotherSurname);
+        practitioner.setStudentShift(studentShift);
+        User user = iUserDAO.getUserByEnrollment(userName);
         if(iPractitionerDAO.getPractitioner(practitioner.getUserName()) == null) {
             if (user != null) {
                 if (iPractitionerDAO.addPractitioner(practitioner)) {
@@ -57,8 +60,8 @@ public class TestPractitionerDAO {
                     print("Unable to add Practitioner");
                 }
             } else {
-                if (iUserDAO.addUser(new User(practitioner.getUserName(), "password", "practicante"))) {
-                    testAddPractitioner();
+                if (iUserDAO.addUser(new User(practitioner.getUserName(), password, "practicante"))) {
+                    testAddPractitioner(userName, studentName, studentFatherSurname, studentMotherSurname, studentShift, password);
                 } else {
                     print("Unable to add user to database");
                 }
@@ -69,12 +72,17 @@ public class TestPractitionerDAO {
         print("");
     }
 
-    private static void testDeletePractitioner() {
+    private static void testDeletePractitioner(String studentEnrollment) {
+        IUserDAO iUserDAO = new UserDAO();
         printTestTitle("Delete Practitioner");
-        Practitioner practitioner = iPractitionerDAO.getPractitioner("s20012131");
+        Practitioner practitioner = iPractitionerDAO.getPractitioner(studentEnrollment);
         if (practitioner != null) {
             if (iPractitionerDAO.deletePractitioner(practitioner)) {
-                print(String.format("Practitioner %s deleted successfully", practitioner.getUserName()));
+                if (iUserDAO.deleteUser(practitioner)) {
+                    print("Practitioner deleted successfully");
+                } else {
+                    print("Unable to delete User");
+                }
             } else {
                 print("Unable to delete Practitioner");
             }

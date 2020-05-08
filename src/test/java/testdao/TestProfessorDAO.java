@@ -13,77 +13,14 @@ public class TestProfessorDAO {
     private final static IProfessorDAO iProfessorDAO = new ProfessorDAO();
 
     public static void main(String[] args) {
-        testAddProfessor();
+        testAddProfessor("p20553366","Jessica","Elric","Muñoz","Vespertino","56OirA?n¡t2tt4Re'¿raCAPo");
+        testAddProfessor("p20513488","Freud","Smith"," Rodriguez","Matutino","'¿raCPttOA?ntA56o¡4R2ire");
+        testAddProfessor("p20010145","Lois","Lane","Kent","Matutino","Ott564RAPirA?ne'¿raC2o¡t");
         testGetAllProfessors();
-        testDeleteProfessor();
-        testUpdateProfessor();
-    }
-
-    private static void testAddProfessor() {
-        IUserDAO iUserDAO = new UserDAO();
-        printTestTitle("Add Professor");
-        Professor professor = new Professor();
-        professor.setProfessorNames("Roberto Carlos");
-        professor.setProfessorFatherSurname("Valencia");
-        professor.setProfessorMotherSurname("de la Villa");
-        professor.setProfessorShift("Matutino");
-        professor.setUserName("p11556677");
-        User user = iUserDAO.getUserByEnrollment(professor.getUserName());
-        if (iProfessorDAO.getProfessor(professor.getUserName()) == null) {
-            if (user != null) {
-                if (iProfessorDAO.addProfessor(professor)) {
-                    print(String.format("Professor %s added successfully", professor.getProfessorNames()));
-                } else {
-                    print("Unable to add Professor");
-                }
-            } else {
-                if (iUserDAO.addUser(new User(professor.getUserName(), "password", "profesor"))) {
-                    testAddProfessor();
-                } else {
-                    print("Unable to add User to database");
-                }
-            }
-        } else {
-            print(String.format("Professor %s already exists", professor.getProfessorNames()));
-        }
-        print("");
-    }
-
-    private static void testUpdateProfessor() {
-        printTestTitle("Update Professor");
-        Professor professor = iProfessorDAO.getProfessor("p33557799");
-        if (professor != null) {
-            professor.setProfessorFatherSurname("Azcarraga");
-            professor.setProfessorNames("Juan Gabriel");
-            if (iProfessorDAO.updateProfessor(professor)) {
-                print(String.format("Professor %s updated successfully", professor.getProfessorNames()));
-            } else {
-                print("Unable to update Professor");
-            }
-        } else {
-            print("No Professor found");
-        }
-        print("");
-    }
-
-    private static void testDeleteProfessor() {
-        IUserDAO iUserDAO = new UserDAO();
-        printTestTitle("Delete Professor");
-        Professor professor = iProfessorDAO.getProfessor("p11556677");
-        if (professor != null) {
-            if (iProfessorDAO.deleteProfessor(professor)) {
-                if (iUserDAO.deleteUser(iUserDAO.getUserByEnrollment(professor.getUserName()))) {
-                    print("Professor deleted successfully");
-                } else {
-                    print("Unable to delete User");
-                }
-            } else {
-                print("Unable to delete Professor");
-            }
-        } else{
-            print("No Professor found");
-        }
-        print("");
+        testDeleteProfessor("p20204865");
+        testDeleteProfessor("p20010145");
+        testUpdateProfessor("p20553366", "Antonieta", "De las Aguas");
+        testUpdateProfessor("p20553386", "Joshua", "Kamikaze");
     }
 
     private static void testGetAllProfessors() {
@@ -95,6 +32,74 @@ public class TestProfessorDAO {
             }
         } else {
             print("There are no professors!");
+        }
+        print("");
+    }
+
+    private static void testAddProfessor(String userName, String professorName, String professorFatherSurname,
+                                         String professorMotherSurname, String professorShift, String password) {
+        IUserDAO iUserDAO = new UserDAO();
+        printTestTitle("Add Professor");
+        Professor professor = new Professor();
+        professor.setProfessorNames(professorName);
+        professor.setProfessorFatherSurname(professorFatherSurname);
+        professor.setProfessorMotherSurname(professorMotherSurname);
+        professor.setProfessorShift(professorShift);
+        professor.setUserName(userName);
+        User user = iUserDAO.getUserByEnrollment(professor.getUserName());
+        if (iProfessorDAO.getProfessor(professor.getUserName()) == null) {
+            if (user != null) {
+                if (iProfessorDAO.addProfessor(professor)) {
+                    print(String.format("Professor %s added successfully", professor.getProfessorNames()));
+                } else {
+                    print("Unable to add Professor");
+                }
+            } else {
+                if (iUserDAO.addUser(new User(professor.getUserName(), password, "profesor"))) {
+                    testAddProfessor(userName, professorName, professorFatherSurname, professorMotherSurname, professorShift, password);
+                } else {
+                    print("Unable to add User to database");
+                }
+            }
+        } else {
+            print(String.format("Professor %s already exists", professor.getProfessorNames()));
+        }
+        print("");
+    }
+
+    private static void testUpdateProfessor(String personalNumber, String professorName, String professorFatherSurname) {
+        printTestTitle("Update Professor");
+        Professor professor = iProfessorDAO.getProfessor(personalNumber);
+        if (professor != null) {
+            professor.setProfessorNames(professorName);
+            professor.setProfessorFatherSurname(professorFatherSurname);
+            if (iProfessorDAO.updateProfessor(professor)) {
+                print(String.format("Professor %s updated successfully", professor.getProfessorNames()));
+            } else {
+                print("Unable to update Professor");
+            }
+        } else {
+            print("No Professor found");
+        }
+        print("");
+    }
+
+    private static void testDeleteProfessor(String personalNumber) {
+        IUserDAO iUserDAO = new UserDAO();
+        printTestTitle("Delete Professor");
+        Professor professor = iProfessorDAO.getProfessor(personalNumber);
+        if (professor != null) {
+            if (iProfessorDAO.deleteProfessor(professor)) {
+                if (iUserDAO.deleteUser(professor)) {
+                    print("Professor deleted successfully");
+                } else {
+                    print("Unable to delete User");
+                }
+            } else {
+                print("Unable to delete Professor");
+            }
+        } else{
+            print("No Professor found");
         }
         print("");
     }

@@ -33,7 +33,7 @@ public class ProfessorDAO implements IProfessorDAO {
     @Override
     public List<Professor> getAllProfessors() {
         List <Professor> professors = new ArrayList<>();
-        String sql = "SELECT * FROM Profesor";
+        String sql = "SELECT * FROM profesor";
         try {
             connection = mySQLConnection.getConnection();
             preparedStatement = connection.prepareStatement(sql);
@@ -71,7 +71,7 @@ public class ProfessorDAO implements IProfessorDAO {
     @Override
     public boolean addProfessor(Professor professor) {
         result = false;
-        String query = String.format("INSERT INTO Profesor(NumeroPersonalProfesor,Nombre,%s",
+        String query = String.format("INSERT INTO profesor(NumeroPersonalProfesor,Nombre,%s",
                 "ApellidoPaterno,ApellidoMaterno,Turno) VALUES(?,?,?,?,?)");
         try {
             connection = mySQLConnection.getConnection();

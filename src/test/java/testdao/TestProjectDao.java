@@ -15,7 +15,7 @@ public class TestProjectDao {
 
     public static void main(String[] args) {
         testGetAllProjects();
-        testGetProject();
+        testGetProjectByID();
         testAssignPractitioner();
         addProject();
         deleteProject();
@@ -30,7 +30,7 @@ public class TestProjectDao {
         print("");
     }
 
-    private static void testGetProject() {
+    private static void testGetProjectByID() {
         printTestTitle("Get Project");
         Project project = iProjectDAO.getProject(1);
         if (project != null) {

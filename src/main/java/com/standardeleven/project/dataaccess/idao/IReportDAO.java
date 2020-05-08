@@ -8,6 +8,5 @@ public interface IReportDAO {
     List<Report> getAllReports();
     Report getReportByID(int reportID);
     boolean addReport(Report report);
-    boolean updateReport(Report report);
     boolean deleteReport(Report report);
 }

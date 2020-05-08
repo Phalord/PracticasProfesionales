@@ -49,14 +49,33 @@ public class ActivityDAO implements IActivityDAO {
         return activities;
     }
 
+    public List<Activity> getAllActivitiesByReportID(int reportID) {
+        List<Activity> activities = new ArrayList<>();
+        String query = "SELECT * FROM actividad WHERE idReporte = ?";
+        try {
+            connection = mySQLConnection.getConnection();
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, reportID);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Activity activity = new Activity();
+                fillActivity(activity);
+                activities.add(activity);
+            }
+        } catch (SQLException sqlException) {
+            Logger.getLogger(ActivityDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
+        }
+        return activities;
+    }
+
     @Override
-    public Activity getActivityByID(int idActivity) {
+    public Activity getActivityByID(int activityID) {
         Activity activity = null;
         String query = "SELECT * FROM actividad WHERE idActividad = ?";
         try {
             connection = mySQLConnection.getConnection();
             preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1, idActivity);
+            preparedStatement.setInt(1, activityID);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 activity = new Activity();

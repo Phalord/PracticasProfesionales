@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.standardeleven.project.gui.controller.Controller_ActivitySection">
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.standardeleven.project.gui.controller.Controller_ActivitySection">
    <children>
       <Label layoutX="223.0" layoutY="69.0" text="Autoevaluación">
          <font>
@@ -29,9 +29,9 @@
             <Font name="Consolas" size="14.0" />
          </font>
       </Button>
-      <ImageView fx:id="imgHome" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="21.0" onMouseClicked="#returnHome" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgHome" fitHeight="113.0" fitWidth="82.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#returnHome" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Principios de Construccion de Software/Lel/SPP/src/com/standardeleven/project/gui/images/home.png" />
+            <Image url="@../images/home.png" />
          </image>
       </ImageView>
    </children>

@@ -4,7 +4,6 @@ import com.npcstudio.sqlconnection.MySQLConnection;
 import com.standardeleven.project.dataaccess.idao.IProfessorDAO;
 import com.standardeleven.project.logical.Professor;
 
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
@@ -16,28 +15,19 @@ import java.util.logging.Logger;
 
 public class ProfessorDAO implements IProfessorDAO {
     private final MySQLConnection mySQLConnection;
-    private Connection connection;
-    private PreparedStatement preparedStatement;
-    private ResultSet resultSet;
     private boolean result;
 
     public ProfessorDAO() {
         mySQLConnection = new MySQLConnection();
-        try {
-            mySQLConnection.readProperties();
-        } catch (FileNotFoundException exception) {
-            Logger.getLogger(ProfessorDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
-        }
     }
 
     @Override
     public List<Professor> getAllProfessors() {
         List <Professor> professors = new ArrayList<>();
-        String sql = "SELECT * FROM profesor";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            resultSet = preparedStatement.executeQuery();
+        String query = "SELECT * FROM profesor";
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
             while(resultSet.next()) {
                 Professor professor = new Professor();
                 fillProfessor(resultSet, professor);
@@ -53,14 +43,14 @@ public class ProfessorDAO implements IProfessorDAO {
     public Professor getProfessor(String personalNumber) {
         Professor professor = null;
         String query = "SELECT * FROM profesor WHERE NumeroPersonalProfesor = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, personalNumber);
-            resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                professor = new Professor();
-                fillProfessor(resultSet, professor);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    professor = new Professor();
+                    fillProfessor(resultSet, professor);
+                }
             }
         } catch (SQLException sqlException) {
             Logger.getLogger(ProfessorDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
@@ -73,9 +63,8 @@ public class ProfessorDAO implements IProfessorDAO {
         result = false;
         String query = String.format("INSERT INTO profesor(NumeroPersonalProfesor,Nombre,%s",
                 "ApellidoPaterno,ApellidoMaterno,Turno) VALUES(?,?,?,?,?)");
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1,professor.getUserName());
             preparedStatement.setString(2,professor.getProfessorNames());
             preparedStatement.setString(3,professor.getProfessorFatherSurname());
@@ -94,9 +83,8 @@ public class ProfessorDAO implements IProfessorDAO {
         result = false;
         String query = String.format("UPDATE profesor SET Nombre=?, ApellidoPaterno=?,%s",
                 " ApellidoMaterno=?, Turno=? WHERE NumeroPersonalProfesor=?");
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)){
             preparedStatement.setString(1,professor.getProfessorNames());
             preparedStatement.setString(2,professor.getProfessorFatherSurname());
             preparedStatement.setString(3,professor.getProfessorMotherSurname());
@@ -114,11 +102,10 @@ public class ProfessorDAO implements IProfessorDAO {
     public boolean deleteProfessor(Professor professor) {
         result = false;
         String query = "DELETE FROM profesor WHERE NumeroPersonalProfesor = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1,professor.getUserName());
-            int numberRowsAffected = statement.executeUpdate();
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1,professor.getUserName());
+            int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);
         } catch (SQLException sqlException) {
             Logger.getLogger(ProfessorDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);

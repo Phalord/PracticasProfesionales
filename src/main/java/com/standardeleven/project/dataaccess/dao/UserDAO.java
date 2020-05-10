@@ -5,7 +5,6 @@ import com.standardeleven.project.dataaccess.idao.IUserDAO;
 import com.standardeleven.project.logical.User;
 import org.mindrot.jbcrypt.BCrypt;
 
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,28 +16,19 @@ import java.util.logging.Logger;
 
 public class UserDAO implements IUserDAO {
     private final MySQLConnection mySQLConnection;
-    private Connection connection;
-    private PreparedStatement preparedStatement;
-    private ResultSet resultSet;
     private boolean result;
 
     public UserDAO() {
         mySQLConnection = new MySQLConnection();
-        try {
-            mySQLConnection.readProperties();
-        } catch (FileNotFoundException exception) {
-            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
-        }
     }
 
     @Override
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<>();
         String query = "SELECT * FROM usuario";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
-            resultSet = preparedStatement.executeQuery();
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
             while (resultSet.next()) {
                 User user = new User();
                 user.setUserName(resultSet.getString("usuario"));
@@ -56,16 +46,16 @@ public class UserDAO implements IUserDAO {
     public User getUserByEnrollment(String userName) {
         User user = null;
         String query = "SELECT * FROM usuario WHERE usuario = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, userName);
-            resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                user = new User();
-                user.setUserName(resultSet.getString("usuario"));
-                user.setUserPassword(resultSet.getString("contraseñaHash"));
-                user.setUserType(resultSet.getString("tipoCuenta"));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    user = new User();
+                    user.setUserName(resultSet.getString("usuario"));
+                    user.setUserPassword(resultSet.getString("contraseñaHash"));
+                    user.setUserType(resultSet.getString("tipoCuenta"));
+                }
             }
         } catch (SQLException sqlException) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
@@ -78,9 +68,8 @@ public class UserDAO implements IUserDAO {
         result = false;
         String query = "INSERT INTO usuario(usuario,contraseñaHash,tipoCuenta) VALUES(?,?,?)";
         String passwordAux = BCrypt.hashpw(user.getUserPassword(), BCrypt.gensalt(18));
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, user.getUserName());
             preparedStatement.setString(2, passwordAux);
             preparedStatement.setString(3, user.getUserType());
@@ -101,9 +90,8 @@ public class UserDAO implements IUserDAO {
     public boolean deleteUser(User user) {
         result = false;
         String query = "DELETE FROM usuario WHERE usuario = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, user.getUserName());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);

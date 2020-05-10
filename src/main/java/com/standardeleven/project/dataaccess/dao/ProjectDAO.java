@@ -5,7 +5,6 @@ import com.standardeleven.project.dataaccess.idao.IProjectDAO;
 import com.standardeleven.project.logical.Practitioner;
 import com.standardeleven.project.logical.Project;
 
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,28 +16,19 @@ import java.util.logging.Logger;
 
 public class ProjectDAO implements IProjectDAO {
     private final MySQLConnection mySQLConnection;
-    private Connection connection;
-    private PreparedStatement preparedStatement;
-    private ResultSet resultSet;
     private boolean result;
 
     public ProjectDAO() {
         mySQLConnection = new MySQLConnection();
-        try {
-            mySQLConnection.readProperties();
-        } catch (FileNotFoundException exception) {
-            Logger.getLogger(ProjectDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
-        }
     }
 
     @Override
     public List<Project> getAllProjects() {
         List<Project> projects = new ArrayList<>();
         String query = "SELECT * FROM proyecto";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
-            resultSet = preparedStatement.executeQuery();
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
             while(resultSet.next()) {
                 Project project = new Project(resultSet.getString("NombreProyecto"),
                         resultSet.getString("Descripcion"), resultSet.getString("Recursos"),
@@ -56,14 +46,14 @@ public class ProjectDAO implements IProjectDAO {
     public List<Project> getAllAvailableProjects() {
         List<Project> projects = new ArrayList<>();
         String query = "SELECT * FROM proyecto WHERE Matricula IS NULL";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
-            resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()) {
-                Project project = new Project();
-                fillProject(resultSet, project);
-                projects.add(project);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while(resultSet.next()) {
+                    Project project = new Project();
+                    fillProject(resultSet, project);
+                    projects.add(project);
+                }
             }
         } catch (SQLException sqlException) {
             Logger.getLogger(ProjectDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
@@ -75,14 +65,14 @@ public class ProjectDAO implements IProjectDAO {
     public Project getProject(int idProject) {
         Project project = null;
         String query = "SELECT * FROM proyecto WHERE idProyecto = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, idProject);
-            resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()) {
-                project = new Project();
-                fillProject(resultSet, project);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while(resultSet.next()) {
+                    project = new Project();
+                    fillProject(resultSet, project);
+                }
             }
         } catch (SQLException sqlException) {
             Logger.getLogger(ProjectDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
@@ -95,18 +85,12 @@ public class ProjectDAO implements IProjectDAO {
         result = false;
         String studentEnrollment = practitioner.getUserName();
         String query = "UPDATE proyecto SET Matricula = ? WHERE proyecto.idProyecto = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            if(!connection.isClosed()) {
-                preparedStatement = connection.prepareStatement(query);
-                preparedStatement.setString(1, studentEnrollment);
-                preparedStatement.setInt(2, idProject);
-                int numberRowsAffected = preparedStatement.executeUpdate();
-                result = (0 < numberRowsAffected);
-            } else {
-                Exception exception = new Exception("Connection Lost with Server");
-                Logger.getLogger(PractitionerDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
-            }
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, studentEnrollment);
+            preparedStatement.setInt(2, idProject);
+            int numberRowsAffected = preparedStatement.executeUpdate();
+            result = (0 < numberRowsAffected);
         } catch (SQLException sqlException) {
             Logger.getLogger(ProjectDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
         }
@@ -119,9 +103,8 @@ public class ProjectDAO implements IProjectDAO {
         String query = String
                 .format("INSERT INTO proyecto(NombreProyecto,Descripcion,Recursos,%s",
                         "idResponsableProyecto) VALUES(?,?,?,?)");
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1,project.getProjectName());
             preparedStatement.setString(2,project.getProjectDescription());
             preparedStatement.setString(3,project.getProjectResource());
@@ -139,9 +122,8 @@ public class ProjectDAO implements IProjectDAO {
         result = false;
         String query = String.format("UPDATE proyecto SET Descripcion=?, Recursos=?, Matricula=?,%s",
                 " NumeroPersonalCoordinador=? WHERE NombreProyecto=?");
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(5,project.getProjectName());
             preparedStatement.setString(1,project.getProjectDescription());
             preparedStatement.setString(2,project.getProjectResource());
@@ -158,9 +140,8 @@ public class ProjectDAO implements IProjectDAO {
     public boolean deleteProject(Project project) {
         result = false;
         String query = "DELETE FROM proyecto WHERE idProyecto = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1,project.getProjectID());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);

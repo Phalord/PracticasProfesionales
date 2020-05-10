@@ -1,4 +1,4 @@
-package testdao;
+package dataaccess;
 
 import com.standardeleven.project.dataaccess.dao.ActivityDAO;
 import com.standardeleven.project.dataaccess.dao.PractitionerDAO;

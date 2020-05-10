@@ -1,27 +1,29 @@
-import com.npcstudio.sqlconnection.MySQLConnection;
+package dataaccess;
 
-import java.io.FileNotFoundException;
+import com.npcstudio.sqlconnection.MySQLConnection;
+import org.junit.jupiter.api.Test;
+
+import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
 public class TestDatabaseConnection {
-    private static final MySQLConnection connection = new MySQLConnection();
+    MySQLConnection mySQLConnection = new MySQLConnection();
 
     public static void main(String[] args){
-        testConnection();
     }
 
-    private static void testConnection() {
-        try {
-            connection.getConnection();
-            System.out.println("Conexión exitosa");
-            connection.closeConnection();
-            System.out.println("Conexión cerrada");
+    @Test
+    public void testConnection() {
+        try (Connection connection = mySQLConnection.getConnection()) {
+            assertNotNull(connection);
         } catch (SQLException exception) {
             System.out.println(String.format("SQLException: %s", exception.getMessage()));
             System.out.println(String.format("SQLException: %s", exception.getErrorCode()));
             System.out.println(String.format("SQLException: %s", exception.getSQLState()));
+            fail();
         }
     }
 }

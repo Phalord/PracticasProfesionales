@@ -3,6 +3,7 @@ package com.standardeleven.project.dataaccess.dao;
 import com.npcstudio.sqlconnection.MySQLConnection;
 import com.standardeleven.project.dataaccess.idao.IActivityDAO;
 import com.standardeleven.project.logical.Activity;
+import com.standardeleven.project.logical.Report;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -90,6 +91,22 @@ public class ActivityDAO implements IActivityDAO {
             preparedStatement.setString(4, activity.getActivityDescription());
             preparedStatement.setDate(5, null);
             preparedStatement.setBoolean(6, activity.getActivityStatus());
+            int numberRowsAffected = preparedStatement.executeUpdate();
+            result = (numberRowsAffected > 0);
+        } catch (SQLException sqlException) {
+            Logger.getLogger(ActivityDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
+        }
+        return result;
+    }
+
+    @Override
+    public boolean assignReport(Activity activity, Report report) {
+        result = false;
+        String query = "UPDATE actividad SET idReporte = ? WHERE idActividad = ?";
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, report.getReportID());
+            preparedStatement.setInt(2, activity.getActivityID());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);
         } catch (SQLException sqlException) {

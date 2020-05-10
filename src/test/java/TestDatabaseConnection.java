@@ -9,16 +9,7 @@ public class TestDatabaseConnection {
     private static final MySQLConnection connection = new MySQLConnection();
 
     public static void main(String[] args){
-        readProperties();
         testConnection();
-    }
-
-    private static void readProperties() {
-        try {
-            connection.readProperties();
-        } catch (FileNotFoundException fileNotFoundException) {
-            saveProperties();
-        }
     }
 
     private static void testConnection() {
@@ -31,15 +22,6 @@ public class TestDatabaseConnection {
             System.out.println(String.format("SQLException: %s", exception.getMessage()));
             System.out.println(String.format("SQLException: %s", exception.getErrorCode()));
             System.out.println(String.format("SQLException: %s", exception.getSQLState()));
-        }
-    }
-
-    private static void saveProperties() {
-        try {
-            connection.saveProperties();
-        } catch (FileNotFoundException fileNotFoundException) {
-            Logger.getLogger(TestDatabaseConnection.class.getName())
-                    .log(Level.SEVERE, fileNotFoundException.getMessage(), fileNotFoundException);
         }
     }
 }

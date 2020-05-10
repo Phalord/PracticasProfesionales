@@ -4,7 +4,6 @@ import com.npcstudio.sqlconnection.MySQLConnection;
 import com.standardeleven.project.dataaccess.idao.IActivityDAO;
 import com.standardeleven.project.logical.Activity;
 
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,31 +15,22 @@ import java.util.logging.Logger;
 
 public class ActivityDAO implements IActivityDAO {
     private final MySQLConnection mySQLConnection;
-    private Connection connection;
-    private PreparedStatement preparedStatement;
-    private ResultSet resultSet;
     private boolean result;
 
     public ActivityDAO() {
         mySQLConnection = new MySQLConnection();
-        try {
-            mySQLConnection.readProperties();
-        } catch (FileNotFoundException exception) {
-            Logger.getLogger(ActivityDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
-        }
     }
 
     @Override
     public List<Activity> getAllActivities() {
         List<Activity> activities = new ArrayList<>();
         String query = "SELECT * FROM actividad";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
-            resultSet = preparedStatement.executeQuery();
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
             while (resultSet.next()) {
                 Activity activity = new Activity();
-                fillActivity(activity);
+                fillActivity(activity, resultSet);
                 activities.add(activity);
             }
         } catch (SQLException sqlException) {
@@ -52,15 +42,15 @@ public class ActivityDAO implements IActivityDAO {
     public List<Activity> getAllActivitiesByReportID(int reportID) {
         List<Activity> activities = new ArrayList<>();
         String query = "SELECT * FROM actividad WHERE idReporte = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)){
             preparedStatement.setInt(1, reportID);
-            resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                Activity activity = new Activity();
-                fillActivity(activity);
-                activities.add(activity);
+            try (ResultSet resultSet = preparedStatement.executeQuery()){
+                while (resultSet.next()) {
+                    Activity activity = new Activity();
+                    fillActivity(activity, resultSet);
+                    activities.add(activity);
+                }
             }
         } catch (SQLException sqlException) {
             Logger.getLogger(ActivityDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
@@ -72,14 +62,14 @@ public class ActivityDAO implements IActivityDAO {
     public Activity getActivityByID(int activityID) {
         Activity activity = null;
         String query = "SELECT * FROM actividad WHERE idActividad = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, activityID);
-            resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                activity = new Activity();
-                fillActivity(activity);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    activity = new Activity();
+                    fillActivity(activity, resultSet);
+                }
             }
         } catch (SQLException sqlException) {
             Logger.getLogger(ActivityDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
@@ -92,9 +82,8 @@ public class ActivityDAO implements IActivityDAO {
         result = false;
         String query = String.format("INSERT INTO actividad(tituloActividad,idProyecto,matriculaEstudiante,%s",
                 "descripcionActividad,fechaEntregaActividad, estadoActividad) VALUES (?,?,?,?,?,?)");
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, activity.getActivityTitle());
             preparedStatement.setInt(2, activity.getProjectID());
             preparedStatement.setString(3, activity.getStudentEnrollment());
@@ -113,9 +102,8 @@ public class ActivityDAO implements IActivityDAO {
     public boolean deleteActivity(Activity activity) {
         result = false;
         String query = "DELETE FROM actividad WHERE idActividad = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)){
             preparedStatement.setInt(1, activity.getActivityID());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);
@@ -125,7 +113,7 @@ public class ActivityDAO implements IActivityDAO {
         return  result;
     }
 
-    private void fillActivity(Activity activity) throws SQLException {
+    private void fillActivity(Activity activity, ResultSet resultSet) throws SQLException {
         activity.setActivityID(resultSet.getInt("idActividad"));
         activity.setActivityTitle(resultSet.getString("tituloActividad"));
         activity.setProjectID(resultSet.getInt("idProyecto"));

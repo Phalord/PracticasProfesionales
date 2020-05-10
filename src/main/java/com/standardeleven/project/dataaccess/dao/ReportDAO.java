@@ -4,7 +4,6 @@ import com.npcstudio.sqlconnection.MySQLConnection;
 import com.standardeleven.project.dataaccess.idao.IReportDAO;
 import com.standardeleven.project.logical.Report;
 
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,31 +15,22 @@ import java.util.logging.Logger;
 
 public class ReportDAO implements IReportDAO {
     private final MySQLConnection mySQLConnection;
-    private Connection connection;
-    private PreparedStatement preparedStatement;
-    private ResultSet resultSet;
     private boolean result;
 
     public ReportDAO() {
         mySQLConnection = new MySQLConnection();
-        try {
-            mySQLConnection.readProperties();
-        } catch (FileNotFoundException exception) {
-            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
-        }
     }
 
     @Override
     public List<Report> getAllReports() {
         List<Report> reports = new ArrayList<>();
         String query = "SELECT * FROM reporte";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
-            resultSet = preparedStatement.executeQuery();
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
             while (resultSet.next()) {
                 Report report = new Report();
-                fillReport(report);
+                fillReport(report, resultSet);
                 reports.add(report);
             }
         } catch (SQLException sqlException) {
@@ -53,14 +43,14 @@ public class ReportDAO implements IReportDAO {
     public Report getReportByID(int reportID) {
         Report report = null;
         String query = "SELECT * FROM reporte WHERE idReporte = ?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, reportID);
-            resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                report = new Report();
-                fillReport(report);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    report = new Report();
+                    fillReport(report, resultSet);
+                }
             }
         } catch (SQLException sqlException) {
             Logger.getLogger(ReportDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
@@ -73,9 +63,8 @@ public class ReportDAO implements IReportDAO {
         result = false;
         String query = String.format("INSERT INTO reporte(numeroReporteProyecto,horasCubiertasProyecto,%s",
                 "periodoEscolar,expEducativaNRC) VALUES(?,?,?,?)");
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, report.getProjectReportNumber());
             preparedStatement.setInt(2, report.getProjectHoursCovered());
             preparedStatement.setString(3, report.getEducationalExperiencePeriod());
@@ -92,9 +81,8 @@ public class ReportDAO implements IReportDAO {
     public boolean deleteReport(Report report) {
         result = false;
         String query = "DELETE FROM reporte WHERE idReporte =?";
-        try {
-            connection = mySQLConnection.getConnection();
-            preparedStatement = connection.prepareStatement(query);
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, report.getReportID());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);
@@ -104,7 +92,7 @@ public class ReportDAO implements IReportDAO {
         return result;
     }
 
-    private void fillReport(Report report) throws SQLException{
+    private void fillReport(Report report, ResultSet resultSet) throws SQLException{
         report.setReportID(resultSet.getInt("idReporte"));
         report.setActivitiesAccomplished(new ActivityDAO().getAllActivitiesByReportID(report.getReportID()));
         report.setProjectReportNumber(resultSet.getInt("numeroReporteProyecto"));

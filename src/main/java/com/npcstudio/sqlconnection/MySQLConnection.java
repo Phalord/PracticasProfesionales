@@ -2,6 +2,7 @@ package com.npcstudio.sqlconnection;
 
 
 import com.standardeleven.project.dataaccess.DatabaseProperties;
+import com.standardeleven.project.dataaccess.dao.ActivityDAO;
 
 import java.io.FileNotFoundException;
 import java.sql.Connection;
@@ -17,6 +18,14 @@ public class MySQLConnection {
     private String database;
     private String username;
     private String password;
+
+    public MySQLConnection() {
+        try {
+            readProperties();
+        } catch (FileNotFoundException exception) {
+            Logger.getLogger(MySQLConnection.class.getName()).log(Level.SEVERE, exception.getMessage(), exception);
+        }
+    }
 
     public void setDatabase(String database) {
         this.database = database;
@@ -47,7 +56,7 @@ public class MySQLConnection {
         databaseProperties.saveProperties();
     }
 
-    public void connect() throws SQLException {
+    private void connect() throws SQLException {
         String driver = "jdbc:mysql://";
         connection = DriverManager.getConnection(String.format("%s%s", driver, database), username, password);
     }

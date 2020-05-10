@@ -10,10 +10,10 @@ public class TestUserDAO {
     public static void main(String[] args) {
         testAddUser("s17015232", "ConT123RaSeñ123a!", "practicante");
         testGetUser("c15086425");
-        testDeleteUser("s17015232");
         testAddUser("c15086425", "Co23eñ12n!RaT13aS", "coordinador");
         testGetUser("s17015232");
-        testDeleteUser("s18012132");
+        testDeleteUser("s17015232");
+        testDeleteUser("c15086425");
     }
 
     private static void testGetUser(String enrollment) {

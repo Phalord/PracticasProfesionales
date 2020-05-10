@@ -15,9 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestCoordinatorDAO {
     private final static ICoordinatorDAO iCoordinatorDAO = new CoordinatorDAO();
 
-    public static void main(String[] args) {
-    }
-
     @Test
     public void testGetAllCoordinators() {
         printTestTitle("Get All Coordinators");

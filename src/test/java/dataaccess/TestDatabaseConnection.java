@@ -12,9 +12,6 @@ import static org.junit.Assert.fail;
 public class TestDatabaseConnection {
     MySQLConnection mySQLConnection = new MySQLConnection();
 
-    public static void main(String[] args){
-    }
-
     @Test
     public void testConnection() {
         try (Connection connection = mySQLConnection.getConnection()) {

@@ -18,9 +18,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 public class TestPractitionerDAO {
     private final static IPractitionerDAO iPractitionerDAO = new PractitionerDAO();
 
-    public static void main(String[] args) {
-    }
-
     @Test
     public void testGetAllPractitioners() {
         printTestTitle("Get All Practitioners");

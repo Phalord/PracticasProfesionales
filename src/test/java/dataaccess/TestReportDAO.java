@@ -17,9 +17,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 public class TestReportDAO {
     private static final IReportDAO iReportDAO = new ReportDAO();
 
-    public static void main(String[] args) {
-    }
-
     @Test
     public void testGetAllReports() {
         printTestTitle("Get All Reports");

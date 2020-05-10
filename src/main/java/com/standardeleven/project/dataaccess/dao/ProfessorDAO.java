@@ -4,7 +4,6 @@ import com.npcstudio.sqlconnection.MySQLConnection;
 import com.standardeleven.project.dataaccess.idao.IProfessorDAO;
 import com.standardeleven.project.logical.Professor;
 
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;

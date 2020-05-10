@@ -5,7 +5,6 @@ import com.standardeleven.project.dataaccess.idao.IUserDAO;
 import com.standardeleven.project.logical.User;
 import org.mindrot.jbcrypt.BCrypt;
 
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

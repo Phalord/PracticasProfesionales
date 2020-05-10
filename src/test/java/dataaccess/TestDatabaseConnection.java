@@ -10,7 +10,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 
 public class TestDatabaseConnection {
-    MySQLConnection mySQLConnection = new MySQLConnection();
+    private final MySQLConnection mySQLConnection = new MySQLConnection();
 
     @Test
     public void testConnection() {

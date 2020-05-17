@@ -15,7 +15,7 @@ import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.IOException;
 
-public class Controller_LogIn {
+public class ControllerLogIn {
     private final Stage window = new Stage();
     @FXML private TextField fieldUsername;
     @FXML private PasswordField fieldPassword;

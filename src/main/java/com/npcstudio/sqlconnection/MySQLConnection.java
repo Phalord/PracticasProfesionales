@@ -2,7 +2,6 @@ package com.npcstudio.sqlconnection;
 
 
 import com.standardeleven.project.dataaccess.DatabaseProperties;
-import com.standardeleven.project.dataaccess.dao.ActivityDAO;
 
 import java.io.FileNotFoundException;
 import java.sql.Connection;

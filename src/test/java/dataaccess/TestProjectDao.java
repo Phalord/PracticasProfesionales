@@ -34,7 +34,8 @@ public class TestProjectDao {
         print("");
     }
 
-    private static void testAssignPractitioner() {
+    @Test
+    public void testAssignPractitioner() {
         printTestTitle("Assign Practitioner");
         Practitioner practitioner;
         IPractitionerDAO iPractitionerDAO = new PractitionerDAO();

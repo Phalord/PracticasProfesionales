@@ -7,44 +7,36 @@ import com.standardeleven.project.dataaccess.idao.IActivityDAO;
 import com.standardeleven.project.dataaccess.idao.IPractitionerDAO;
 import com.standardeleven.project.dataaccess.idao.IProjectDAO;
 import com.standardeleven.project.logical.Activity;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class TestActivityDAO {
     private final static IActivityDAO iActivityDAO = new ActivityDAO();
 
-    public static void main(String[] args) {
-        testGetAllActivities();
-        testGetActivityByID();
-        testAddActivity();
-        testDeleteActivity();
-    }
-
-    private static void testGetAllActivities() {
+    @Test
+    public void testGetAllActivities() {
         printTestTitle("Get All Activities");
         List<Activity> activities = iActivityDAO.getAllActivities();
-        if (activities != null) {
-            for (Activity activity: activities) {
-                print(activity.toString());
-            }
-        } else {
-            print("There are no activities");
-        }
+        assertFalse(activities.isEmpty());
         print("");
     }
 
-    private static void testGetActivityByID() {
+    @Test
+    public void testGetActivityByID() {
         printTestTitle("Get Activity By ID");
         Activity activity = iActivityDAO.getActivityByID(8);
-        if (activity != null) {
-            print(activity.toString());
-        } else {
-            print("Activity not found");
-        }
+        assertNotNull(activity);
         print("");
     }
 
-    private static void testAddActivity() {
+    @Test
+    public void testAddActivity() {
         printTestTitle("Add Activity");
         Activity activity = new Activity();
         activity.setActivityTitle("Test Activity Three");
@@ -53,28 +45,22 @@ public class TestActivityDAO {
         activity.setActivityDescription("This is supposed to be a medium/long Activity description");
         activity.setActivityStatus(false);
         if (verifyProjectAndPractitioner(activity.getProjectID(), activity.getStudentEnrollment())) {
-            if(iActivityDAO.addActivity(activity)) {
-                print(String.format("Activity %s added successfully", activity.getActivityTitle()));
-            } else {
-                print(String.format("Unable to add Activity %s", activity.getActivityTitle()));
-            }
+            assertTrue(iActivityDAO.addActivity(activity));
         } else {
             print("Please use a valid Project or Practitioner");
         }
         print("");
     }
 
-    private static void testDeleteActivity() {
+    @Test
+    public void testDeleteActivity() {
         printTestTitle("Delete Activity");
         Activity activity = iActivityDAO.getActivityByID(5);
         if (activity != null) {
-            if (iActivityDAO.deleteActivity(activity)) {
-                print(String.format("Activity %s deleted successfully", activity.getActivityTitle()));
-            } else {
-                print(String.format("Unable to delete Activity %s", activity.getActivityTitle()));
-            }
+            assertTrue(iActivityDAO.deleteActivity(activity));
         } else {
             print("The activity doesn't exist");
+            fail();
         }
         print("");
     }

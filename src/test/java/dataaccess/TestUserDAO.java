@@ -12,9 +12,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 public class TestUserDAO {
     private final static IUserDAO iUserDAO = new UserDAO();
 
-    public static void main(String[] args) {
-    }
-
     @Test
     public void testGetUser() {
         printTestTitle("Get User");

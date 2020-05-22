@@ -12,7 +12,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="registerButton" layoutX="164.0" layoutY="127.0" mnemonicParsing="false" onAction="#addPractitioner" prefHeight="61.0" prefWidth="274.0" text="Registrar Practicante" />
+      <Button fx:id="registerPractitionerButton" layoutX="164.0" layoutY="127.0" mnemonicParsing="false" onAction="#addPractitionerClick" prefHeight="61.0" prefWidth="274.0" text="Registrar Practicante" />
       <Button layoutX="163.0" layoutY="208.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="274.0" text="Asignar Proyecto" />
       <Button layoutX="163.0" layoutY="287.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="274.0" text="Lista de Practicantes" />
       <Button layoutX="163.0" layoutY="364.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="274.0" text="Eliminar Practicante" />

@@ -16,25 +16,26 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class Controller_PractitionerSection implements Initializable {
-    @FXML private Button registerButton;
+    @FXML private Button registerPractitionerButton;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {}     
 
     @FXML
-    private void addPractitioner(ActionEvent event) { 
+    private void addPractitionerClick(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/View_AddPractitioner.fxml"));
             Parent root = loader.load();
-            Controller_AddPractitioner addPractitionerController = loader.getController();
+            Controller_AddPractitioner addPractitionerController;
+            addPractitionerController = loader.getController();
             Scene addPractitionerScene = new Scene(root);
             Stage addPractitionerStage = new Stage();
             addPractitionerStage.initModality(Modality.APPLICATION_MODAL);
             addPractitionerStage.setScene(addPractitionerScene);
-            addPractitionerStage.show();
+            addPractitionerStage.showAndWait();
         } catch (IOException ioException) {
             Logger.getLogger(Controller_PractitionerSection.class.getName()).log(Level.SEVERE, 
                     ioException.getMessage(), ioException);
-        }
+        }  
     }
 }

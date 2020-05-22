@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller=".Controller_AddPractitioner">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.standardeleven.project.gui.controller.Controller_AddPractitioner">
    <children>
       <Label layoutX="15.0" layoutY="14.0" text="Registrar practicante">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="51.0" layoutY="96.0" />
+      <TextField fx:id="studentNameTextField" layoutX="51.0" layoutY="96.0" />
       <Label layoutX="51.0" layoutY="69.0" prefHeight="18.0" prefWidth="75.0" text="Nombre">
          <font>
             <Font size="14.0" />
@@ -40,11 +39,11 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="51.0" layoutY="147.0" />
-      <TextField layoutX="50.0" layoutY="208.0" />
-      <TextField layoutX="50.0" layoutY="272.0" />
-      <TextField layoutX="50.0" layoutY="331.0" />
+      <TextField fx:id="studentFatherSurnameTextField" layoutX="51.0" layoutY="147.0" />
+      <TextField fx:id="studentMotherSurnameTextField" layoutX="50.0" layoutY="208.0" />
+      <TextField fx:id="studentShiftTextField" layoutX="50.0" layoutY="272.0" />
+      <TextField fx:id="personalProfessorTextField" layoutX="50.0" layoutY="331.0" />
       <Button layoutX="441.0" layoutY="331.0" mnemonicParsing="false" text="Cancelar" />
-      <Button layoutX="522.0" layoutY="331.0" mnemonicParsing="false" text="Registrar" />
+      <Button fx:id="registerButton" layoutX="522.0" layoutY="331.0" mnemonicParsing="false" onAction="#registerPractitioner" text="Registrar" />
    </children>
 </AnchorPane>

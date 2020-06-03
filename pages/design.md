@@ -80,17 +80,17 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 #### Actividad: Administrador
 #### Actividad: Coordinador
 #### Actividad: Profesor
-  1. ![Solicitar Proyecto][ASOPR]
-  2. ![Añadir Horario][AANHO]
-  3. ![Generar Reporte Parcial][AGRPA]
-  4. ![Añadir Reporte Parcial][AARPA]
-  5. ![Generar Reporte Mensual][AGRME]
-  6. ![Añadir Reporte Mensual][AARME]
-  7. ![Generar Autoevaluación][AGAUT]
-  8. ![Añadir Autoevaluación][AAAUT]
-  9. ![Añadir Actividad][AAACT]
-  10. ![Añadir Bitácora Personal][AAPSP]
-  11. ![Añadir Plan de Actividades][AAPAC]
+  1. [Solicitar Proyecto][ASOPR]
+  2. [Añadir Horario][AANHO]
+  3. [Generar Reporte Parcial][AGRPA]
+  4. [Añadir Reporte Parcial][AARPA]
+  5. [Generar Reporte Mensual][AGRME]
+  6. [Añadir Reporte Mensual][AARME]
+  7. [Generar Autoevaluación][AGAUT]
+  8. [Añadir Autoevaluación][AAAUT]
+  9. [Añadir Actividad][AAACT]
+  10. [Añadir Bitácora Personal][AAPSP]
+  11. [Añadir Plan de Actividades][AAPAC]
 
 [ASOPR]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act1.png?raw=true "Solicitar Proyecto"
 [AANHO]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act2.png?raw=true "Añadir Horario"

@@ -50,29 +50,29 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 #### Descripción: Coordinador
 #### Descripción: Profesor
 #### Descripción: Practicante
-  1. ![Solicitar Proyecto][SOPR]
-  2. ![Añadir Horario][ANHO]
-  3. ![Generar Reporte Parcial][GRPA]
-  4. ![Añadir Reporte Parcial][ARPA]
-  5. ![Generar Reporte Mensual][GRME]
-  6. ![Añadir Reporte Mensual][ARME]
-  7. ![Generar Autoevaluación][GAUT]
-  8. ![Añadir Autoevaluación][AAUT]
-  9. ![Añadir Actividad][AACT]
-  10. ![Añadir Bitácora Personal][APSP]
-  11. ![Añadir Plan de Actividades][APAC]
+  1. [Solicitar Proyecto][SOPR]
+  2. [Añadir Horario][ANHO]
+  3. [Generar Reporte Parcial][GRPA]
+  4. [Añadir Reporte Parcial][ARPA]
+  5. [Generar Reporte Mensual][GRME]
+  6. [Añadir Reporte Mensual][ARME]
+  7. [Generar Autoevaluación][GAUT]
+  8. [Añadir Autoevaluación][AAUT]
+  9. [Añadir Actividad][AACT]
+  10. [Añadir Bitácora Personal][APSP]
+  11. [Añadir Plan de Actividades][APAC]
 
-[SOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act1.png "Solicitar Proyecto"
-[ANHO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act2.png "Añadir Horario"
-[GRPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act3.png "Generar Reporte Parcial"
-[ARPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act4.png "Añadir Reporte Parcial"
-[GRME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act5.png "Generar Reporte Mensual"
-[ARME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act6.png "Añadir Reporte Mensual"
-[GAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act7.png "Generar Autoevaluación"
-[AAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act8.png "Añadir Autoevaluación"
-[AACT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act9.png "Añadir Actividad"
-[APSP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act10.png "Añadir Bitácora Personal" 
-[APAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/activities/practitioner/act11.png "Añadir Plan de Actividades"
+[SOPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-1/
+[ANHO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-2/
+[GRPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-3/
+[ARPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-4/
+[GRME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-5/
+[ARME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-6/
+[GAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-7/
+[AAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-8/
+[AACT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-9/
+[APSP]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-10/
+[APAC]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-11/
 
 #### Descripción: Usuario
 
@@ -80,29 +80,29 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 #### Actividad: Administrador
 #### Actividad: Coordinador
 #### Actividad: Profesor
-  1. [Solicitar Proyecto][ASOPR]
-  2. [Añadir Horario][AANHO]
-  3. [Generar Reporte Parcial][AGRPA]
-  4. [Añadir Reporte Parcial][AARPA]
-  5. [Generar Reporte Mensual][AGRME]
-  6. [Añadir Reporte Mensual][AARME]
-  7. [Generar Autoevaluación][AGAUT]
-  8. [Añadir Autoevaluación][AAAUT]
-  9. [Añadir Actividad][AAACT]
-  10. [Añadir Bitácora Personal][AAPSP]
-  11. [Añadir Plan de Actividades][AAPAC]
+  1. ![Solicitar Proyecto][ASOPR]
+  2. ![Añadir Horario][AANHO]
+  3. ![Generar Reporte Parcial][AGRPA]
+  4. ![Añadir Reporte Parcial][AARPA]
+  5. ![Generar Reporte Mensual][AGRME]
+  6. ![Añadir Reporte Mensual][AARME]
+  7. ![Generar Autoevaluación][AGAUT]
+  8. ![Añadir Autoevaluación][AAAUT]
+  9. ![Añadir Actividad][AAACT]
+  10. ![Añadir Bitácora Personal][AAPSP]
+  11. ![Añadir Plan de Actividades][AAPAC]
 
-[ASOPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-1/
-[AANHO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-2/
-[AGRPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-3/
-[AARPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-4/
-[AGRME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-5/
-[AARME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-6/
-[AGAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-7/
-[AAAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-8/
-[AAACT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-9/
-[AAPSP]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-10/
-[AAPAC]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-11/
+[ASOPR]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act1.png?raw=true "Solicitar Proyecto"
+[AANHO]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act2.png?raw=true "Añadir Horario"
+[AGRPA]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act3.png?raw=true "Generar Reporte Parcial"
+[AARPA]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act4.png?raw=true "Añadir Reporte Parcial"
+[AGRME]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act5.png?raw=true "Generar Reporte Mensual"
+[AARME]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act6.png?raw=true "Añadir Reporte Mensual"
+[AGAUT]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act7.png?raw=true "Generar Autoevaluación"
+[AAAUT]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act8.png?raw=true "Añadir Autoevaluación"
+[AAACT]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act9.png?raw=true "Añadir Actividad"
+[AAPSP]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act10.png?raw=true "Añadir Bitácora Personal" 
+[AAPAC]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act11.png?raw=true "Añadir Plan de Actividades"
 
 #### Actividad: Practicante
 #### Actividad: Usuario

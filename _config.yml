@@ -23,7 +23,7 @@ email: a.sandovalbr@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Proyecto final de las Experiencias Educativas: Principios de 
   Diseño de Software y Principios de Construcción de Software
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/PracticasProfesionales" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Mr_Tunas
 github_username:  Phalord

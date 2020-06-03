@@ -25,18 +25,18 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 
 ## Definición de Requerimientos
 ### Diagrama de paquetes de Casos de Uso
-![Paquetes de Casos de Uso][PCU]
+[Paquetes de Casos de Uso][PCU]
 
 ### Diagramas de Casos de Uso por paquetes
-![Paquete Administrador][CUA]
+[Paquete Administrador][CUA]
 
-![Paquete Coordinador][CUC]
+[Paquete Coordinador][CUC]
 
-![Paquete Profesor][CUP]
+[Paquete Profesor][CUP]
 
-![Paquete Practicante][CUS]
+[Paquete Practicante][CUS]
 
-![Paquete Usuario][CUU]
+[Paquete Usuario][CUU]
 
 [PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/usecasepackages.png
 [CUA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/administratorpackage.png

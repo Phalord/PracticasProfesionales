@@ -27,7 +27,20 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 ### Diagrama de paquetes de Casos de Uso
 ![Paquetes de Casos de Uso][PCU]
 
-[PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/usecasepackages.png
+[PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/packages/packages.PNG
+
+### Diagramas de Casos de Uso por paquetes
+  1. [Paquete Administrador][CUA]
+  2. [Paquete Coordinador][CUC]
+  3. [Paquete Profesor][CUP]
+  4. [Paquete Practicante][CUS]
+  5. [Paquete Usuario][CUU]
+
+[CUA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/packages/administratorpackage.png "Paquete Administrador"
+[CUC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/packages/coordinatorpackage.png "Paquete Coordinador"
+[CUP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/packages/professorpackage.PNG "Paquete Profesor"
+[CUS]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/packages/practitionerpackage.png "Paquete Practicante"
+[CUU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/packages/userpackage.png "Paquete Usuario"
 
 ### Prototipos de Interfaz
 #### Prototipo: Administrador
@@ -125,19 +138,6 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 [DLII]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_InvalidInformation.png "`Dialog_InvalidInformation` Prototype"
 [DLER]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Error.png "`Dialog_Error` Prototype"
 [VUDT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/View_UploadDocument.png "`View_UploadDocument` Prototype"
-
-### Diagramas de Casos de Uso por paquetes
-  1. [Paquete Administrador][CUA]
-  2. [Paquete Coordinador][CUC]
-  3. [Paquete Profesor][CUP]
-  4. [Paquete Practicante][CUS]
-  5. [Paquete Usuario][CUU]
-
-[CUA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/administratorpackage.png
-[CUC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/coordinatorpackage.png
-[CUP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/professorpackage.png
-[CUS]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/packages/practitionerpackage.png
-[CUU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/userpackage.png
 
 ### Descripción de Casos de Uso
 #### Descripción: Administrador

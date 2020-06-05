@@ -7,8 +7,13 @@ toc: true
 
 ## Estándar 11 - Markdown Edition
 
-## Autores
-  * Ruiz Cuervo Víctor Arturo
+## Datos escorlares
+**Docente:** Mtro. Pérez Arriaga Juan Carlos
+
+**Experiencia Educativa:** Principios de Construcción de Software
+
+**Dev Team:**
+  * Ruiz Cuervo Victor Arturo
   * Sandoval Bravo Alejandro
   * Tapia Cruz Abner Jeffrey
 

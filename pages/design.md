@@ -46,14 +46,26 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 [VPSN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/administrator/View_ProfessorSection.png "`View_ProfessorSection` Prototype"
 
 #### Prototipo: Coordinador
-  1. [View_PractitionerSection][VPSE]
-  2. [View_ProjectRequests][VPRE]
-  3. [View_AssignationConfirmation][VACO]
-  4. [Dialog_ProjectAlreadyAssigned][DLAA]
+  1. [View_CoordinatorMenu][VCMN]
+  2. [View_PractitionerSection][VPSE]
+  3. [View_ProjectRequests][VPRE]
+  4. [View_AssignationConfirmation][VACO]
+  5. [View_AddProject][VAPT]
+  6. [View_DeleteProject][VDPT]
+  7. [View_DeletePractitioner][VDPI]
+  8. [View_IndicatorsReport][VIRP]
+  9. [View_ChooseProject][VCPT]
+  10. [Dialog_ProjectAlreadyAssigned][DLAA]
 
+[VCMN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_CoordinatorMenu.png "`View_CoordinatorMenu` Prototype"
 [VPSE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_PractitionerSection.png "`View_PractitionerSection` Prototype"
 [VPRE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_ProjectAssignation.png "`View_ProjectAssignation` Prototype"
 [VACO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_AssignationConfirmation.png "`View_AssignationConfirmation` Prototype"
+[VAPT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_AddProject.png "`View_AddProject` Prototype"
+[VDPT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_DeleteProject.png "`View_DeleteProject` Prototype"
+[VDPI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_DeletePractitioner.png "`View_DeletePractitioner` Prototype"
+[VIRP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_IndicatorsReport.png "`View_IndicatorsReport` Prototype"
+[VCPT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_ChooseProject.png "`View_ChooseProject` Prototype"
 [DLAA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/Dialog_ProjectAlreadyAssigned.png "`Dialog_ProjectAlreadyAssigned` Prototype"
 
 #### Prototipo: Profesor

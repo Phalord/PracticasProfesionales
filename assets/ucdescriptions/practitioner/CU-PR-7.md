@@ -29,14 +29,14 @@ PRE-1. Debe haber al menos un **`PRACTITIONER`** en el sistema.
 PRE-2. El **`PRACTITIONER`** debió haber subido 2 **`REPORT`** parciales.   
 
 **Flujo Normal:**  
-1.	El *SPP* despliega la ventana [`View_SelfAppraisal`][VSAP] la cual muestra una etiqueta de instrucción junto un listado de afirmaciones con cuadros de texto al lado y al final 2 botones “Generar autoevaluación” y “Cancelar”; y solicita ingresar un puntaje entre 0 y 5.
-2.	El *Practicante* ingresa los valores solicitados para cada afirmación y selecciona la opción “Generar autoevaluación”. (Ver FA-1) 
-3.	El *SPP* despliega un [`Dialog_Confirmation`][DLCO] con las opciones “Confirmar” y “Cancelar”. 
-4.	El *Practicante* da clic en la opción “Confirmar” (Ver FA-2) 
-5.	El *SPP* genera un archivo PDF de la **`SELF APPRAISAL`**, se guarda tanto en el equipo del *Practicante* como en la base de datos y muestra un [`Dialog_Success`][DLSU] con el botón "Aceptar". (Ver EX-1)
-6.	El **Profesor** da clic en el botón "Aceptar".
-7.	El *SPP* cierra el [`Dialog_Success`][DLSU].
-8.	Fin del caso de uso.
+ 1.	El *SPP* despliega la ventana [`View_SelfAppraisal`][VSAP] la cual muestra una etiqueta de instrucción junto un listado de afirmaciones con cuadros de texto al lado y al final 2 botones “Generar autoevaluación” y “Cancelar”; y solicita ingresar un puntaje entre 0 y 5.
+ 2.	El *Practicante* ingresa los valores solicitados para cada afirmación y selecciona la opción “Generar autoevaluación”. (Ver FA-1) 
+ 3.	El *SPP* despliega un [`Dialog_Confirmation`][DLCO] con las opciones “Confirmar” y “Cancelar”. 
+ 4.	El *Practicante* da clic en la opción “Confirmar” (Ver FA-2) 
+ 5.	El *SPP* genera un archivo PDF de la **`SELF APPRAISAL`**, se guarda tanto en el equipo del *Practicante* como en la base de datos y muestra un [`Dialog_Success`][DLSU] con el botón "Aceptar". (Ver EX-1)
+ 6.	El **Profesor** da clic en el botón "Aceptar".
+ 7.	El *SPP* cierra el [`Dialog_Success`][DLSU].
+ 8.	Fin del caso de uso.
 
 **Flujos Alternos:**  
   1. *Cancelar acción*

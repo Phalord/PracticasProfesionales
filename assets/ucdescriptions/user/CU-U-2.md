@@ -28,11 +28,11 @@ El *Usuario* selecciona la opción “Nuevo Mensaje” en la ventana [`View_Mess
 PRE-1. Debe existir al menos dos `USER` en el sistema.  
 
 **Flujo Normal:**  
-1. El *SPP* despliega la ventana [`View_NewMessage`][VNME] la cual contiene 3 etiquetas con sus respectivas cajas de texto para ingresar información, estas son: “Destinatario”, “Asunto”, “Contenido”. Al final de la interfaz se encuentran los botones “Enviar” y “Cancelar”. 
-2. El *Usuario* ingresa la información correspondiente y selecciona la opción “Enviar”. (Ver FA-1).
-3. El *SPP* valida los campos de texto, envía el mensaje y despliega un [`Dialog_Success`][DLSU] con el botón "Aceptar". (Ver FA-2, FA-3 y EX-1)
-4. El *Usuario* da clic en el botón "Aceptar".
-5. El *SPP* cierra el [`Dialog_Success`][DLSU] y termina el Caso de Uso.
+ 1. El *SPP* despliega la ventana [`View_NewMessage`][VNME] la cual contiene 3 etiquetas con sus respectivas cajas de texto para ingresar información, estas son: “Destinatario”, “Asunto”, “Contenido”. Al final de la interfaz se encuentran los botones “Enviar” y “Cancelar”. 
+ 2. El *Usuario* ingresa la información correspondiente y selecciona la opción “Enviar”. (Ver FA-1).
+ 3. El *SPP* valida los campos de texto, envía el mensaje y despliega un [`Dialog_Success`][DLSU] con el botón "Aceptar". (Ver FA-2, FA-3 y EX-1)
+ 4. El *Usuario* da clic en el botón "Aceptar".
+ 5. El *SPP* cierra el [`Dialog_Success`][DLSU] y termina el Caso de Uso.
 
 **Flujos Alternos:**  
   1. *Cancelar acción*

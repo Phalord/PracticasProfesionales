@@ -15,7 +15,7 @@ hide_hero: true
 
 **Fecha de actualización:** 25 de mayo de 2020
 
-**Descripción** 
+**Descripción:** 
 El *Administrador* elimina un **`PROFESSOR`** para restringir el acceso a las diferentes funcionalidades y así poder registrar otro. Todo esto con el fin de que haya un control hacia estos **`USER`** y que no más de dos tengan acceso.
 
 **Actor:**  
@@ -24,7 +24,7 @@ El *Administrador* elimina un **`PROFESSOR`** para restringir el acceso a las di
 **Disparador:**  
 El *Administrador* da clic en el botón “Eliminar profesor” en la vista [`View_ProfessorSection`][VPSN].
 
-**Precondiciones**  
+**Precondiciones:**  
 PRE-1. Debe existir al menos un **`PROFESSOR`** registrado y en estado “Activo”.
 
 **Flujo Normal:**  

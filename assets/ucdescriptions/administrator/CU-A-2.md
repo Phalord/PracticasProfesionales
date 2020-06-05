@@ -56,7 +56,7 @@ Pre-1. Si ya existen **`PROFESSOR`** registrados, a lo más uno debe de estar en
 
 **Excepciones:**  
 1. El *SPP* no pudo conectarse a la base de datos y no guardó la información
-	1.	El *SPP* muestra el diálogo [`Dialog_Confirmation`][DLCO] con el mensaje “No se pudo registrar el Profesor. Intente de nuevo.” y los botones “Cancelar registro” e “Intentar de nuevo”. 
+	1.	El *SPP* muestra el diálogo [`Dialog_ConnectionError`][DLCE] con el mensaje “No se pudo registrar el Profesor. Intente de nuevo.” y los botones “Cancelar registro” e “Intentar de nuevo”. 
 	2.	Si el *Administrador* da clic en el botón “Cancelar registro” termina el caso de uso, si selecciona la opción “Intentar de nuevo” el *SPP* regresa al paso 7 del flujo normal
 
 **Postcondiciones:**  
@@ -72,4 +72,5 @@ No extiende.
 [VAPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/administrator/View_AddProfessor.png "`View_AddProfessor` Prototype"
 [DLII]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_InvalidInformation.png "`Dialog_InvalidInformation` Prototype"
 [DLCO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Confirmation.png "`Dialog_Confirmation` Prototype"
+[DLCE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_ConnectionError.png "`Dialog_ConnectionError` Prototype"
 [DLSU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Success.png "`Dialog_Success` Prototype"

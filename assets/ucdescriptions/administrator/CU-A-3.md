@@ -15,7 +15,7 @@ hide_hero: true
 
 **Fecha de actualización:** 25 de mayo de 2020
 
-**Descripción**  
+**Descripción:**  
 El *Administrador* elimina un **`COORDINATOR`** para restringir el acceso a las diferentes funcionalidades y así poder registrar otro. Todo esto con el fin de que haya un control hacia estos **`USER`** y que sólo uno sea quien tenga acceso.
 
 **Actor:** *Administrador*
@@ -23,7 +23,7 @@ El *Administrador* elimina un **`COORDINATOR`** para restringir el acceso a las 
 **Disparador:**  
 El *Administrador* da clic en el botón “Eliminar coordinador” en la vista [`View_CoordinatorSection`][VCSE].
 
-**Precondiciones**  
+**Precondiciones:**  
 Pre-1. Debe existir al menos un **`COORDINATOR`** registrado y en estado “Activo”.
 
 **Flujo Normal:**  
@@ -47,10 +47,10 @@ Pre-1. Debe existir al menos un **`COORDINATOR`** registrado y en estado “Acti
 
 **Excepciones:**  
 1. *EL SPP no puedo conectarse a la base de datos y no obtuvo los **`COORDINATOR`** para mostrarlos en forma de lista*
-	1. El SPP muestra el diálogo [`Dialog_Confirmation`][DLCO] con el mensaje “No se pudieron obtener los Coordinadores activos. Intente de nuevo.” Y los botones “Cancelar” e “Intentar de nuevo”.
+	1. El SPP muestra el diálogo [`Dialog_ConnectionError`][DLCE] con el mensaje “No se pudieron obtener los Coordinadores activos. Intente de nuevo.” Y los botones “Cancelar” e “Intentar de nuevo”.
 	2. Si el *Administrador* selecciona la opción “Cancelar” termina el caso de uso, si selecciona la opción “Intentar de nuevo” el SPP regresa al paso 1 del flujo normal.
 2. *El SPP no pudo conectarse a la base de datos y no guardó la información*
-	1. El SPP muestra el diálogo [`Dialog_Confirmation`][DLCO] con el mensaje “No se pudo eliminar el Coordinador. Intente de nuevo.” y los botones y los botones “Cancelar” e “Intentar de nuevo”.
+	1. El SPP muestra el diálogo [`Dialog_ConnectionError`][DLCE] con el mensaje “No se pudo eliminar el Coordinador. Intente de nuevo.” y los botones y los botones “Cancelar” e “Intentar de nuevo”.
 	2. Si el *Administrador* da clic en el botón “Cancelar” termina el caso de uso, si selecciona la opción “Intentar de nuevo” el SPP regresa al paso 5 del flujo normal.
 
 **Postcondiciones:**  
@@ -66,3 +66,5 @@ No extiende.
 [VDCR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/administrator/View_DeleteCoordinator.png "`View_DeleteCoordinator` Prototype"
 [DLCO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Confirmation.png "`Dialog_Confirmation` Prototype"
 [DLSU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Success.png "`Dialog_Success` Prototype"
+[DLII]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_InvalidInformation.png "`Dialog_InvalidInformation` Prototype"
+[DLCE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_ConnectionError.png "`Dialog_ConnectionError` Prototype"

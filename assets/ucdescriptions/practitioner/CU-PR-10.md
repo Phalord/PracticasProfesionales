@@ -22,7 +22,7 @@ El *Practicante* deberá poder subir una versión PDF de su `PERSONAL LOG`.
 *Practicante*
 
 **Disparador:**  
-El *Practicante* da clic al botón "Añadir Horario" en la interfaz `View_UploadDocumentation`.
+El *Practicante* da clic al botón "Añadir Bitácora PSP" en la interfaz `View_UploadDocumentation`.
 
 **Precondiciones**  
 Pre-1. El *Practitioner* debe haber subido su `SELF APPRAISAL`.

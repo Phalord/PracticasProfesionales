@@ -22,7 +22,7 @@ El *Practicante* deberá poder subir el PDF de su `ACTIVITY` para que su `PROFES
 *Practicante*
 
 **Disparador:**  
-El *Practicante* da clic al botón "Añadir Horario" en la interfaz `View_UploadDocumentation`.
+El *Practicante* da clic al botón "Añadior Actividad" en la interfaz `View_UploadDocumentation`.
 
 **Precondiciones**  
 Pre-1. El *Practicante* debe tener, al menos, una `ACTIVITY` asignada sin entregar.

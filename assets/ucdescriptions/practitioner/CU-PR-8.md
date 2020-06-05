@@ -22,7 +22,7 @@ El *Practicante* deberá poder subir una versión PDF de su `SELF APPRAISAL`.
 *Practicante*
 
 **Disparador:**  
-El *Practicante* da clic al botón "Añadir Horario" en la interfaz `View_UploadDocumentation`.
+El *Practicante* da clic al botón "Añadir Autoevaluación" en la interfaz `View_UploadDocumentation`.
 
 **Precondiciones**  
 Pre-1. El *Practicante* debe tener las 200hrs de servicio en sus `PARTIAL REPORT` y `MONTHLY REPORT`.

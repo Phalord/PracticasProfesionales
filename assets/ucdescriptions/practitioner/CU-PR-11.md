@@ -22,7 +22,7 @@ El *Practicante* deberá poder subir una versión PDF de su `ACTIVITIES SCHEDULE
 *Practicante*
 
 **Disparador:**  
-El *Practicante* da clic al botón "Añadir Horario" en la interfaz `View_UploadDocumentation`.
+El *Practicante* da clic al botón "Añadir Plan de Act." en la interfaz `View_UploadDocumentation`.
 
 **Precondiciones** 
 Pre-1. El *Practicante* debe tener asignado un `PROJECT`.

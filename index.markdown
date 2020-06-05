@@ -11,7 +11,7 @@ subtitle: "README"
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/78086764c41a4c2ab0f0330aa398cb50)][codacyBadge]
 
-**El Sistema para Practicas Profesionales** está enfocado en la agilización
+El **Sistema para Practicas Profesionales** está enfocado en la agilización
 de todo lo que conlleva la realización de las *Prácticas Profesionales*;
 desde la *Solicitud de Proyectos* por parte de los *Practicantes*, hasta la
 evaluación del docente hacia el *Practicante* y su desempeño en la *Institución*

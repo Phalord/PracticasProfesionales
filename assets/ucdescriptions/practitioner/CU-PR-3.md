@@ -45,7 +45,7 @@ PRE-1. Se encuentra un `PROJECT` vinculado a algún `PRACTITIONER`.
   3. *Añadir Actividad*
      1. El *Practicante* da clic en botón "Añadir Actividad".
      2. El *SPP* repetirá los campos de la información de la `ACTIVITY` para ingresar una nueva.
-  4. *Campos de información inválidos*
+  4. *Información Inválida*
      1. El *SPP* muestra un [`Dialog_InvalidInformation`][DLII] y regresa al FN-2.
 
 **Excepciones:**

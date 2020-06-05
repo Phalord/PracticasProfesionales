@@ -57,6 +57,20 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 [DLAA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/Dialog_ProjectAlreadyAssigned.png "`Dialog_ProjectAlreadyAssigned` Prototype"
 
 #### Prototipo: Profesor
+  1. [View_ActivitySection][VASN]
+  2. [View_AddActivity][VAAY]
+  3. [View_EvaluateEvidenceSection][VEES]
+  4. [View_EvaluateMonthlyReport][VEMR]
+  5. [View_EvaluatePartialReport][VEPR]
+  6. [View_RateReport][VRRT]
+
+[VASN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/professor/View_ActivitySection.png "`View_ActivitySection` Prototype"
+[VAAY]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/professor/View_AddActivity.png "`View_AddActivity` Prototype"
+[VEES]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/professor/View_EvaluateEvidenceSection.png "`View_EvaluateEvidenceSection` Prototype"
+[VEMR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/professor/View_EvaluateMonthlyReport.png "`View_EvaluateMonthlyReport` Prototype"
+[VEPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/professor/View_EvaluatePartialReport.png "`View_EvaluatePartialReport` Prototype"
+[VRRT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/professor/View_RateReport.png "`View_RateReport` Prototype"
+
 #### Prototipo: Practicante
   1. [View_PractitionerHome][VPHO]
   2. [View_GenerateDocumentation][VGDN]
@@ -77,6 +91,12 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 [VUDC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_UploadDocumentation.png "`View_UploadDocumentation` Prototype"
 
 #### Prototipo: Usuario
+  1. [View_MessageSection][VMSN]
+  2. [View_NewMessage][VNMS]
+
+[VMSN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/user/View_MessageSection.png "`View_MessageSection` Prototype"
+[VNMS]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_NewMessage.png "`View_NewMessage` Prototype"
+
 #### Prototipos reusables
   1. [Dialog_Confirmation][DLCO]
   2. [Dialog_ConnectionError][DLCE]

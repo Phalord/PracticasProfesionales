@@ -22,7 +22,7 @@ El *Practicante* deberá poder seleccionar hasta tres `PROJECT` como opciones pa
 *Practicante*
 
 **Disparador**  
-El *Practicante* da clic al botón "Solicitar Proyecto" en la vista `View_ProjectSection`
+El *Practicante* da clic al botón "Solicitar Proyecto" en la vista `View_ProjectSection`.
 
 **Precondiciones**  
 Pre-1. Debe haber, por lo menos, 1 `PROJECT` sin asignar en la Base de Datos.

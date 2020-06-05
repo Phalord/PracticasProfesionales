@@ -27,6 +27,22 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 ### Diagrama de paquetes de Casos de Uso
 [Paquetes de Casos de Uso][PCU]
 
+### Prototipos de Interfaz
+#### Prototipo: Administrador
+#### Prototipo: Coordinador
+#### Prototipo: Profesor
+#### Prototipo: Practicante
+  1. [View_PractitionerHome][VPHO]
+  2. [View_GenerateDocumentation][VGDN]
+  3. [View_GeneratePartialReport][VGPR]
+  4. [View_GenerateMonthlyReport][VGMR]
+  5. [View_ProjectInformation][VPIN]
+  6. [View_ProjectRequest][VPRQ]
+  7. [View_ProjectSection][VPSC]
+  8. [View_UploadDocumentation][VUDC]
+  
+#### Prototipo: Usuario
+
 ### Diagramas de Casos de Uso por paquetes
 [Paquete Administrador][CUA]
 

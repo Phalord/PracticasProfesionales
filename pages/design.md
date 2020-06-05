@@ -115,15 +115,11 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 [VUDT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/View_UploadDocument.png "`View_UploadDocument` Prototype"
 
 ### Diagramas de Casos de Uso por paquetes
-[Paquete Administrador][CUA]
-
-[Paquete Coordinador][CUC]
-
-[Paquete Profesor][CUP]
-
-[Paquete Practicante][CUS]
-
-[Paquete Usuario][CUU]
+  1. [Paquete Administrador][CUA]
+  2. [Paquete Coordinador][CUC]
+  3. [Paquete Profesor][CUP]
+  4. [Paquete Practicante][CUS]
+  5. [Paquete Usuario][CUU]
 
 [CUA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/administratorpackage.png
 [CUC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/coordinatorpackage.png
@@ -233,6 +229,15 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 [AACPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act7.jpg "Actualizar Proyecto"
 
 #### Actividad: Profesor
+  1. [Generar Actividad][AGEAC]
+  2. [Añadir Formato de Presentación][AAFPR]
+  3. [Evaluar Reporte Parcial][AERPA]
+  4. [Evaluar Reporte Mensual][AERME]
+
+[AGEAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/professor/act1.jpg "Generar Actividad"
+[AAFPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/professor/act2.jpg "Añadir Formato de Presentación"
+[AERPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/professor/act3.jpg "Evaluar Reporte Parcial"
+[AERME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/professor/act4.jpg "Evaluar Reporte Mensual"
 
 #### Actividad: Practicante
   1. [Solicitar Proyecto][ASOPR]
@@ -261,13 +266,16 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 
 #### Actividad: Usuario
   1. [Consultar Buzón][ACOBU]
-  2. [Enviar Mensaje][ENME]
+  2. [Enviar Mensaje][AENME]
 
 [ACOBU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act1.png "Consultar Buzón"
 [AENME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act1.png "Enviar Mensaje"
 
 ## Diseño
 ### Diagrama de Clases del Modelo de Dominio
+![Modelo de Dominio][PCU]
+
+[PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/domain/domain_model.png
 
 ## Conclusiones
 En resumen, lo presentado en esta *Especificación de Diseño* fue una breve descripción de la situación actual sobre el proceso de prácticas profesionales, los [diagramas de casos de uso](#diagramas-de-casos-de-uso-por-paquetes) y algunas [descripciones](#descripción-de-casos-de-uso) de estos, ya que tomamos algunos que consideramos relevantes para esta versión, además de sus respectivos [diagramas de actividad](#diagramas-de-actividades-por-caso-de-uso). Todo esto fue mostrado con la finalidad de dar a entender o, por lo menos, generar una pequeña idea de como será el funcionamiento del sistema y explicar el por qué sería conveniente su realización, pues, como se mencionó anteriormente en la [introducción](#introducción), el sistema permitirá un desarrollo eficaz y rápido del proceso al automatizarlo mediante el uso de Software.

@@ -27,6 +27,8 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 ### Diagrama de paquetes de Casos de Uso
 [Paquetes de Casos de Uso][PCU]
 
+[PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/usecasepackages.png
+
 ### Prototipos de Interfaz
 #### Prototipo: Administrador
 #### Prototipo: Coordinador
@@ -40,8 +42,18 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
   6. [View_ProjectRequest][VPRQ]
   7. [View_ProjectSection][VPSC]
   8. [View_UploadDocumentation][VUDC]
-  
+
+[VPHO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_PractitionerHome.png "`View_PractitionerHome` Prototype"
+[VGDN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_GenerateDocumentation.png "`View_GenerateDocumentation` Prototype"
+[VGPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_GeneratePartialReport.png "`View_GeneratePartialReport` Prototype"
+[VGMR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_GenerateMonthlyReport.png "`View_GenerateMonthlyReport` Prototype"
+[VPIN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_ProjectInformation.png "`View_ProjectInformation` Prototype"
+[VPRQ]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_ProjectRequest.png "`View_ProjectRequest` Prototype"
+[VPSC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_ProjectSection.png "`View_ProjectSection` Prototype"
+[VUDC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_UploadDocumentation.png "`View_UploadDocumentation` Prototype"
+
 #### Prototipo: Usuario
+#### Prototipos reusables
 
 ### Diagramas de Casos de Uso por paquetes
 [Paquete Administrador][CUA]
@@ -54,7 +66,6 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 
 [Paquete Usuario][CUU]
 
-[PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/usecasepackages.png
 [CUA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/administratorpackage.png
 [CUC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/coordinatorpackage.png
 [CUP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/professorpackage.png

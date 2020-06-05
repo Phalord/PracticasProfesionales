@@ -16,7 +16,7 @@ hide_hero: true
 **Fecha de actualización:** 05 de Junio de 2020
 
 **Descripción:**  
-El *Coordinador* registra un nuevo `PROJECT` en el sistema para que los `PRACTITIONER` puedan visualizar su información, evitando pérdidas de tiempo en comunicación presencial y que siempre esté disponible dicha información.   
+El *Coordinador* registra un nuevo **`PROJECT`** en el sistema para que los **`PRACTITIONER`** puedan visualizar su información, evitando pérdidas de tiempo en comunicación presencial y que siempre esté disponible dicha información.   
 
 **Actor:**  
 *Coordinador*  
@@ -25,13 +25,13 @@ El *Coordinador* registra un nuevo `PROJECT` en el sistema para que los `PRACTIT
 El *Coordinador* da clic en el botón “Registrar proyecto” en la ventana `View_ProjectSection`   
 
 **Precondiciones:**  
-PRE-1. Debe haber al menos un `COORDINATOR` en el sistema.  
-PRE-2. Debe de haber al menos un `PROJECT RESPONSIBLE` que siga laborando en la `RELATED COMPANY`
+PRE-1. Debe haber al menos un **`COORDINATOR`** en el sistema.  
+PRE-2. Debe de haber al menos un **`PROJECT RESPONSIBLE`** que siga laborando en la **`RELATED COMPANY`**
 
 **Flujo Normal:**  
   1. El *SPP* despliega la ventana `View_AddProject` la cual muestra la primera sección llamada “Datos de empresa” la cual contiene las etiquetas: Nombre de empresa, Dirección, Ciudad, Estado y Teléfono. Después, está la sección “Datos del responsable del proyecto” y contiene las etiquetas: Nombre, Cargo y Correo electrónico; y por último, la sección "Datos del proyecto" con las etiquetas Nombre, Descripción y Recursos. Cada una de las etiquetas contiene una caja de texto al lado y al final, aparecen 2 botones “Registrar” y “Cancelar”.
-  2. El *Coordinador* procede a ingresar la información solicitada por el SSP y da clic en el botón “Registrar”. (Ver FA-1). 
-  3. El SSP valida la información ingresada por el *Coordinador* , guarda el `PROJECT` en la base de datos y despliega un `Dialog_Success` con el botón "Aceptar"(Ver FA-2, EX-1). 
+  2. El *Coordinador* procede a ingresar la información solicitada por el *SPP* y da clic en el botón “Registrar”. (Ver FA-1). 
+  3. El *SPP* valida la información ingresada por el *Coordinador* , guarda el **`PROJECT`** en la base de datos y despliega un `Dialog_Success` con el botón "Aceptar"(Ver FA-2, EX-1). 
   4. El *Coordinador* da clic en el botón "Aceptar".
   5. El *SPP* cierra el `Dialog_Success`.
   6. Fin del caso de uso.
@@ -53,7 +53,7 @@ PRE-2. Debe de haber al menos un `PROJECT RESPONSIBLE` que siga laborando en la 
 	   3.	El *SPP* cierra el `Dialog_ConnectionError` y retoma el flujo normal desde el paso 2.
 
 **Postcondiciones:**  
-POST-1. El `PROJECT` se guardó en la base de datos y se cambió su estado a “Activo”.
+POST-1. El **`PROJECT`** se guardó en la base de datos y se cambió su estado a “Activo”.
 
 **Incluye (Relación Include):**  
 No incluye.

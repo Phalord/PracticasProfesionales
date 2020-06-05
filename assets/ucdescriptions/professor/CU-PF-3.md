@@ -29,15 +29,15 @@ PRE-1. Debe existir al menos un `PROFESSOR` en el sistema.
 PRE-2. Debe existir al menos un `REPORT` parcial por parte del `PRACTICING`.   
 
 **Flujo Normal:**  
-1.	El *SPP* despliega la ventana `View_PartialReport` la cual muestra una lista de `REPORT` parciales entregados junto con el nombre del `PRACTICING`, la fecha que se entregó y al final un botón “Cancelar”.
-2.	El *Profesor* selecciona un `REPORT` parcial para evaluar. (Ver FA-1). 
-3.	El *SPP* despliega la ventana `View_RateReport`, muestra una vista previa del `REPORT` parcial junto con un cuadro de texto para asignar la calificación y su etiqueta; además de un apartado de observaciones del `REPORT` y los botones "Ver rúbrica", "Descargar", "Calificar" y "Cancelar".
-4.	El *Profesor* asigna una calificación al `REPORT` parcial y da clic en el botón “Calificar”. (Ver FA-1, FA-2, FA-3 y FA-4). 
-5.	El *SPP* muestra un `Dialog_Confirmation` con las opciones “Confirmar” y “Cancelar”.
-6.	El *Profesor* selecciona la opción “Confirmar”. (Ver FA-5). 
-7.	El *SPP* guarda la información registrada por el *Profesor* y despliega un `Dialog_Success` con el botón "Aceptar". (Ver EX-1).
-8.	 El *Profesor* da clic en el botón "Aceptar".
-9.	El *SPP* cierra el `Dialog_Success`.
+1. El *SPP* despliega la ventana `View_PartialReport` la cual muestra una lista de `REPORT` parciales entregados junto con el nombre del `PRACTICING`, la fecha que se entregó y al final un botón “Cancelar”.
+2. El *Profesor* selecciona un `REPORT` parcial para evaluar. (Ver FA-1). 
+3. El *SPP* despliega la ventana `View_RateReport`, muestra una vista previa del `REPORT` parcial junto con un cuadro de texto para asignar la calificación y su etiqueta; además de un apartado de observaciones del `REPORT` y los botones "Ver rúbrica", "Descargar", "Calificar" y "Cancelar".
+4. El *Profesor* asigna una calificación al `REPORT` parcial y da clic en el botón “Calificar”. (Ver FA-1, FA-2, FA-3 y FA-4). 
+5. El *SPP* muestra un `Dialog_Confirmation` con las opciones “Confirmar” y “Cancelar”.
+6. El *Profesor* selecciona la opción “Confirmar”. (Ver FA-5). 
+7. El *SPP* guarda la información registrada por el *Profesor* y despliega un `Dialog_Success` con el botón "Aceptar". (Ver EX-1).
+8. El *Profesor* da clic en el botón "Aceptar".
+9. El *SPP* cierra el `Dialog_Success`.
 10.	Fin del caso de uso.
 
 **Flujos Alternos:**  

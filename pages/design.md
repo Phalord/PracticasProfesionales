@@ -25,12 +25,26 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 
 ## Definición de Requerimientos
 ### Diagrama de paquetes de Casos de Uso
-[Paquetes de Casos de Uso][PCU]
+![Paquetes de Casos de Uso][PCU]
 
 [PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/packages/usecasepackages.png
 
 ### Prototipos de Interfaz
 #### Prototipo: Administrador
+  1. [View_AddCoordinator][VACR]
+  2. [View_AddProfessor][VAPR]
+  3. [View_CoordinatorSection][VCSE]
+  4. [View_DeleteCoordinator][VDCR]
+  5. [View_DeleteProfessor][VDPR]
+  6. [View_ProfessorSection][VPSN]
+
+[VACR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/administrator/View_AddCoordinator.png "`View_AddCoordinator` Prototype"
+[VAPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/administrator/View_AddProfessor.png "`View_AddProfessor` Prototype"
+[VCSE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/administrator/View_CoordinatorSection.png "`View_CoordinatorSection` Prototype"
+[VDCR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/administrator/View_DeleteCoordinator.png "`View_DeleteCoordinator` Prototype"
+[VDPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/administrator/View_DeleteProfessor.png "`View_DeleteProfessor` Prototype"
+[VPSN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/administrator/View_ProfessorSection.png "`View_ProfessorSection` Prototype"
+
 #### Prototipo: Coordinador
   1. [View_PractitionerSection][VPSE]
   2. [View_ProjectRequests][VPRE]
@@ -64,6 +78,21 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 
 #### Prototipo: Usuario
 #### Prototipos reusables
+  1. [Dialog_Confirmation][DLCO]
+  2. [Dialog_ConnectionError][DLCE]
+  3. [Dialog_Error][DLER]
+  4. [Dialog_MaxReached][DLMR]
+  5. [Dialog_Success][DLSU]
+  6. [Dialog_InvalidInformation][DLII]
+  7. [View_UploadDocument][VUDT]
+
+[DLCO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Confirmation.png "`Dialog_Confirmation` Prototype"
+[DLSU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Success.png "`Dialog_Success` Prototype"
+[DLCE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_ConnectionError.png "`Dialog_ConnectionError` Prototype"
+[DLMR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_MaxReached.png "`Dialog_MaxReached` Prototype"
+[DLII]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_InvalidInformation.png "`Dialog_InvalidInformation` Prototype"
+[DLER]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Error.png "`Dialog_Error` Prototype"
+[VUDT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/View_UploadDocument.png "`View_UploadDocument` Prototype"
 
 ### Diagramas de Casos de Uso por paquetes
 [Paquete Administrador][CUA]
@@ -84,9 +113,43 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 
 ### Descripción de Casos de Uso
 #### Descripción: Administrador
+  1. [Registrar Coordinador][RECO]
+  2. [Registrar Profesor][REPS]
+  3. [Eliminar Coordinador][ELCO]
+  4. [Eliminar Profesor][ELPR]
+
+[RECO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/administrator/cu-a-1/ "Descripción de CU-A-1"
+[REPS]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/administrator/cu-a-2/ "Descripción de CU-A-2"
+[ELCO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/administrator/cu-a-3/ "Descripción de CU-A-3"
+[ELPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/administrator/cu-a-4/ "Descripción de CU-A-4"
+
 #### Descripción: Coordinador
+  1. [Registrar Proyecto][REPR]
+  2. [Asignar Proyecto][ASPR]
+  3. [Eliminar Proyecto][ELPO]
+  4. [Eliminar Practicante][ELPE]
+  5. [Generar Reporte de Indicadores][GRDI]
+  6. [Registrar Practicante][REPE]
+  7. [Actualizar Proyecto][ACPO]
+
+[REPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-1/ "Descripción de CU-C-1"
+[ASPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-2/ "Descripción de CU-C-2"
+[ELPO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-3/ "Descripción de CU-C-3"
+[ELPE]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-4/ "Descripción de CU-C-4"
+[GRDI]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-5/ "Descripción de CU-C-5"
+[REPE]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-6/ "Descripción de CU-C-6"
+[ACPO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-7/ "Descripción de CU-C-7"
+
 #### Descripción: Profesor
-  1. [][]
+  1. [Generar Actividad][GEAC]
+  2. [Añadir Formato de Presentación][AFPR]
+  3. [Evaluar Reporte Parcial][ERPA]
+  4. [Evaluar Reporte Mensual][ERME]
+
+[GEAC]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-1/ "Descripción de CU-PF-1"
+[AFPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-2/ "Descripción de CU-PF-2"
+[ERPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-3/ "Descripción de CU-PF-3"
+[ERME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-4/ "Descripción de CU-PF-4"
 
 #### Descripción: Practicante
   1. [Solicitar Proyecto][SOPR]
@@ -101,24 +164,57 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
   10. [Añadir Bitácora Personal][APSP]
   11. [Añadir Plan de Actividades][APAC]
 
-[SOPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-1/
-[ANHO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-2/
-[GRPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-3/
-[ARPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-4/
-[GRME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-5/
-[ARME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-6/
-[GAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-7/
-[AAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-8/
-[AACT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-9/
-[APSP]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-10/
-[APAC]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-11/
+[SOPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-1/ "Descripción de CU-PR-1"
+[ANHO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-2/ "Descripción de CU-PR-2"
+[GRPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-3/ "Descripción de CU-PR-3"
+[ARPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-4/ "Descripción de CU-PR-4"
+[GRME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-5/ "Descripción de CU-PR-5"
+[ARME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-6/ "Descripción de CU-PR-6"
+[GAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-7/ "Descripción de CU-PR-7"
+[AAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-8/ "Descripción de CU-PR-8"
+[AACT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-9/ "Descripción de CU-PR-9"
+[APSP]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-10/ "Descripción de CU-PR-10"
+[APAC]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-11/ "Descripción de CU-PR-11"
 
 #### Descripción: Usuario
+  1. [Consultar Buzón][COBU]
+  2. [EnviarMensaje][ENME]
+
+[COBU]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/user/cu-u-1/ "Descripción de CU-U-1"
+[ENME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/user/cu-u-2/ "Descripción de CU-U-2"
 
 ### Diagramas de Actividades por Caso de Uso
 #### Actividad: Administrador
+  1. [Registrar Coordinador][ARECO]
+  2. [Registrar Profesor][AREPS]
+  3. [Eliminar Coordinador][AELCO]
+  4. [Eliminar Profesor][AELPR]
+
+[ARECO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/administrator/act1.jpg "Registrar Coordinador"
+[AREPS]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/administrator/act2.jpg "Registrar Profesor"
+[AELCO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/administrator/act3.jpg "Eliminar Coordinador"
+[AELPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/administrator/act4.jpg "Eliminar Profesor"
+
 #### Actividad: Coordinador
+  1. [Registrar Proyecto][AREPR]
+  2. [Asignar Proyecto][AASPR]
+  3. [Eliminar Proyecto][AELPO]
+  4. [Eliminar Practicante][AELPE]
+  5. [Generar Reporte de Indicadores][AGRDI]
+  6. [Registrar Practicante][AREPE]
+  7. [Actualizar Proyecto][AACPO]
+
+[AREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act1.jpg "Registrar Proyecto"
+[AASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act2.jpg "Asignar Proyecto"
+[AELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act3.jpg "Eliminar Proyecto"
+[AELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act4.jpg "Eliminar Practicante"
+[AGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act5.jpg "Generar Reporte de Indicadores"
+[AREPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act6.jpg "Registrar Practicante"
+[AACPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act7.jpg "Actualizar Proyecto"
+
 #### Actividad: Profesor
+
+#### Actividad: Practicante
   1. [Solicitar Proyecto][ASOPR]
   2. [Añadir Horario][AANHO]
   3. [Generar Reporte Parcial][AGRPA]
@@ -131,20 +227,24 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
   10. [Añadir Bitácora Personal][AAPSP]
   11. [Añadir Plan de Actividades][AAPAC]
 
-[ASOPR]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act1.png?raw=true "Solicitar Proyecto"
-[AANHO]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act2.png?raw=true "Añadir Horario"
-[AGRPA]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act3.png?raw=true "Generar Reporte Parcial"
-[AARPA]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act4.png?raw=true "Añadir Reporte Parcial"
-[AGRME]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act5.png?raw=true "Generar Reporte Mensual"
-[AARME]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act6.png?raw=true "Añadir Reporte Mensual"
-[AGAUT]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act7.png?raw=true "Generar Autoevaluación"
-[AAAUT]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act8.png?raw=true "Añadir Autoevaluación"
-[AAACT]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act9.png?raw=true "Añadir Actividad"
-[AAPSP]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act10.png?raw=true "Añadir Bitácora Personal" 
-[AAPAC]: https://github.com/Phalord/PracticasProfesionales/blob/gh-pages/assets/imgs/activities/practitioner/act11.png?raw=true "Añadir Plan de Actividades"
+[ASOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act1.png "Solicitar Proyecto"
+[AANHO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act2.png "Añadir Horario"
+[AGRPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act3.png "Generar Reporte Parcial"
+[AARPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act4.png "Añadir Reporte Parcial"
+[AGRME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act5.png "Generar Reporte Mensual"
+[AARME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act6.png "Añadir Reporte Mensual"
+[AGAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act7.png "Generar Autoevaluación"
+[AAAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act8.png "Añadir Autoevaluación"
+[AAACT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act9.png "Añadir Actividad"
+[AAPSP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act10.png "Añadir Bitácora Personal" 
+[AAPAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act11.png "Añadir Plan de Actividades"
 
-#### Actividad: Practicante
 #### Actividad: Usuario
+  1. [Consultar Buzón][ACOBU]
+  2. [Enviar Mensaje][ENME]
+
+[ACOBU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act1.png "Consultar Buzón"
+[AENME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act1.png "Enviar Mensaje"
 
 ## Diseño
 ### Diagrama de Clases del Modelo de Dominio

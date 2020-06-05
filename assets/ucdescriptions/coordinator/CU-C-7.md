@@ -6,7 +6,7 @@ hide_hero: true
 ---
 **ID:** CU-C-7
 
-**Nombre:** Actualizar proyecto  
+**Nombre:** Actualizar Proyecto  
 
 **Autor:** Victor Arturo Ruiz Cuervo  
 
@@ -28,13 +28,13 @@ PRE-1. Debe haber al menos un `COORDINATOR` en el sistema.
 PRE-2. Debe de haber al menos un `PROJECT` en la base de datos.    
 
 **Flujo Normal:**    
-1. El *SPP* despliega la ventana `View_ChooseProject` la cual muestra una lista de los `PROJECT` almacenados junto con un botón “Cancelar”. Además de la instrucción de seleccionar un `PROJECT` en una etiqueta.
-2. El *Coordinador* selecciona el `PROJECT` que quiere editar. (Ver FA-1). 
-3. El *SPP* despliega la ventana `View_AddProject` *(Ver caso de uso CU-C-1)*. 
-4. El *Coordinador* ingresa la información actualizada en los cuadros de texto correspondientes y da clic en el botón “Registrar”. (Ver FA-1) 
-5. El *SPP* valida la información ingresada, actualiza y guarda la información modificada; y muestra un `Dialog_Success`con el botón "Aceptar". (Ver FA-2, EX-1).
-6. El *Coordinador* da clic en la opción "Aceptar".
-7. El *SPP* cierra el `Dialog_Success` y despliega la ventana `View_ChooseProject`.
+  1. El *SPP* despliega la ventana `View_ChooseProject` la cual muestra una lista de los `PROJECT` almacenados junto con un botón “Cancelar”. Además de la instrucción de seleccionar un `PROJECT` en una etiqueta.
+  2. El *Coordinador* selecciona el `PROJECT` que quiere editar. (Ver FA-1). 
+  3. El *SPP* despliega la ventana `View_AddProject` *(Ver caso de uso CU-C-1)*. 
+  4. El *Coordinador* ingresa la información actualizada en los cuadros de texto correspondientes y da clic en el botón “Registrar”. (Ver FA-1) 
+  5. El *SPP* valida la información ingresada, actualiza y guarda la información modificada; y muestra un `Dialog_Success`con el botón "Aceptar". (Ver FA-2, EX-1).
+  6. El *Coordinador* da clic en la opción "Aceptar".
+  7. El *SPP* cierra el `Dialog_Success` y despliega la ventana `View_ChooseProject`.
 8.	Fin del caso de uso.
 
 **Flujos Alternos:**  

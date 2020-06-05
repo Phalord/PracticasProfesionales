@@ -16,7 +16,7 @@ hide_hero: true
 **Fecha de actualización:** 24 de mayo de 2020
 
 **Descripción**  
-El *Practicante* deberá poder seleccionar hasta tres `PROJECT` como opciones para enviar un `PROJECT REQUEST` y poder ser asignado a uno de los `PROJECT` seleccionados.
+El *Practicante* deberá poder seleccionar hasta tres **`PROJECT`** como opciones para enviar un **`PROJECT REQUEST`** y poder ser asignado a uno de los **`PROJECT`** seleccionados.
 
 **Actor:**  
 *Practicante*
@@ -25,16 +25,16 @@ El *Practicante* deberá poder seleccionar hasta tres `PROJECT` como opciones pa
 El *Practicante* da clic al botón "Solicitar Proyecto" en la vista [`View_ProjectSection`][VPSC].
 
 **Precondiciones**  
-Pre-1. Debe haber, por lo menos, 1 `PROJECT` sin asignar en la Base de Datos.
+Pre-1. Debe haber, por lo menos, 1 **`PROJECT`** sin asignar en la Base de Datos.
 
-Pre-2. El Practicante no ha enviado su `PROJECT REQUEST`.
+Pre-2. El Practicante no ha enviado su **`PROJECT REQUEST`**.
 
 **Flujo Normal:**
-  1. El *SPP* recupera los `PROJECT` de la Base de Datos y los muestra en [`View_ProjectRequest`][VPRQ] con disposición cuadriculada; cada cuadro contiene una imagen representativa del proyecto y dos botones: "Visualizar" y "Seleccionar"; hasta abajo dos botones "Solicitar" y "Cancelar". EX-1.
-  2. El *Practicante* da clic al botón "Seleccionar" en los `PROJECT` que quiera marcar como opción y da clic al botón "Solicitar". FA-1 FA-2 F-4 F-5
+  1. El *SPP* recupera los **`PROJECT`** de la Base de Datos y los muestra en [`View_ProjectRequest`][VPRQ] con disposición cuadriculada; cada cuadro contiene una imagen representativa del proyecto y dos botones: "Visualizar" y "Seleccionar"; hasta abajo dos botones "Solicitar" y "Cancelar". EX-1.
+  2. El *Practicante* da clic al botón "Seleccionar" en los **`PROJECT`** que quiera marcar como opción y da clic al botón "Solicitar". FA-1 FA-2 F-4 F-5
   3. El *SPP* muestra un diálogo [`Dialog_Confirmation`][DLCO] con los botones "Confirmar" y "No".
   4. El *Practicante* da clic al botón "Confirmar". FA-3
-  5. El *SPP* cierra el [`Dialog_Confirmation`][DLCO] y añade los `PROJECT` al `PROJECT REQUEST` y lo guarda en la Base de Datos; y muestra un [`Dialog_Success`][DLSU].
+  5. El *SPP* cierra el [`Dialog_Confirmation`][DLCO] y añade los **`PROJECT`** al **`PROJECT REQUEST`** y lo guarda en la Base de Datos; y muestra un [`Dialog_Success`][DLSU].
 
 **Flujos Alternos:**
   1. *Regresar*
@@ -59,7 +59,7 @@ Pre-2. El Practicante no ha enviado su `PROJECT REQUEST`.
       1. El *SPP* muestra un diálogo de mensaje [`Dialog_ConnectionError`][DLCE].
 
 **Postcondiciones:**  
-Post-1. El `PROJECT REQUEST` se guardó correctamente en la Base de Datos.
+Post-1. El **`PROJECT REQUEST`** se guardó correctamente en la Base de Datos.
 
 **Incluye (Relación Include):**  
 No incluye.

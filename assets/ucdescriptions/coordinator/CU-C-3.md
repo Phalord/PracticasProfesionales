@@ -28,24 +28,10 @@ El *Coordinador* da clic el botón “Eliminar Proyecto” en la vista `View_Pro
 Pre-1. Debe de haber por lo menos un **`PROJECT`** registrado.
 
 **Flujo Normal:**  
-<<<<<<< HEAD
-1. El *SPP* obtiene de la base de datos los **`PROJECT`**, los muestra en forma de lista en la vista `View_DeleteProject` y muestra los botones “Eliminar” (por cada **`PROJECT`**) y el botón “Cancelar” en la parte inferior izquierda de la ventana. (Ver EX1).
-
-2. El *Coordinador* da clic en el botón “Eliminar” para el **`PROJECT`** deseado. (Ver FA 2.1).
-=======
-1. El SPP obtiene de la base de datos los **`PROJECT`**, los muestra en forma de lista en la vista `View_DeleteProject` y muestra los botones “Eliminar” (por cada **`PROJECT`**) y el botón “Cancelar” en la parte inferior izquierda de la ventana. (Ver EX 1).
-
-2. El **Coordinador** da clic en el botón “Eliminar” para el **`PROJECT`** deseado. (Ver FA 1)
->>>>>>> 503058b6c627de3185c5c6f85ff32a62c68ae23e
-
+1. El *SPP* obtiene de la base de datos los **`PROJECT`**, los muestra en forma de lista en la vista `View_DeleteProject` y muestra los botones “Eliminar” (por cada **`PROJECT`**) y el botón “Cancelar” en la parte inferior izquierda de la ventana. (Ver EX 1).
+2. El *Coordinador* da clic en el botón “Eliminar” para el **`PROJECT`** deseado. (Ver FA 1).
 3. El *SPP* muestra la información del **`PROJECT`** seleccionado en la vista `View_ProjectInformation` y los botones “Eliminar” y “Cancelar”.
-
-<<<<<<< HEAD
-4. El *Coordinador* da clic en el botón “Eliminar”. (Ver FA2.2).
-=======
-4. El **Coordinador** da clic en el botón “Eliminar”. (Ver FA 2)
->>>>>>> 503058b6c627de3185c5c6f85ff32a62c68ae23e
-
+4. El *Coordinador* da clic en el botón “Eliminar”. (Ver FA 2).
 5. El *SPP* muestra el diálogo `Dialog_Confirmation` para validar con el mensaje “¿Seguro desea eliminar el Proyecto seleccionado?” y los botones “Sí” y “Cancelar”.
 
 <<<<<<< HEAD

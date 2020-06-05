@@ -22,6 +22,7 @@ public class Controller_AddPractitioner implements Initializable {
     @FXML
     private TextField studentShiftTextField;
     @FXML
+    
     private TextField personalProfessorTextField;
     private Practitioner practitioner;
     

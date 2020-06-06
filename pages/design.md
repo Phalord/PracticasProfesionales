@@ -27,7 +27,7 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 ### Diagrama de paquetes de Casos de Uso
 ![Paquetes de Casos de Uso][PCU]
 
-[PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/packages/packages.png
+[PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/packages/packages.PNG
 
 ### Diagramas de Casos de Uso por paquetes
   1. [Paquete Administrador][CUA]
@@ -233,7 +233,7 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
   7. [Actualizar Proyecto][AACPO]
 
 [AREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act1.jpg "Registrar Proyecto"
-[AASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act2.jpg "Asignar Proyecto"
+[AASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act2.png "Asignar Proyecto"
 [AELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act3.jpg "Eliminar Proyecto"
 [AELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act4.jpg "Eliminar Practicante"
 [AGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act5.jpg "Generar Reporte de Indicadores"
@@ -270,7 +270,7 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 [AARPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act4.png "Añadir Reporte Parcial"
 [AGRME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act5.jpg "Generar Reporte Mensual"
 [AARME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act6.png "Añadir Reporte Mensual"
-[AGAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act7.png "Generar Autoevaluación"
+[AGAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act7.jpg "Generar Autoevaluación"
 [AAAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act8.png "Añadir Autoevaluación"
 [AAACT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act9.png "Añadir Actividad"
 [AAPSP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act10.png "Añadir Bitácora Personal" 
@@ -280,14 +280,19 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
   1. [Consultar Buzón][ACOBU]
   2. [Enviar Mensaje][AENME]
 
-[ACOBU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act1.png "Consultar Buzón"
-[AENME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act1.png "Enviar Mensaje"
+[ACOBU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act1.jpg "Consultar Buzón"
+[AENME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act2.jpg "Enviar Mensaje"
 
 ## Diseño
 ### Diagrama de Clases del Modelo de Dominio
-![Modelo de Dominio][PCU]
+![Modelo de Dominio][MDD]
 
-[PCU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/domain/domain_model.png
+[MDD]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/domain/domain_model.png
+
+### Diagramas de Robustez
+  1. [CU-C-1][ROB1]
+
+[ROB1]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob1.jpg
 
 ## Conclusiones
 En resumen, lo presentado en esta *Especificación de Diseño* fue una breve descripción de la situación actual sobre el proceso de prácticas profesionales, los [diagramas de casos de uso](#diagramas-de-casos-de-uso-por-paquetes) y algunas [descripciones](#descripción-de-casos-de-uso) de estos, ya que tomamos algunos que consideramos relevantes para esta versión, además de sus respectivos [diagramas de actividad](#diagramas-de-actividades-por-caso-de-uso). Todo esto fue mostrado con la finalidad de dar a entender o, por lo menos, generar una pequeña idea de como será el funcionamiento del sistema y explicar el por qué sería conveniente su realización, pues, como se mencionó anteriormente en la [introducción](#introducción), el sistema permitirá un desarrollo eficaz y rápido del proceso al automatizarlo mediante el uso de Software.

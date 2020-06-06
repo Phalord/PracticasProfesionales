@@ -287,7 +287,7 @@ Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por
 ### Diagrama de Clases del Modelo de Dominio
 ![Modelo de Dominio][MDD]
 
-[MDD]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/tree/gh-pages/assets/imgs/domain/domain_model.jpg
+[MDD]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/domain/domain_model.jpg
 
 ### Diagramas de Robustez
   1. [CU-C-1][ROB1]

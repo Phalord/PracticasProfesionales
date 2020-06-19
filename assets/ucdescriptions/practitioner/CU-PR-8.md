@@ -15,7 +15,7 @@ hide_hero: true
 
 **Fecha de actualización:** 24 de mayo de 2020
 
-**Descripción**  
+**Descripción:**  
 El *Practicante* deberá poder subir una versión PDF de su **`SELF APPRAISAL`**.
 
 **Actor:**  
@@ -24,7 +24,7 @@ El *Practicante* deberá poder subir una versión PDF de su **`SELF APPRAISAL`**
 **Disparador:**  
 El *Practicante* da clic al botón "Añadir Autoevaluación" en la interfaz [`View_UploadDocumentation`][VUDC].
 
-**Precondiciones**  
+**Precondiciones:**  
 Pre-1. El *Practicante* debe tener las 200hrs de servicio en sus **`PARTIAL REPORT`** y **`MONTHLY REPORT`**.
 
 **Flujo Normal:**

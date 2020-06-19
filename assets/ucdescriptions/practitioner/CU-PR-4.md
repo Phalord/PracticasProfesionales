@@ -15,7 +15,7 @@ hide_hero: true
 
 **Fecha de actualización:** 24 de mayo de 2020
 
-**Descripción**  
+**Descripción:**  
 El *Practicante* deberá poder subir una versión PDF de su **`PARTIAL REPORT`**.
 
 **Actor:**  
@@ -24,7 +24,7 @@ El *Practicante* deberá poder subir una versión PDF de su **`PARTIAL REPORT`**
 **Disparador:**  
 El *Practicante* da clic al botón "Añadir Reporte Parcial" en la interfaz [`View_UploadDocumentation`][VUDC].
 
-**Precondiciones**  
+**Precondiciones:**  
 Pre-1. El *Practicante* debe tener asignado a un **`PROJECT`**.
 Pre-2. El *Practicante* debe tener asignada al menos 1 **`ACTIVITY`** sin completar.
 

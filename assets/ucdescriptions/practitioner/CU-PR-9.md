@@ -15,7 +15,7 @@ hide_hero: true
 
 **Fecha de actualización:** 24 de mayo de 2020
 
-**Descripción**  
+**Descripción:**  
 El *Practicante* deberá poder subir el PDF de su **`ACTIVITY`** para que su **`PROFESSOR`** proceda a calificarla.
 
 **Actor:**  
@@ -24,7 +24,7 @@ El *Practicante* deberá poder subir el PDF de su **`ACTIVITY`** para que su **`
 **Disparador:**  
 El *Practicante* da clic al botón "Añadir Actividad" en la interfaz [`View_UploadDocumentation`][VUDC].
 
-**Precondiciones**  
+**Precondiciones:**  
 Pre-1. El *Practicante* debe tener, al menos, una **`ACTIVITY`** asignada sin entregar.
 
 **Flujo Normal:**

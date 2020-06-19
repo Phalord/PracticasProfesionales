@@ -15,16 +15,16 @@ hide_hero: true
 
 **Fecha de actualización:** 18 de junio de 2020
 
-**Descripción**  
+**Descripción:**  
 El *Practicante* deberá poder seleccionar hasta tres **`PROJECT`** como opciones para enviar un **`PROJECT REQUEST`** y poder ser asignado a uno de los **`PROJECT`** seleccionados.
 
 **Actor:**  
 *Practicante*
 
-**Disparador**  
+**Disparador:**  
 El *Practicante* da clic al botón "Solicitar Proyecto" en la vista [`View_ProjectSection`][VPSC].
 
-**Precondiciones**  
+**Precondiciones:**  
 Pre-1. Debe haber, por lo menos, 1 **`PROJECT`** sin asignar en la Base de Datos.
 
 Pre-2. El Practicante no ha enviado su **`PROJECT REQUEST`**.

@@ -15,7 +15,7 @@ hide_hero: true
 
 **Fecha de actualización:** 24 de mayo de 2020
 
-**Descripción**  
+**Descripción:**  
 El *Practicante* deberá poder subir una versión PDF de su **`ACTIVITIES SCHEDULE`**.
 
 **Actor:**  
@@ -24,7 +24,7 @@ El *Practicante* deberá poder subir una versión PDF de su **`ACTIVITIES SCHEDU
 **Disparador:**  
 El *Practicante* da clic al botón "Añadir Plan de Act." en la interfaz [`View_UploadDocumentation`][VUDC].
 
-**Precondiciones** 
+**Precondiciones:** 
 Pre-1. El *Practicante* debe tener asignado un **`PROJECT`**.
 
 **Flujo Normal:**

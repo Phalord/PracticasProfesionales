@@ -13,9 +13,9 @@ hide_hero: true
 
 **Fecha de creación:** 25 de marzo de 2020
 
-**Fecha de actualización:** 24 de mayo de 2020
+**Fecha de actualización:** 18 de junio de 2020
 
-**Descripción**  
+**Descripción:**  
 El *Practicante* deberá poder subir una versión PDF de su **`SCHOOL TIMETABLE`**.
 
 **Actor:**  
@@ -24,8 +24,8 @@ El *Practicante* deberá poder subir una versión PDF de su **`SCHOOL TIMETABLE`
 **Disparador:**  
 El *Practicante* da clic al botón "Añadir Horario" en la interfaz [`View_UploadDocumentation`][VUDC].
 
-**Precondiciones**  
-Pre-1. El *Practicante* debe tener asignado a un **`PROJECT`**
+**Precondiciones:**  
+Pre-1. El *Practicante* debe tener asignado a un **`PROJECT`**.
 
 **Flujo Normal:**
   1. El *SPP* muestra la interfaz [`View_UploadDocument`][VUDT], con los botones "Seleccionar Archivo", "Subir" y "Regresar".
@@ -33,7 +33,7 @@ Pre-1. El *Practicante* debe tener asignado a un **`PROJECT`**
   3. El *SPP* abre el explorador de archivos del Sistema Operativo (SO).
   4. El *Practicante* busca su **`SCHOOL TIMETABLE`** en el explorador de archivos, lo selecciona y da clic en "Cargar". FA-2
   5. El *SPP* carga el **`SCHOOL TIMETABLE`**. EX-1
-  6. El *Practiante* da clic en el botón "Subir". FA-1
+  6. El *Practicante* da clic en el botón "Subir". FA-1
   7. El *SPP* muestra un diálogo [`Dialog_Confirmation`][DLCO] con dos botones "Cancelar" y "Confirmar".
   8. El *Practicante* da clic en el botón "Confirmar". FA-3
   9. El *SPP* guarda el **`SCHOOL TIMETABLE`** en la Base de Datos y muestra un [`Dialog_Success`][DLSU]. EX-2
@@ -47,7 +47,7 @@ Pre-1. El *Practicante* debe tener asignado a un **`PROJECT`**
      2. El *SPP* cierra el explorador de archivos y regresa el enfoque al *SPP*, regresando al FN-2.
   3. *Cancelar Confirmación*
      1. El *Practicante* da clic en el botón "Cancelar".
-     2. El *SPP* cierra el [`Dialog_Confirmation`][DLCO] y regresa al FN-2.
+     2. El *SPP* cierra el [`Dialog_Confirmation`][DLCO] y regresa al FN-6.
 
 **Excepciones:**
    1. *Error al cargar el **`SCHOOL TIMETABLE`***

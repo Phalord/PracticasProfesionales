@@ -32,7 +32,8 @@ Pre-1. Debe haber, al menos, un **`PROJECT REQUEST`** en la Base de Datos.
   2. El *Coordinador* busca al **`PRACTITIONER`** y da clic al botón "Asignar" del **`PROJECT`** que desee. FA-1
   3. El *SPP* recupera la información del **`PRACTITIONER`** y del **`PROJECT`** de la base de datos y muestra una ventana emergente de confirmación [`View_AssignationConfirmation`][VACO] con los botones "Asignar" y "Cancelar". EX-1
   4. El *Coordinador* da clic al botón "Asignar". FA-2
-  5. El *SPP* realiza la asignación del **`PROJECT`** en la Base de Datos y cambia el estado del **`PROJECT REQUEST`** a "Asignado" y muestra un [`Dialog_Succes`][DLSU]. EX-1 FA-3
+  5. El *SPP* valida que el **`PROYECTO`** no se encuentre asignado. FA-3
+  6. El *SPP* realiza la asignación del **`PROJECT`** en la Base de Datos y cambia el estado del **`PROJECT REQUEST`** a "Asignado" y muestra un [`Dialog_Succes`][DLSU]. EX-1
 
 **Flujos Alternos:**
   1. *Regresar*

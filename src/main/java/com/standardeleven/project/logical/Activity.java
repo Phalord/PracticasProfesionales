@@ -7,6 +7,8 @@ import java.util.Date;
 public class Activity {
     private int activityID;
     private int projectID;
+    private int estimatedCompletionHours;
+    private int actualCompletionHours;
     private String activityTitle;
     private String studentEnrollment;
     private String activityDescription;
@@ -16,6 +18,8 @@ public class Activity {
     public Activity(){
         setActivityID(0);
         setProjectID(0);
+        setEstimatedCompletionHours(0);
+        setActualCompletionHours(0);
         setActivityTitle("activityTitle");
         setStudentEnrollment("studentEnrollment");
         setActivityDescription("ActivityDescription");
@@ -29,6 +33,14 @@ public class Activity {
 
     public void setProjectID(int projectID) {
         this.projectID = projectID;
+    }
+
+    public void setEstimatedCompletionHours(int estimatedCompletionHours) {
+        this.estimatedCompletionHours = estimatedCompletionHours;
+    }
+
+    public void setActualCompletionHours(int actualCompletionHours) {
+        this.actualCompletionHours = actualCompletionHours;
     }
 
     public void setStudentEnrollment(String studentEnrollment) {
@@ -59,6 +71,14 @@ public class Activity {
         return projectID;
     }
 
+    public int getEstimatedCompletionHours() {
+        return estimatedCompletionHours;
+    }
+
+    public int getActualCompletionHours() {
+        return actualCompletionHours;
+    }
+
     public String getStudentEnrollment() {
         return studentEnrollment;
     }
@@ -81,8 +101,9 @@ public class Activity {
 
     @Override
     public String toString() {
-        return String.format(" %d | %s | %s | %s | %s | %s", getActivityID(), getActivityTitle(),
-                getProjectID(), getStudentEnrollment(), getActivityDescription(), getDateFormat());
+        return String.format(" %d | %s | %d | %d | %d | %s | %s | %s", getActivityID(), getActivityTitle(),
+                getProjectID(), getEstimatedCompletionHours(), getActualCompletionHours(), getStudentEnrollment(),
+                getActivityDescription(), getDateFormat());
     }
 
     private String getDateFormat() {

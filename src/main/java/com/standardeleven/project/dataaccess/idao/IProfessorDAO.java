@@ -1,6 +1,5 @@
 package com.standardeleven.project.dataaccess.idao;
 
-import java.sql.SQLException;
 import java.util.List;
 import com.standardeleven.project.logical.Professor;
 

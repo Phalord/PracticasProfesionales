@@ -12,8 +12,8 @@ public interface IProjectDAO {
     List<Project> getAllAvailableProjects();
     Project getProject(int idProject);
     boolean assignPractitioner(Practitioner practitioner, int idProject);
-    boolean addProject(Project project) throws SQLException;
-    boolean updateProject(Project project) throws SQLException;
-    boolean deleteProject(Project project) throws SQLException;
+    boolean addProject(Project project);
+    boolean updateProject(Project project);
+    boolean deleteProject(Project project);
 
 }

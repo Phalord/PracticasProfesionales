@@ -1,7 +1,6 @@
 package com.standardeleven.project.dataaccess.idao;
 
 import com.standardeleven.project.logical.Practitioner;
-import com.standardeleven.project.logical.Project;
 
 import java.util.List;
 

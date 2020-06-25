@@ -1,36 +1,46 @@
 package com.standardeleven.project.gui;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import static com.standardeleven.project.main.Main.PRACTITIONER;
+import static com.standardeleven.project.main.Main.COORDINATOR;
+import static com.standardeleven.project.main.Main.PROFESSOR;
+
 public class GUI_Home implements IWindowGUI {
     private Stage window;
-    private BorderPane borderPane;
 
     public GUI_Home(String accountType) {
+        final String fxmlPractitionerHome = "/view/View_PractitionerHome.fxml";
+        final String fxmlCoordinatorHome = "/view/View_CoordinatorHome.fxml";
+        final String fxmlProfessorHome = "/view/View_ProfessorHome.fxml";
         switch (accountType) {
-            case "practicante":
-                buildPractitionerScene();
+            case PRACTITIONER:
+                buildStage(new Stage(), "Practicante");
+                buildScene(fxmlPractitionerHome);
                 break;
-            case "coordinador":
-                buildCoordinatorScene();
+            case COORDINATOR:
+                buildStage(new Stage(), "Coordinador");
+                buildScene(fxmlCoordinatorHome);
                 break;
-            case "profesor":
-                buildProfessorScene();
+            case PROFESSOR:
+                buildStage(new Stage(), "Profesor");
+                buildScene(fxmlProfessorHome);
                 break;
             default:
                 Logger.getLogger(GUI_Home.class.getName()).log(Level.SEVERE, "Account type out of boundaries");
+                break;
         }
     }
 
     @Override
     public void display() {
-        window.setScene(new Scene(borderPane, 720, 480));
         window.show();
     }
 
@@ -40,22 +50,13 @@ public class GUI_Home implements IWindowGUI {
         window.setTitle(title);
     }
 
-    public void buildPractitionerScene() {
-        buildStage(new Stage(), "Practicante");
-        Label label = new Label("Bienvenido, Practicante!");
-        borderPane = new BorderPane();
-        borderPane.setCenter(label);
-    }
-    public void buildCoordinatorScene() {
-        buildStage(new Stage(), "Coordinador");
-        Label label = new Label("Bienvenido, Coordinador!");
-        borderPane = new BorderPane();
-        borderPane.setCenter(label);
-    }
-    public void buildProfessorScene() {
-        buildStage(new Stage(), "Profesor");
-        Label label = new Label("Bienvenido, Profesor!");
-        borderPane = new BorderPane();
-        borderPane.setCenter(label);
+    private void buildScene(String fxmlFile) {
+        Parent viewFile;
+        try {
+            viewFile = FXMLLoader.load(getClass().getResource(fxmlFile));
+            window.setScene(new Scene(viewFile, 600, 400));
+        } catch (IOException ioException) {
+            Logger.getLogger(GUI_Home.class.getName()).log(Level.SEVERE, ioException.getMessage(), ioException);
+        }
     }
 }

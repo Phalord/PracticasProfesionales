@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.standardeleven.project.gui.controller.ControllerSelectProject"
+            prefHeight="200.0" prefWidth="150.0">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Label fx:id="projectName" text="Nombre Proyecto" prefWidth="100" alignment="CENTER" wrapText="true"/>
+            <Button id="add" text="Añadir"/>
+            <Button id="visualize" text="Visualizar"/>
+        </VBox>
+    </center>
+
+</BorderPane>

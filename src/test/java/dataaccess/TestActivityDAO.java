@@ -14,7 +14,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
 public class TestActivityDAO {
     private final static IActivityDAO iActivityDAO = new ActivityDAO();
@@ -53,15 +52,10 @@ public class TestActivityDAO {
     }
 
     @Test
-    public void testDeleteActivity() {
+    public void testDeleteExistingActivity() {
         printTestTitle("Delete Activity");
         Activity activity = iActivityDAO.getActivityByID(5);
-        if (activity != null) {
-            assertTrue(iActivityDAO.deleteActivity(activity));
-        } else {
-            print("The activity doesn't exist");
-            fail();
-        }
+        assertTrue(iActivityDAO.deleteActivity(activity));
         print("");
     }
 

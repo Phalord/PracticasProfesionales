@@ -13,6 +13,7 @@
   3. [Restricciones](#restricciones)
   4. [Seguridad](#seguridad)
   5. [Convención de nombres](#convención-de-nombres)
+  6. [Referencias](#referencias)
 
 ## Introducción
 En el mundo de la programación no existen reglas que declaren cómo debe o no debe
@@ -37,7 +38,6 @@ Google Java Style Guide, el Estándar de Programación para Construcción en Jav
 abarcar los puntos esenciales para la creación de un proyecto de software sostenible, robusto
 y de calidad. Este estándar será utilizado para la creación del proyecto final de, la Experiencia
 Educativa, Principios de construcción de Software; del equipo once.
-
 
 ## Formato
 
@@ -276,7 +276,7 @@ public void changeName(String name) {
 ### Pruebas
 Uso de la metodología de TDD. El *Desarrollo Guiado por Pruebas*, o *Test Driven Development* por sus siglas en inglés, consta en escribir primero los casos de prueba unitarios; para estos se toma una parte del código y comprobar su funcionamiento.
 
-### Excepciones
+### Excepciones (Seguridad)
 
 #### Captura de Excepciones
 Las excepciones deben ser atrapadas en un bloque `try-catch`.
@@ -341,7 +341,7 @@ Para convertir una frase a `camelCase`, se comienza con el nombre en forma de pr
 | **Database connection** | `databaseConnection` | `dataBaseConnection` |
 | **Import file**         |     `importFile`     |         `ImportFile` |
 
-## Fuentes
+## Referencias
   * [Google Java Style Guide][GJSG]
   * [47Deg - Coding Guidelines][47DEG]
   * [Government of Bahrain Java Standards][GBJS]

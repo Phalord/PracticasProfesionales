@@ -2,6 +2,7 @@ package com.standardeleven.project.gui.controller;
 
 import com.standardeleven.project.dataaccess.dao.UserDAO;
 import com.standardeleven.project.dataaccess.idao.IUserDAO;
+import com.standardeleven.project.gui.GUI_Home;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
@@ -28,14 +29,17 @@ public class ControllerLogIn {
         window.show();
     }
 
-    public void logIn() {
+    @FXML
+    private void logIn() {
         IUserDAO iUserDAO = new UserDAO();
         String username = fieldUsername.getText();
         String password = fieldPassword.getText();
         if (iUserDAO.getUserByEnrollment(username) != null) {
             if (BCrypt.checkpw(password, iUserDAO.getUserByEnrollment(username).getUserPassword())) {
                 logInMessage.setTextFill(Color.rgb(39, 210, 30));
-                logInMessage.setText("Log in exitosos, pero no se ha implementado nada más");
+                GUI_Home gui_home = new GUI_Home(iUserDAO.getUserByEnrollment(username).getUserType());
+                gui_home.display();
+                closeWindow();
             } else {
                 incorrectCredentials();
             }
@@ -44,8 +48,13 @@ public class ControllerLogIn {
         }
     }
 
-    public void incorrectCredentials() {
+    private void incorrectCredentials() {
         logInMessage.setTextFill(Color.rgb(210, 39, 30));
         logInMessage.setText("Usuario o contraseña incorrectas. Por favor intente nuevamente.");
+    }
+
+    private void closeWindow() {
+        Stage stage1 = (Stage) fieldPassword.getScene().getWindow();
+        stage1.close();
     }
 }

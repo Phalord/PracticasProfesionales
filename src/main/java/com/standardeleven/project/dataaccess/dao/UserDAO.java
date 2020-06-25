@@ -67,7 +67,7 @@ public class UserDAO implements IUserDAO {
     public boolean addUser(User user) {
         result = false;
         String query = "INSERT INTO usuario(usuario,contraseñaHash,tipoCuenta) VALUES(?,?,?)";
-        String passwordAux = BCrypt.hashpw(user.getUserPassword(), BCrypt.gensalt(18));
+        String passwordAux = BCrypt.hashpw(user.getUserPassword(), BCrypt.gensalt(10));
         try (Connection connection = mySQLConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, user.getUserName());

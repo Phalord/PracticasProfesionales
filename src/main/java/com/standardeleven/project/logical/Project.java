@@ -1,6 +1,6 @@
 package com.standardeleven.project.logical;
 
-public class Project {
+public class  Project {
     private int projectID;
     private String projectName;
     private String projectDescription;

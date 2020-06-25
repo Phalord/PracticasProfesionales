@@ -121,7 +121,7 @@ public class ProjectDAO implements IProjectDAO {
     public boolean updateProject(Project project) {
         result = false;
         String query = String.format("UPDATE proyecto SET Descripcion=?, Recursos=?, Matricula=?,%s",
-                " NumeroPersonalCoordinador=? WHERE NombreProyecto=?");
+                " idResponsableProyecto=? WHERE NombreProyecto=?");
         try (Connection connection = mySQLConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(5,project.getProjectName());

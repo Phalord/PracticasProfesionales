@@ -1,47 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" fx:id="container" prefHeight="481.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.standardeleven.project.gui.controller.Controller_ProjectSection">
-   <children>
-      <Button fx:id="buttonAddProject" layoutX="153.0" layoutY="149.0" mnemonicParsing="false" onAction="#registerProject" prefHeight="26.0" prefWidth="238.0" text="Registrar proyecto" />
-      <Button fx:id="buttonUpdateProject" layoutX="152.0" layoutY="238.0" mnemonicParsing="false" onAction="#updateProject" prefHeight="26.0" prefWidth="238.0" text="Actualizar proyecto" />
-      <Button fx:id="buttonProjectList" layoutX="153.0" layoutY="327.0" mnemonicParsing="false" onAction="#listRegisteredProjects" prefHeight="26.0" prefWidth="237.0" text="Lista de proyectos registrados" />
-      <Button fx:id="buttonDeleteProject" layoutX="152.0" layoutY="410.0" mnemonicParsing="false" onAction="#deleteProject" prefHeight="26.0" prefWidth="238.0" text="Eliminar proyecto" />
-      <ImageView fx:id="imgAdd" fitHeight="60.0" fitWidth="63.0" layoutX="424.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../src/main/resources/images/more.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgRemove" fitHeight="60.0" fitWidth="69.0" layoutX="424.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../src/main/resources/images/cross.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgUpload" fitHeight="76.0" fitWidth="60.0" layoutX="424.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../src/main/resources/images/up.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgListCheck" fitHeight="60.0" fitWidth="60.0" layoutX="424.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../src/main/resources/images/check-box.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="imgHome" fitHeight="60.0" fitWidth="60.0" layoutX="30.0" layoutY="21.0" onMouseClicked="#returnHome" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../src/main/resources/images/home.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="labelProjectSectionTitle" layoutX="190.0" layoutY="63.0" text="Sección Proyecto">
-         <font>
-            <Font name="Consolas Bold" size="30.0" />
-         </font>
-      </Label>
-   </children>
-</AnchorPane>
+<?import java.lang.Integer?>
+<BorderPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.standardeleven.project.gui.controller.ControllerProjectSection">
+   <fx:define>
+      <Integer fx:id="BUTTON_SIZE" fx:value="200"/>
+   </fx:define>
+   <center>
+      <BorderPane>
+         <center>
+            <VBox alignment="CENTER" spacing="15">
+               <Button id="myProject" text="Mi Proyecto" prefWidth="$BUTTON_SIZE" onAction="#viewMyProject"/>
+               <Button id="requestProject" text="Solicitar Proyecto" prefWidth="$BUTTON_SIZE" onAction="#requestProyect"/>
+               <padding>
+                  <Insets topRightBottomLeft="50"/>
+               </padding>
+            </VBox>
+         </center>
+         <padding>
+            <Insets topRightBottomLeft="50" />
+         </padding>
+         <left>
+            <Region BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Region BorderPane.alignment="CENTER" />
+         </right>
+         <top>
+            <Label text="Sección Proyecto" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+   </center>
+   <left>
+      <Region BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Region BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Region BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Usuario">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Mi información"/>
+                  <MenuItem mnemonicParsing="false" text="Mensajería"/>
+                  <MenuItem mnemonicParsing="false" text="Cerrar Sesión"/>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+
+</BorderPane>

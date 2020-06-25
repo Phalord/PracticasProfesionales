@@ -44,7 +44,7 @@ public class ActivityDAO implements IActivityDAO {
         List<Activity> activities = new ArrayList<>();
         String query = "SELECT * FROM actividad WHERE idReporte = ?";
         try (Connection connection = mySQLConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)){
+            PreparedStatement preparedStatement = connection.prepareStatement(query)){
             preparedStatement.setInt(1, reportID);
             try (ResultSet resultSet = preparedStatement.executeQuery()){
                 while (resultSet.next()) {
@@ -135,7 +135,9 @@ public class ActivityDAO implements IActivityDAO {
         activity.setActivityTitle(resultSet.getString("tituloActividad"));
         activity.setProjectID(resultSet.getInt("idProyecto"));
         activity.setStudentEnrollment(resultSet.getString("matriculaEstudiante"));
+        activity.setActivityDescription(resultSet.getString("descripcionActividad"));
         activity.setActivityDeliveryDate(resultSet.getDate("fechaEntregaActividad"));
         activity.setActivityStatus(resultSet.getBoolean("estadoActividad"));
+
     }
 }

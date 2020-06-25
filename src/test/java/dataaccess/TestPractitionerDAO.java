@@ -50,7 +50,7 @@ public class TestPractitionerDAO {
                 assertTrue(iPractitionerDAO.addPractitioner(practitioner));
             } else {
                 if (iUserDAO.addUser(new User(practitioner.getUserName(),
-                        "min51!uEñar3Sco?'at63Pe¿S5r", "practicante"))) {
+                        "termusrev715131!!", "practicante"))) {
                     assertTrue(iPractitionerDAO.addPractitioner(practitioner));
                 } else {
                     fail("Unable to add user to database");

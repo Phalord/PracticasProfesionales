@@ -25,6 +25,10 @@ public class Controller_AddPractitioner implements Initializable {
     
     private TextField personalProfessorTextField;
     private Practitioner practitioner;
+    @FXML
+    private Button cancelButton;
+    @FXML
+    private Button deleteButton;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {}    

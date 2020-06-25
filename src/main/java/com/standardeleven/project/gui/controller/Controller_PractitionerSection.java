@@ -30,6 +30,7 @@ public class Controller_PractitionerSection implements Initializable {
             addPractitionerController = loader.getController();
             Scene addPractitionerScene = new Scene(root);
             Stage addPractitionerStage = new Stage();
+            addPractitionerStage.setResizable(false);
             addPractitionerStage.initModality(Modality.APPLICATION_MODAL);
             addPractitionerStage.setScene(addPractitionerScene);
             addPractitionerStage.showAndWait();

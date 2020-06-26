@@ -3,15 +3,16 @@ package com.standardeleven.project.dataaccess.dao;
 import com.npcstudio.sqlconnection.MySQLConnection;
 import com.standardeleven.project.dataaccess.idao.IPractitionerDAO;
 import com.standardeleven.project.logical.Practitioner;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.ObservableList;
 
 public class PractitionerDAO implements IPractitionerDAO {
     private final MySQLConnection mySQLConnection;
@@ -91,6 +92,22 @@ public class PractitionerDAO implements IPractitionerDAO {
             Logger.getLogger(PractitionerDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
         }
         return result;
+    }
+    
+    @Override
+    public void fillPractitionerTable(Connection mySQLConnection, ObservableList<Practitioner> listPractitioner) {
+        String query = "SELECT * FROM practicante";
+        try {
+            Statement instruction = mySQLConnection.createStatement();
+            ResultSet resultQuery = instruction.executeQuery(query);
+            while(resultQuery.next()){
+                Practitioner practitioner = new Practitioner();
+                fillPractitioner(practitioner, resultQuery);
+                listPractitioner.add(practitioner);
+            }
+        } catch (SQLException sqlException) {
+            Logger.getLogger(PractitionerDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
+        }  
     }
 
     private static void fillPractitioner(Practitioner practitioner, ResultSet resultSet) throws SQLException{

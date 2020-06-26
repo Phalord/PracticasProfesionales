@@ -15,7 +15,7 @@ public class TestUserDAO {
     @Test
     public void testGetUser() {
         printTestTitle("Get User");
-        User user = iUserDAO.getUserByEnrollment("s18012132");
+        User user = iUserDAO.getUserByUserName("s18012132");
         assertEquals("s18012132", user.getUserName());
         print();
     }
@@ -34,7 +34,7 @@ public class TestUserDAO {
     @Test
     public void testDeleteUser() {
         printTestTitle("Delete User");
-        User user = iUserDAO.getUserByEnrollment("s17015232");
+        User user = iUserDAO.getUserByUserName("s17015232");
         if(user != null) {
             assertTrue(iUserDAO.deleteUser(user));
         } else {

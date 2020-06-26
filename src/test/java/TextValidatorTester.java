@@ -66,7 +66,7 @@ public class TextValidatorTester {
         while (true) {
             System.out.println("Ingrese un numero de teléfono");
             String telephoneNumber = scanner.nextLine();
-            System.out.println(validTelephoneNumber(telephoneNumber));
+            System.out.println(validateTelephoneNumber(telephoneNumber));
             System.out.println("Wanna continue? Y/N");
             if (scanner.nextLine().equalsIgnoreCase("N")) {
                 break;

@@ -14,7 +14,7 @@
             <Label text="Inicio de Sesión"/>
             <TextField fx:id="fieldUsername" promptText="Matrícula"/>
             <PasswordField fx:id="fieldPassword" promptText="Contraseña"/>
-            <Label fx:id="logInMessage"/>
+            <Label fx:id="logInMessage" wrapText="true"/>
             <Button id="buttonLogIn" text="Iniciar Sesión" onAction="#logIn"/>
             <padding>
                 <Insets topRightBottomLeft="30"/>

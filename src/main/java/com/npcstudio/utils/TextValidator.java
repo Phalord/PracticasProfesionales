@@ -24,7 +24,7 @@ public class TextValidator {
         return emailValidator.isValid(email);
     }
 
-    public static boolean validTelephoneNumber(String telephoneNumber) {
+    public static boolean validateTelephoneNumber(String telephoneNumber) {
         String regex = "[0-9]{3}[-. ][0-9]{3}[-. ][0-9]{4}";
         return telephoneNumber.matches(regex);
     }

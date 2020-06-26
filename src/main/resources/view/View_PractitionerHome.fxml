@@ -6,6 +6,7 @@
 <?import javafx.scene.text.*?>
 
 <?import java.lang.Integer?>
+<?import java.lang.String?>
 <BorderPane prefHeight="400.0" prefWidth="600.0"
             xmlns="http://javafx.com/javafx/10.0.2-internal"
             xmlns:fx="http://javafx.com/fxml/1"
@@ -13,6 +14,7 @@
     <fx:define>
         <Integer fx:id="BUTTON_SIZE" fx:value="200"/>
         <Integer fx:id="BACK_BUTTON_SIZE" fx:value="100"/>
+        <String fx:id="userName"/>
     </fx:define>
     <center>
         <BorderPane>
@@ -55,17 +57,11 @@
       <Region BorderPane.alignment="CENTER" />
    </bottom>
    <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="Usuario">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Mi información" />
-                <MenuItem mnemonicParsing="false" text="Mensajería" />
-                <MenuItem mnemonicParsing="false" text="Cerrar Sesión" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+       <MenuBar BorderPane.alignment="CENTER">
+           <Menu id="topMenu" mnemonicParsing="false" text="$userName">
+               <MenuItem mnemonicParsing="false" text="Cerrar Sesión"/>
+           </Menu>
+       </MenuBar>
    </top>
 
 </BorderPane>

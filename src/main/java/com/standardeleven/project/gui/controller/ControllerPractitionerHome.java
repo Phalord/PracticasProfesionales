@@ -5,6 +5,15 @@ import javafx.stage.Stage;
 
 public class ControllerPractitionerHome {
     private final Stage window = new Stage();
+    @FXML private String userName;
+
+    public void setUsername(String username) {
+        this.userName = username;
+    }
+
+    public String getUsername() {
+        return userName;
+    }
 
     @FXML
     public void goProjectSection() {

@@ -36,7 +36,7 @@ public class TestProfessorDAO {
         professor.setProfessorMotherSurname("Profesante");
         professor.setProfessorShift("Vespertino");
         professor.setUserName("p11223344");
-        User user = iUserDAO.getUserByEnrollment(professor.getUserName());
+        User user = iUserDAO.getUserByUserName(professor.getUserName());
         if (user != null) {
             assertTrue(iProfessorDAO.addProfessor(professor));
         } else {

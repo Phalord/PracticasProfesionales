@@ -5,7 +5,6 @@ import com.standardeleven.project.dataaccess.dao.UserDAO;
 import com.standardeleven.project.dataaccess.idao.ICoordinatorDAO;
 import com.standardeleven.project.dataaccess.idao.IUserDAO;
 import com.standardeleven.project.logical.Coordinator;
-import com.standardeleven.project.logical.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -43,7 +42,7 @@ public class TestCoordinatorDAO {
         coordinator.setCoordinatorName("Coordinator");
         coordinator.setCoordinatorFatherSurname("Coordinador");
         coordinator.setCoordinatorMotherSurname("Coordinante");
-        if (iUserDAO.getUserByEnrollment(coordinator.getUserName()) != null) {
+        if (iUserDAO.getUserByUserName(coordinator.getUserName()) != null) {
             assertTrue(iCoordinatorDAO.addCoordinator(coordinator));
         } else {
             coordinator.setUserPassword("coordinador");

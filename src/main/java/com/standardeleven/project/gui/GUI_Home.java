@@ -1,5 +1,6 @@
 package com.standardeleven.project.gui;
 
+import com.standardeleven.project.gui.controller.ControllerPractitionerHome;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,7 +17,7 @@ import static com.standardeleven.project.main.Main.PROFESSOR;
 public class GUI_Home implements IWindowGUI {
     private Stage window;
 
-    public GUI_Home(String accountType) {
+    public GUI_Home(String accountType, String userName) {
         final String fxmlPractitionerHome = "/view/View_PractitionerHome.fxml";
         final String fxmlCoordinatorHome = "/view/View_CoordinatorHome.fxml";
         final String fxmlProfessorHome = "/view/View_ProfessorHome.fxml";
@@ -55,6 +56,7 @@ public class GUI_Home implements IWindowGUI {
         try {
             viewFile = FXMLLoader.load(getClass().getResource(fxmlFile));
             window.setScene(new Scene(viewFile, 600, 400));
+            window.setResizable(false);
         } catch (IOException ioException) {
             Logger.getLogger(GUI_Home.class.getName()).log(Level.SEVERE, ioException.getMessage(), ioException);
         }

@@ -43,7 +43,7 @@ public class UserDAO implements IUserDAO {
     }
 
     @Override
-    public User getUserByEnrollment(String userName) {
+    public User getUserByUserName(String userName) {
         User user = null;
         String query = "SELECT * FROM usuario WHERE usuario = ?";
         try (Connection connection = mySQLConnection.getConnection();
@@ -61,6 +61,24 @@ public class UserDAO implements IUserDAO {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
         }
         return user;
+    }
+
+    @Override
+    public String getUserTypeByUserName(String userName) {
+        String userType = null;
+        String query = "SELECT * FROM usuario WHERE usuario = ?";
+        try (Connection connection = mySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, userName);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    userType = resultSet.getString("tipoCuenta");
+                }
+            }
+        } catch (SQLException sqlException) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
+        }
+        return userType;
     }
 
     @Override

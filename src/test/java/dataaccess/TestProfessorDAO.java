@@ -31,16 +31,16 @@ public class TestProfessorDAO {
         IUserDAO iUserDAO = new UserDAO();
         printTestTitle("Add Professor");
         Professor professor = new Professor();
-        professor.setProfessorNames("Jessica");
-        professor.setProfessorFatherSurname("Elric");
-        professor.setProfessorMotherSurname("Muñoz");
+        professor.setProfessorNames("Professor");
+        professor.setProfessorFatherSurname("Profesor");
+        professor.setProfessorMotherSurname("Profesante");
         professor.setProfessorShift("Vespertino");
-        professor.setUserName("p20553366");
+        professor.setUserName("p11223344");
         User user = iUserDAO.getUserByEnrollment(professor.getUserName());
         if (user != null) {
             assertTrue(iProfessorDAO.addProfessor(professor));
         } else {
-            if (iUserDAO.addUser(new User(professor.getUserName(), "56OirA?n¡t2tt4Re'¿raCAPo", "profesor"))) {
+            if (iUserDAO.addUser(new User(professor.getUserName(), "profesor", "profesor"))) {
                 assertTrue(iProfessorDAO.addProfessor(professor));
             } else {
                 print("Unable to add User to database");

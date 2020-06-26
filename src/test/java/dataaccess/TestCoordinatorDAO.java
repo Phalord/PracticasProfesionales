@@ -39,14 +39,16 @@ public class TestCoordinatorDAO {
         IUserDAO iUserDAO = new UserDAO();
         printTestTitle("Add Coordinator");
         Coordinator coordinator = new Coordinator();
-        coordinator.setUserName("c11002684");
-        coordinator.setCoordinatorName("Francisco");
-        coordinator.setCoordinatorFatherSurname("Molina");
-        coordinator.setCoordinatorMotherSurname("Rojas");
+        coordinator.setUserName("c11223344");
+        coordinator.setCoordinatorName("Coordinator");
+        coordinator.setCoordinatorFatherSurname("Coordinador");
+        coordinator.setCoordinatorMotherSurname("Coordinante");
         if (iUserDAO.getUserByEnrollment(coordinator.getUserName()) != null) {
             assertTrue(iCoordinatorDAO.addCoordinator(coordinator));
         } else {
-            if(iUserDAO.addUser(new User(coordinator.getUserName(), "Nc)Se2oe¡p14rat2r'a2iT1(ÑA", "coordinador"))) {
+            coordinator.setUserPassword("coordinador");
+            coordinator.setUserType("coordinador");
+            if(iUserDAO.addUser(coordinator)) {
                 assertTrue(iCoordinatorDAO.addCoordinator(coordinator));
             } else {
                 print("Unable to add User to database");

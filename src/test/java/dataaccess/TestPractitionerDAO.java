@@ -39,18 +39,19 @@ public class TestPractitionerDAO {
         IUserDAO iUserDAO = new UserDAO();
         printTestTitle("Add Practitioner");
         Practitioner practitioner = new Practitioner();
-        practitioner.setUserName("s18012132");
-        practitioner.setStudentName("Alejandro");
-        practitioner.setStudentFatherSurname("Sandoval");
-        practitioner.setStudentMotherSurname("Bravo");
-        practitioner.setStudentShift("Vespertino");
-        User user = iUserDAO.getUserByEnrollment("s18012132");
+        practitioner.setUserName("s11223344");
+        practitioner.setStudentName("Practitioner");
+        practitioner.setStudentFatherSurname("Practicante");
+        practitioner.setStudentMotherSurname("Practicoso");
+        practitioner.setStudentShift("Matutino");
+        User user = iUserDAO.getUserByEnrollment("s11223344");
         if(iPractitionerDAO.getPractitioner(practitioner.getUserName()) == null) {
             if (user != null) {
                 assertTrue(iPractitionerDAO.addPractitioner(practitioner));
             } else {
-                if (iUserDAO.addUser(new User(practitioner.getUserName(),
-                        "termusrev715131!!", "practicante"))) {
+                practitioner.setUserPassword("practitioner");
+                practitioner.setUserType("practicante");
+                if (iUserDAO.addUser(practitioner)) {
                     assertTrue(iPractitionerDAO.addPractitioner(practitioner));
                 } else {
                     fail("Unable to add user to database");

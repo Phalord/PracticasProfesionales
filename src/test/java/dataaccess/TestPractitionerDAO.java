@@ -5,7 +5,6 @@ import com.standardeleven.project.dataaccess.dao.UserDAO;
 import com.standardeleven.project.dataaccess.idao.IPractitionerDAO;
 import com.standardeleven.project.dataaccess.idao.IUserDAO;
 import com.standardeleven.project.logical.Practitioner;
-import com.standardeleven.project.logical.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -44,18 +43,13 @@ public class TestPractitionerDAO {
         practitioner.setStudentFatherSurname("Practicante");
         practitioner.setStudentMotherSurname("Practicoso");
         practitioner.setStudentShift("Matutino");
-        User user = iUserDAO.getUserByEnrollment("s11223344");
         if(iPractitionerDAO.getPractitioner(practitioner.getUserName()) == null) {
-            if (user != null) {
+            practitioner.setUserPassword("practitioner");
+            practitioner.setUserType("practicante");
+            if (iUserDAO.addUser(practitioner)) {
                 assertTrue(iPractitionerDAO.addPractitioner(practitioner));
             } else {
-                practitioner.setUserPassword("practitioner");
-                practitioner.setUserType("practicante");
-                if (iUserDAO.addUser(practitioner)) {
-                    assertTrue(iPractitionerDAO.addPractitioner(practitioner));
-                } else {
-                    fail("Unable to add user to database");
-                }
+                fail("Unable to add user to database");
             }
         } else {
             fail(String.format("Practitioner %s already exists", practitioner.getUserName()));

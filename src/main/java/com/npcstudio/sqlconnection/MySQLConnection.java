@@ -1,6 +1,5 @@
 package com.npcstudio.sqlconnection;
 
-
 import com.standardeleven.project.dataaccess.DatabaseProperties;
 
 import java.io.FileNotFoundException;

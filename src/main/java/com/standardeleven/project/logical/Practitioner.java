@@ -1,14 +1,5 @@
 package com.standardeleven.project.logical;
 
-import com.standardeleven.project.dataaccess.dao.PractitionerDAO;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.collections.ObservableList;
-
 public class Practitioner extends User{
     
     private String studentName;
@@ -16,7 +7,7 @@ public class Practitioner extends User{
     private String studentMotherSurname;
     private String studentShift;
     private int studentGrade;
-    private int personalProfessor;
+    private String personalProfessor;
 
     public Practitioner() {
         super();
@@ -46,7 +37,7 @@ public class Practitioner extends User{
         this.studentGrade = studentGrade;
     }
 
-    public void setPersonalProfessor(int personalProfessor) {
+    public void setPersonalProfessor(String personalProfessor) {
         this.personalProfessor = personalProfessor;
     }
 
@@ -70,7 +61,7 @@ public class Practitioner extends User{
         return studentGrade;
     }
 
-    public int getPersonalProfessor() {
+    public String getPersonalProfessor() {
         return personalProfessor;
     }
 }

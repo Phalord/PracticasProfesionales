@@ -63,7 +63,7 @@ public class PractitionerDAO implements IPractitionerDAO {
     public boolean addPractitioner(Practitioner practitioner) {
         result = false;
         String query = String.format("INSERT INTO practicante(Matricula,Nombre,ApellidoPaterno,%s",
-                "ApellidoMaterno,Turno) VALUES(?,?,?,?,?)");
+                "ApellidoMaterno,Turno,NumeroPersonalProfesor) VALUES(?,?,?,?,?,?)");
         try (Connection connection = mySQLConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, practitioner.getUserName());
@@ -71,6 +71,7 @@ public class PractitionerDAO implements IPractitionerDAO {
             preparedStatement.setString(3, practitioner.getStudentFatherSurname());
             preparedStatement.setString(4, practitioner.getStudentMotherSurname());
             preparedStatement.setString(5, practitioner.getStudentShift());
+            preparedStatement.setString(6, practitioner.getPersonalProfessor());
             int numberRowsAffected = preparedStatement.executeUpdate();
             result = (numberRowsAffected > 0);
         } catch (SQLException sqlException) {
@@ -93,7 +94,7 @@ public class PractitionerDAO implements IPractitionerDAO {
         }
         return result;
     }
-    
+
     @Override
     public void fillPractitionerTable(Connection mySQLConnection, ObservableList<Practitioner> listPractitioner) {
         String query = "SELECT * FROM practicante";
@@ -107,7 +108,7 @@ public class PractitionerDAO implements IPractitionerDAO {
             }
         } catch (SQLException sqlException) {
             Logger.getLogger(PractitionerDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
-        }  
+        }
     }
 
     private static void fillPractitioner(Practitioner practitioner, ResultSet resultSet) throws SQLException{
@@ -116,6 +117,6 @@ public class PractitionerDAO implements IPractitionerDAO {
         practitioner.setStudentFatherSurname(resultSet.getString("ApellidoPaterno"));
         practitioner.setStudentMotherSurname(resultSet.getString("ApellidoMaterno"));
         practitioner.setStudentShift(resultSet.getString("Turno"));
-        practitioner.setStudentGrade(resultSet.getInt("Calificacion"));
+        practitioner.setPersonalProfessor(resultSet.getString("NumeroPersonalProfesor"));
     }
 }

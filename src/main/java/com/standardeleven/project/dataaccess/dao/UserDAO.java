@@ -32,7 +32,7 @@ public class UserDAO implements IUserDAO {
             while (resultSet.next()) {
                 User user = new User();
                 user.setUserName(resultSet.getString("usuario"));
-                user.setUserPassword(resultSet.getString("contraseÃ±aHash"));
+                user.setUserPassword(resultSet.getString("contraseñaHash"));
                 user.setUserType(resultSet.getString("tipoCuenta"));
                 users.add(user);
             }
@@ -53,7 +53,7 @@ public class UserDAO implements IUserDAO {
                 while (resultSet.next()) {
                     user = new User();
                     user.setUserName(resultSet.getString("usuario"));
-                    user.setUserPassword(resultSet.getString("contraseÃ±aHash"));
+                    user.setUserPassword(resultSet.getString("contraseñaHash"));
                     user.setUserType(resultSet.getString("tipoCuenta"));
                 }
             }
@@ -66,10 +66,10 @@ public class UserDAO implements IUserDAO {
     @Override
     public boolean addUser(User user) {
         result = false;
-        String query = "INSERT INTO usuario(usuario,contraseÃ±aHash,tipoCuenta) VALUES(?,?,?)";
+        String query = "INSERT INTO usuario(usuario,contraseñaHash,tipoCuenta) VALUES(?,?,?)";
         String passwordAux = BCrypt.hashpw(user.getUserPassword(), BCrypt.gensalt(10));
         try (Connection connection = mySQLConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, user.getUserName());
             preparedStatement.setString(2, passwordAux);
             preparedStatement.setString(3, user.getUserType());

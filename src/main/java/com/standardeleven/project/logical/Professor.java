@@ -48,8 +48,7 @@ public class Professor extends User {
 
     @Override
     public String toString() {
-        return String.format("| %s | %s | %s | %s | %s |", super.getUserName(), getProfessorNames(),
-                getProfessorFatherSurname(), getProfessorMotherSurname(), getProfessorShift());
+        return getProfessorNames() + "("+getUserName()+")";
     }
 }
     

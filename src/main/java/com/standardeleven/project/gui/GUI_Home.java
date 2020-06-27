@@ -1,5 +1,6 @@
 package com.standardeleven.project.gui;
 
+import com.standardeleven.project.gui.controller.ControllerLogIn;
 import com.standardeleven.project.gui.controller.ControllerPractitionerHome;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,21 +19,20 @@ public class GUI_Home implements IWindowGUI {
     private Stage window;
 
     public GUI_Home(String accountType, String userName) {
-        final String fxmlPractitionerHome = "/view/View_PractitionerHome.fxml";
         final String fxmlCoordinatorHome = "/view/View_CoordinatorHome.fxml";
         final String fxmlProfessorHome = "/view/View_ProfessorHome.fxml";
         switch (accountType) {
             case PRACTITIONER:
                 buildStage(new Stage(), "Practicante");
-                buildScene(fxmlPractitionerHome);
+                buildPractitionerHomeScene(userName);
                 break;
             case COORDINATOR:
                 buildStage(new Stage(), "Coordinador");
-                buildScene(fxmlCoordinatorHome);
+                //buildCoordinatorHomeScene(userName);
                 break;
             case PROFESSOR:
                 buildStage(new Stage(), "Profesor");
-                buildScene(fxmlProfessorHome);
+                //buildCoordinatorHomeScene(userName);
                 break;
             default:
                 Logger.getLogger(GUI_Home.class.getName()).log(Level.SEVERE, "Account type out of boundaries");
@@ -51,10 +51,13 @@ public class GUI_Home implements IWindowGUI {
         window.setTitle(title);
     }
 
-    private void buildScene(String fxmlFile) {
+    private void buildPractitionerHomeScene(String userName) {
         Parent viewFile;
         try {
-            viewFile = FXMLLoader.load(getClass().getResource(fxmlFile));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/View_PractitionerHome.fxml"));
+            viewFile = loader.load();
+            ControllerPractitionerHome controllerPractitionerHome = loader.getController();
+            controllerPractitionerHome.setTopMenuText(userName);
             window.setScene(new Scene(viewFile, 600, 400));
             window.setResizable(false);
         } catch (IOException ioException) {

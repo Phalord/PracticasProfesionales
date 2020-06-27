@@ -6,15 +6,14 @@
 <?import javafx.scene.text.*?>
 
 <?import java.lang.Integer?>
-<?import java.lang.String?>
 <BorderPane prefHeight="400.0" prefWidth="600.0"
             xmlns="http://javafx.com/javafx/10.0.2-internal"
             xmlns:fx="http://javafx.com/fxml/1"
+            fx:id="borderPane"
             fx:controller="com.standardeleven.project.gui.controller.ControllerPractitionerHome">
     <fx:define>
         <Integer fx:id="BUTTON_SIZE" fx:value="200"/>
         <Integer fx:id="BACK_BUTTON_SIZE" fx:value="100"/>
-        <String fx:id="userName"/>
     </fx:define>
     <center>
         <BorderPane>
@@ -23,7 +22,6 @@
                     <Button id="projectSection" text="Sección Proyecto" prefWidth="$BUTTON_SIZE" onAction="#goProjectSection"/>
                     <Button id="generateDocumentation" text="Generar Documentación" prefWidth="$BUTTON_SIZE" onAction="#generateDocumentation"/>
                     <Button id="uploadDocumentation" text="Subir Documentación" prefWidth="$BUTTON_SIZE" onAction="#uploadDocumentation"/>
-                    <Button id="back" text="Atrás" prefWidth="$BACK_BUTTON_SIZE" onAction="#back"/>
                     <padding>
                         <Insets topRightBottomLeft="50"/>
                     </padding>
@@ -58,8 +56,8 @@
    </bottom>
    <top>
        <MenuBar BorderPane.alignment="CENTER">
-           <Menu id="topMenu" mnemonicParsing="false" text="$userName">
-               <MenuItem mnemonicParsing="false" text="Cerrar Sesión"/>
+           <Menu fx:id="topMenu" mnemonicParsing="false">
+               <MenuItem mnemonicParsing="false" text="Cerrar Sesión" onAction="#logOut"/>
            </Menu>
        </MenuBar>
    </top>

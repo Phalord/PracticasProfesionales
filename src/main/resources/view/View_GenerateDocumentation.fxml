@@ -9,6 +9,7 @@
 <BorderPane prefHeight="400.0" prefWidth="600.0"
             xmlns="http://javafx.com/javafx/10.0.2-internal"
             xmlns:fx="http://javafx.com/fxml/1"
+            fx:id="borderPane"
             fx:controller="com.standardeleven.project.gui.controller.ControllerGenerateDocumentation">
     <fx:define>
         <Integer fx:id="BUTTON_SIZE" fx:value="200"/>
@@ -20,7 +21,7 @@
                 <VBox alignment="CENTER" spacing="15">
                     <Button id="generatePartialReport" text="Generar Reporte Parcial" prefWidth="$BUTTON_SIZE" onAction="#generatePartialReport"/>
                     <Button id="generateMonthlyReport" text="Generar Reporte Mensual" prefWidth="$BUTTON_SIZE" onAction="#generateMonthlyReport"/>
-                    <Button id="generateSelfAppraisal" text="Generar Autoevaluación" prefWidth="$BUTTON_SIZE" onAction="#generateSelffAppraisal"/>
+                    <Button id="generateSelfAppraisal" text="Generar Autoevaluación" prefWidth="$BUTTON_SIZE" onAction="#generateSelfAppraisal"/>
                     <Button id="back" text="Atrás" prefWidth="$BACK_BUTTON_SIZE" onAction="#back"/>
                     <padding>
                         <Insets topRightBottomLeft="50"/>
@@ -56,15 +57,9 @@
     </bottom>
     <top>
         <MenuBar BorderPane.alignment="CENTER">
-            <menus>
-                <Menu mnemonicParsing="false" text="Usuario">
-                    <items>
-                        <MenuItem mnemonicParsing="false" text="Mi información" />
-                        <MenuItem mnemonicParsing="false" text="Mensajería" />
-                        <MenuItem mnemonicParsing="false" text="Cerrar Sesión" />
-                    </items>
-                </Menu>
-            </menus>
+            <Menu fx:id="topMenu" mnemonicParsing="false">
+                <MenuItem mnemonicParsing="false" text="Cerrar Sesión"/>
+            </Menu>
         </MenuBar>
     </top>
 

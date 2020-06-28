@@ -13,7 +13,7 @@ hide_hero: true
 
 **Fecha de creación:** 19 de marzo de 2020
 
-**Fecha de actualización:** 18 de junio de 2020
+**Fecha de actualización:** 27 de junio de 2020
 
 **Descripción:**  
 El *Practicante* deberá poder generar su **`PARTIAL REPORT`** y registrar las **`ACTIVITY`** que haya realizado durante un tiempo determinado para que pueda ser consultado y calificado, posteriormente, por un *Profesor*.
@@ -28,17 +28,18 @@ El *Practicante* da clic al botón "Generar Reporte Parcial" en la vista [`View_
 PRE-1. Se encuentra un **`PROJECT`** vinculado a algún **`PRACTITIONER`**.
 
 **Flujo Normal:**
-  1. El *SPP* despliega la interfaz [`View_GeneratePartialReport`][VGPR] mostrando etiquetas de texto que señalan la información que deberá ser ingresada (NRC, Periodo Escolar, Periodo del Reporte, Horas Cubiertas, Número de Informe; y de las **`ACTIVITY`**: Tiempo Real Empleado) en el campo de texto adyacente. Debajo del último campo de texto, se encuentran los botones `Añadir Actividad` y, al final de la ventana, dos botones `Generar` `Cancelar`.
+  1. El *SPP* recupera las **`ACTIVITY`** del *Practicante* y despliega la interfaz [`View_GeneratePartialReport`][VGPR] mostrando etiquetas de texto que señalan la información que deberá ser ingresada (NRC, Periodo Escolar, Periodo del Reporte, Horas Cubiertas, Número de Informe; y de las **`ACTIVITY`**: Tiempo Real Empleado) en el campo de texto adyacente. Debajo del último campo de texto, se encuentran los botones `Añadir Actividad` y, al final de la ventana, dos botones `Generar` `Cancelar`. EX-1
   2. El *Practicante*, escribe la información solicitada por el *SPP* y da clic en el botón `Generar`. FA-1 FA-3
-  3. El *SPP* verifica que los campos de información sean válidos. FA-4
-  4. El *SPP* muestra un diálogo de alerta [`Dialog_Confirmation`][DLCO]
-  5. El *Practicante* da clic en el botón "Confirmar". FA-2
-  6. El *SPP* guarda el **`PARTIAL REPORT`** en la base de datos y cierra el diálogo de Alerta; y muestra un [`Dialog_Succes`][DLSU]. EX-1
+  3. El *SPP* verifica que los campos de información sean válidos (FA-4) y muestra un diálogo de alerta [`Dialog_Confirmation`][DLCO]
+  4. El *Practicante* da clic en el botón "Confirmar". FA-2
+  5. El *SPP* guarda el **`PARTIAL REPORT`** en la base de datos y cierra el diálogo de Alerta; y muestra un [`Dialog_Succes`][DLSU]. EX-1
+  6. Termina el Caso de Uso.
 
 **Flujos Alternos:**
   1. *Cancelar Caso de Uso*
-     1. El *Practicante* da clic al botón "Cancelar".
-     2. El *SPP* termina la actividad y termina el Caso de Uso.
+     1. El *Practicante* da clic al botón "Atrás".
+     2. El *SPP* regresa a la [`View_GenerateDocumentation`][VGDN].
+     3. Termina el Caso de Uso.
   2. *Cancelar Confirmación*
      1. El *Practicante* da clic en el botón "Cancelar".
      2. El *SPP* cierra el diálogo de alerta y regresa al FN-2.
@@ -50,8 +51,9 @@ PRE-1. Se encuentra un **`PROJECT`** vinculado a algún **`PRACTITIONER`**.
 
 **Excepciones:**
    1. *Error al conectar con Base de Datos*
-      1. El *SPP* no puede conectarse con la Base de Datos para guardar la **`ACTIVITY`**.
-      2. El *SPP* muestra un diálogo de mensaje [`Dialog_ConnectionError`][DLCE].
+      1. El *SPP* muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
+      2. El *Practicante* da clic en el botón "Aceptar".
+      3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y [FN-1]: despliega la ventana sin la los cuadros para solicitar; [FN-5]: regresa al FN-2.
 
 **Postcondiciones:**  
 Post-1. El **`PARTIAL REPORT`** se guardó exitosamente en la Base de Datos.

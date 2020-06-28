@@ -22,7 +22,7 @@ El *Coordinador* podrá asignar, a un **`PRACTITIONER`**, un **`PROJECT`** regis
 *Coordinador*
 
 **Disparador:**  
-El *Coordinador* da clic al botón "Asignar Proyecto" en la vista [`View_PractitionerSection`][VPSE]
+El *Coordinador* da clic al botón "Asignar Proyecto" en la vista [`View_PractitionerSection`][VPSE].
 
 **Precondiciones:**  
 Pre-1. Debe haber, al menos, un **`PROJECT REQUEST`** en la Base de Datos.
@@ -32,13 +32,14 @@ Pre-1. Debe haber, al menos, un **`PROJECT REQUEST`** en la Base de Datos.
   2. El *Coordinador* busca al **`PRACTITIONER`** y da clic al botón "Asignar" del **`PROJECT`** que desee. FA-1
   3. El *SPP* recupera la información del **`PRACTITIONER`** y del **`PROJECT`** de la base de datos y muestra una ventana emergente de confirmación [`View_AssignationConfirmation`][VACO] con los botones "Asignar" y "Cancelar". EX-1
   4. El *Coordinador* da clic al botón "Asignar". FA-2
-  5. El *SPP* valida que el **`PROYECTO`** no se encuentre asignado. FA-3
-  6. El *SPP* realiza la asignación del **`PROJECT`** en la Base de Datos y cambia el estado del **`PROJECT REQUEST`** a "Asignado" y muestra un [`Dialog_Succes`][DLSU]. EX-1
+  5. El *SPP* valida que el **`PROYECTO`** no se encuentre asignado (FA-3) y realiza la asignación del **`PROJECT`** en la Base de Datos; cambia el estado del **`PROJECT REQUEST`** a "Asignado" y muestra un [`Dialog_Succes`][DLSU]. EX-1
+  6. Termina el Caso de Uso.
 
 **Flujos Alternos:**
-  1. *Regresar*
+  1. *Cancelar Caso de Uso*
      1. El *Practicante* da clic al botón "Regresar".
-     2. El *SPP* termina el Caso de Uso.
+     2. El *SPP* regresa a la [`View_PractitionerSection`][VPSE].
+     3. Termina el Caso de Uso.
   2. *Cancelar Confirmación*
      1. El *Practicante* da clic al botón "Cancelar"
      2. El *SPP* cierra la ventana [`View_AssignationConfirmation`][VACO] y regresa al FN-2.
@@ -49,9 +50,9 @@ Pre-1. Debe haber, al menos, un **`PROJECT REQUEST`** en la Base de Datos.
 
 **Excepciones:**
    1. *Error al conectar con Base de Datos*
-      1. El *SPP* muestra un diálogo de mensaje [`Dialog_ConnectionError`][DLCE].
+      1. El *SPP* muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
       2. El *Practicante* da clic en el botón "Aceptar".
-      3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE].
+      3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y [FN-1]: Despliega la ventana sin **`PROJECT REQUEST`**; [FN-3, FN-5]: regresa al FN-2.
 
 
 **Postcondiciones:**  
@@ -64,7 +65,7 @@ No incluye.
 No extiende.
 
 [VPSE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_PractitionerSection.png "`View_PractitionerSection` Prototype"
-[VPRE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_ProjectAssignation.png "`View_ProjectAssignation` Prototype"
+[VPRE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_ProjectRequests.png "`View_ProjectRequests` Prototype"
 [VACO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_AssignationConfirmation.png "`View_AssignationConfirmation` Prototype"
 [DLSU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Success.png "`Dialog_Success` Prototype"
 [DLAA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/Dialog_ProjectAlreadyAssigned.png "`Dialog_ProjectAlreadyAssigned` Prototype"

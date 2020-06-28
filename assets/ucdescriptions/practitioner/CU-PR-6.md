@@ -40,9 +40,10 @@ Pre-2. El *Practicante* debe tener asignada al menos 1 **`ACTIVITY`** sin comple
   9. El *SPP* guarda el **`MONTHLY REPORT`** en la Base de Datos y muestra un [`Dialog_Succes`][DLSU]. EX-2
 
 **Flujos Alternos:**
-  1. *Regresar*
-     1. El *Practicante* da clic en el botón "Regresar".
-     2. El *SPP* termina el Caso de Uso.
+  1. *Cancelar Caso de Uso*
+     1. El *Practicante* da clic en el botón "Atrás".
+     2. El *SPP* regresa a la [`View_UploadDocumentation`][VUDC]
+     3. Termina el Caso de Uso.
   2. *Cancelar Cargar Documento*
      1. El *Practicante* da clic al botón "Cancelar" del explorador de archivos.
      2. El *SO* cierra el explorador de archivos y regresa el enfoque al *SPP*, regresando al FN-2.
@@ -54,8 +55,9 @@ Pre-2. El *Practicante* debe tener asignada al menos 1 **`ACTIVITY`** sin comple
    1. *Error al cargar el **`MONTHLY REPORT`***
       1. El *SPP* muestra un [`Dialog_Error`][DLER] y regresa al FN-2
    2. *Error al conectar con Base de Datos*
-      1. El *SPP* no puede conectarse con la Base de Datos para guardar el **`MONTHLY REPORT`**.
-      2. El *SPP* muestra un diálogo de mensaje [`Dialog_ConnectionError`][DLCE].
+      1. El *SPP* muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
+      2. El *Practicante* da clic en el botón "Aceptar".
+      3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y regresa al FN-6
 
 **Postcondiciones:**  
 Post-1. El **`MONTHLY REPORT`** se guardó en la Base de Datos.

@@ -39,9 +39,10 @@ Pre-1. El *Practicante* debe tener las 200hrs de servicio en sus **`PARTIAL REPO
   9. El *SPP* guarda el **`SELF APPRAISAL`** en la Base de Datos y muestra un [`Dialog_Succes`][DLSU]. EX-2
 
 **Flujos Alternos:**
-  1. *Regresar*
-     1. El *Practicante* da clic en el botón "Regresar".
-     2. El *SPP* termina el Caso de Uso.
+  1. *Cancelar Caso de Uso*
+     1. El *Practicante* da clic en el botón "Atrás".
+     2. El *SPP* regresa a la [`View_UploadDocumentation`][VUDC]
+     3. Termina el Caso de Uso.
   2. *Cancelar Cargar Documento*
      1. El *Practicante* da clic al botón "Cancelar" del explorador de archivos.
      2. El *SO* cierra el explorador de archivos y regresa el enfoque al *SPP*, regresando al FN-2.
@@ -53,8 +54,9 @@ Pre-1. El *Practicante* debe tener las 200hrs de servicio en sus **`PARTIAL REPO
    1. *Error al cargar el **`SELF APPRAISAL`***
       1. El *SPP* muestra un [`Dialog_Error`][DLER] y regresa al FN-2
    2. *Error al conectar con Base de Datos*
-      1. El *SPP* no puede conectarse con la Base de Datos para guardar el **`SELF APPRAISAL`**.
-      2. El *SPP* muestra un diálogo de mensaje [`Dialog_ConnectionError`][DLCE].
+      1. El *SPP* muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
+      2. El *Practicante* da clic en el botón "Aceptar".
+      3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y regresa al FN-6
 
 **Postcondiciones:**  
 Post-1. El **`SELF APPRAISAL`** se guardó en la Base de Datos.
@@ -64,3 +66,11 @@ No incluye.
 
 **Extiende (Relación Extend):**  
 No extiende.
+
+
+[VUDC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_UploadDocumentation.png "`View_UploadDocumentation` Prototype"
+[VUDT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/View_UploadDocument.png "`View_UploadDocument` Prototype"
+[DLCO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Confirmation.png "`Dialog_Confirmation` Prototype"
+[DLSU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Success.png "`Dialog_Success` Prototype"
+[DLCE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_ConnectionError.png "`Dialog_ConnectionError` Prototype"
+[DLER]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Error.png "`Dialog_Error` Prototype"

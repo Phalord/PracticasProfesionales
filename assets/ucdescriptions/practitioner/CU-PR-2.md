@@ -13,7 +13,7 @@ hide_hero: true
 
 **Fecha de creación:** 25 de marzo de 2020
 
-**Fecha de actualización:** 18 de junio de 2020
+**Fecha de actualización:** 27 de junio de 2020
 
 **Descripción:**  
 El *Practicante* deberá poder subir una versión PDF de su **`SCHOOL TIMETABLE`**.
@@ -25,7 +25,7 @@ El *Practicante* deberá poder subir una versión PDF de su **`SCHOOL TIMETABLE`
 El *Practicante* da clic al botón "Añadir Horario" en la interfaz [`View_UploadDocumentation`][VUDC].
 
 **Precondiciones:**  
-Pre-1. El *Practicante* debe tener asignado a un **`PROJECT`**.
+Pre-1. El *Practicante* debe tener asignado a un **`PROJECT`**.  
 
 **Flujo Normal:**
   1. El *SPP* muestra la interfaz [`View_UploadDocument`][VUDT], con los botones "Seleccionar Archivo", "Subir" y "Regresar".
@@ -37,11 +37,13 @@ Pre-1. El *Practicante* debe tener asignado a un **`PROJECT`**.
   7. El *SPP* muestra un diálogo [`Dialog_Confirmation`][DLCO] con dos botones "Cancelar" y "Confirmar".
   8. El *Practicante* da clic en el botón "Confirmar". FA-3
   9. El *SPP* guarda el **`SCHOOL TIMETABLE`** en la Base de Datos y muestra un [`Dialog_Success`][DLSU]. EX-2
+  10. Termina el Caso de Uso.
 
 **Flujos Alternos:**
-  1. *Regresar*
-     1. El *Practicante* da clic en el botón "Regresar".
-     2. El *SPP* termina el Caso de Uso.
+  1. *Cancelar Caso de Uso*
+     1. El *Practicante* da clic en el botón "Atrás".
+     2. El *SPP* regresa a la [`View_UploadDocumentation`][VUDC].
+     3. Termina el Caso de Uso.
   2. *Cancelar Cargar Documento*
      1. El *Practicante* da clic al botón "Cancelar" del explorador de archivos.
      2. El *SPP* cierra el explorador de archivos y regresa el enfoque al *SPP*, regresando al FN-2.
@@ -55,7 +57,7 @@ Pre-1. El *Practicante* debe tener asignado a un **`PROJECT`**.
    2. *Error al conectar con Base de Datos*
       1. El *SPP* muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
       2. El *Practicante* da clic en el botón "Aceptar".
-      3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y regresa al FN-6
+      3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y regresa al FN-6.
 
 **Postcondiciones:**  
 Post-1. El **`SCHOOL TIMETABLE`** se guardó en la Base de Datos.

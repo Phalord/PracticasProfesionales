@@ -31,7 +31,7 @@ Pre-2. El Practicante no ha enviado su **`PROJECT REQUEST`**.
 **Flujo Normal:**
   1. El *SPP* recupera los nombres de los **`PROJECT`**, sin asignar, de la Base de Datos y los muestra en [`View_ProjectRequest`][VPRQ] con disposición cuadriculada; cada cuadro el nombre del proyecto y dos botones: "Visualizar" y "Seleccionar"; hasta abajo dos botones "Solicitar" y "Cancelar". <a href="#error_conexion">EX-1.</a>
   2. El *Practicante* da clic al botón "Seleccionar" en los **`PROJECT`** que quiera marcar como opción y da clic al botón "Solicitar". <a href="#cancelar_cu">FA-1</a> <a href="#visualizar_proyecto">FA-2</a> <a href="#maxima_opciones">FA-4</a> <a href="#quitar_proyectos">FA-5</a>
-  3. El *SPP* verifica que haya, al menos, un proyecto seleccionado (<a href="sin_seleccion">FA-6</a>) muestra un diálogo [`Dialog_Confirmation`][DLCO] con los botones "Confirmar" y "No".
+  3. El *SPP* verifica que haya, al menos, un proyecto seleccionado (<a href="#sin_seleccion">FA-6</a>) muestra un diálogo [`Dialog_Confirmation`][DLCO] con los botones "Confirmar" y "No".
   4. El *Practicante* da clic al botón "Confirmar". <a href="#cancelar_confirmacion">FA-3</a>
   5. El *SPP* cierra el [`Dialog_Confirmation`][DLCO] y añade los **`PROJECT`** al **`PROJECT REQUEST`** y lo guarda en la Base de Datos; y muestra un [`Dialog_Success`][DLSU]. EX-1
   6. Termina el Caso de uso.

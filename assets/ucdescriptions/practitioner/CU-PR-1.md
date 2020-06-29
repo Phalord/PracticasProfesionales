@@ -29,40 +29,40 @@ Pre-1. Debe haber, por lo menos, 1 **`PROJECT`** sin asignar en la Base de Datos
 Pre-2. El Practicante no ha enviado su **`PROJECT REQUEST`**.   
 
 **Flujo Normal:**
-  1. El *SPP* recupera los nombres de los **`PROJECT`**, sin asignar, de la Base de Datos y los muestra en [`View_ProjectRequest`][VPRQ] con disposición cuadriculada; cada cuadro el nombre del proyecto y dos botones: "Visualizar" y "Seleccionar"; hasta abajo dos botones "Solicitar" y "Cancelar". EX-1.
-  2. El *Practicante* da clic al botón "Seleccionar" en los **`PROJECT`** que quiera marcar como opción y da clic al botón "Solicitar". FA-1 FA-2 FA-4 FA-5
-  3. El *SPP* verifica que haya, al menos, un proyecto seleccionado (FA-6) muestra un diálogo [`Dialog_Confirmation`][DLCO] con los botones "Confirmar" y "No".
-  4. El *Practicante* da clic al botón "Confirmar". FA-3
+  1. El *SPP* recupera los nombres de los **`PROJECT`**, sin asignar, de la Base de Datos y los muestra en [`View_ProjectRequest`][VPRQ] con disposición cuadriculada; cada cuadro el nombre del proyecto y dos botones: "Visualizar" y "Seleccionar"; hasta abajo dos botones "Solicitar" y "Cancelar". <a href="#error_conexion">EX-1.</a>
+  2. El *Practicante* da clic al botón "Seleccionar" en los **`PROJECT`** que quiera marcar como opción y da clic al botón "Solicitar". <a href="#cancelar_cu">FA-1</a> <a href="#visualizar_proyecto">FA-2</a> <a href="#maxima_opciones">FA-4</a> <a href="#quitar_proyectos">FA-5</a>
+  3. El *SPP* verifica que haya, al menos, un proyecto seleccionado (<a href="sin_seleccion">FA-6</a>) muestra un diálogo [`Dialog_Confirmation`][DLCO] con los botones "Confirmar" y "No".
+  4. El *Practicante* da clic al botón "Confirmar". <a href="#cancelar_confirmacion">FA-3</a>
   5. El *SPP* cierra el [`Dialog_Confirmation`][DLCO] y añade los **`PROJECT`** al **`PROJECT REQUEST`** y lo guarda en la Base de Datos; y muestra un [`Dialog_Success`][DLSU]. EX-1
   6. Termina el Caso de uso.
 
 **Flujos Alternos:**
-  1. *Cancelar Caso de Uso*
+  1. <a id="cancelar_cu"><i>Cancelar Caso de Uso</i></a>
      1. El *Practicante* da clic en el botón "Atrás".
      2. El *SPP* regresa a la [`View_ProjectSection`][VPSC] 
      3. Termina el Caso de Uso.
-  2. *Visualizar Proyecto*
+  2. <a id="visualizar_proyecto"><i>Visualizar Proyecto</i></a>
      1. El *Practicante* da clic al botón "Visualizar".
      2. El *SPP* muestra la interfaz [`View_ProjectInformation`][VPIN] que recupera al **`PROJECT`** y que al final contiene un botón "Regresar". EX-1
      3. El *Practicante* da clic en el botón "Regresar"
      4. El *SPP* cierra [`View_ProjectInformation`][VPIN].
-  3. *Cancelar Confirmación*
+  3. <a id="cancelar_confirmacion"><i>Cancelar Confirmación</i></a>
      1. El *Practicante* da clic en el botón "NO".
      2. El *SPP* cierra el [`Dialog_Confirmation`][DLCO] y regresa al FN-2.
-  4. *Máxima cantidad de opciones alcanzadas*
+  4. <a id="maxima_opciones"><i>Máxima cantidad de opciones alcanzadas</i></a>
      1. El *SPP* muestra el diálogo [`Dialog_MaxReached`][DLMR]. 
      2. El *Practicante* da clic en el botón Aceptar.
      3. El *SPP* cierra el diálogo y regresa al FN-1.
-  5. *Quitar Proyecto*
+  5. <a id="quitar_proyectos"><i>Quitar Proyecto</i></a>
      1. El *Practicante* da clic en el botón "Quitar".
      2. El *SPP* quita la selección de ese proyecto.
-  6. *No hay proyectos seleccionados*
+  6. <a id="sin_seleccion"><i>No hay proyectos seleccionados</i></a>
      1. El *SSP* muestra un `Dialog_NoOptionsSelected`.
      2. El *Practicante* da clic en el botón "Aceptar".
      3. EL *SPP* cierra el diálogo.
 
 **Excepciones:**
-   1. *Error al conectar con Base de Datos*
+   1. <a id="error_conexion"><i>Error al conectar con Base de Datos</i></a>
       1. El *SPP* muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
       2. El *Practicante* da clic en el botón "Aceptar".
       3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y [FN-1]: despliega la ventana sin los cuadros de los proyectos para solicitar; [FN-5, FA-2]: regresa al FN-2.

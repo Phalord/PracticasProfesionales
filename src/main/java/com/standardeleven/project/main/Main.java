@@ -7,7 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
- 
+
 public class Main extends Application {
     public static final String PRACTITIONER = "practicante";
     public static final String PROFESSOR = "professor";
@@ -17,9 +17,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("/view/View_PractitionerSection.fxml"));
+            loader.setLocation(Main.class.getResource("/view/View_CoordinatorHome.fxml"));
             Pane window = (Pane) loader.load();
             Scene scene = new Scene(window);
+            primaryStage.setResizable(false);
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
@@ -32,15 +33,18 @@ public class Main extends Application {
     }
 }
 
-
 /*
-package com.standardeleven.project.main;
+//package com.standardeleven.project.main;
 
 import com.standardeleven.project.gui.controller.ControllerLogIn;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    
+    public static final String PRACTITIONER = "practicante";
+    public static final String PROFESSOR = "professor";
+    public static final String COORDINATOR = "coordinator";
 
     public static void main(String[] args) {
         launch(args);
@@ -49,7 +53,6 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         new ControllerLogIn().display();
-
     }
 }
 */

@@ -50,7 +50,7 @@ public class ControllerLogIn {
 
     private void incorrectCredentials() {
         logInMessage.setTextFill(Color.rgb(210, 39, 30));
-        logInMessage.setText("Usuario o contraseÃ±a incorrectas. Por favor intente nuevamente.");
+        logInMessage.setText("Usuario o contraseña incorrectas. Por favor intente nuevamente.");
     }
 
     private void closeWindow() {

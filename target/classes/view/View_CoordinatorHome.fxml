@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneCoordinatorHome" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.standardeleven.project.gui.controller.Controller_CoordinatorHome">
+   <children>
+      <Label layoutX="191.0" layoutY="35.0" prefHeight="35.0" prefWidth="206.0" text="Sección Practicante">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="registerPractitionerButton" layoutX="191.0" layoutY="111.0" mnemonicParsing="false" onAction="#addPractitionerClick" prefHeight="25.0" prefWidth="206.0" text="Registrar Practicante" />
+      <Button layoutX="191.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="Asignar Proyecto" />
+      <Button layoutX="191.0" layoutY="211.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="Lista de Practicantes" />
+      <Button layoutX="191.0" layoutY="261.0" mnemonicParsing="false" onAction="#deletePractitionerClick" prefHeight="25.0" prefWidth="206.0" text="Eliminar Practicante" />
+   </children>
+</AnchorPane>

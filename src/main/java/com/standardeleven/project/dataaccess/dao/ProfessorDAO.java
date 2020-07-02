@@ -122,13 +122,14 @@ public class ProfessorDAO implements IProfessorDAO {
             ResultSet resultQuery = instruction.executeQuery(query);
             while(resultQuery.next()){
                 Professor professor = new Professor();
-                fillProfessor(resultQuery, professor);
+                fillProfessor(resultQuery,professor);
                 listProfessor.add(professor);
             }
         } catch (SQLException sqlException) {
             Logger.getLogger(ProfessorDAO.class.getName()).log(Level.SEVERE, sqlException.getMessage(), sqlException);
         }  
     }
+    
     private void fillProfessor(ResultSet resultSet, Professor professor) throws SQLException {
         professor.setUserName(resultSet.getString("NumeroPersonalProfesor"));
         professor.setProfessorNames(resultSet.getString("Nombre"));

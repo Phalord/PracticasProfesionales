@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="deletePractitionerAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.standardeleven.project.gui.controller.Controller_DeletePractitioner">
+   <children>
+      <TableView fx:id="tableViewPractitioner" prefHeight="356.0" prefWidth="600.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="enrollmentColumn" prefWidth="92.0" text="Matricula" />
+          <TableColumn fx:id="nameColumn" prefWidth="97.0" text="Nombre" />
+            <TableColumn fx:id="fatherSurnameColumn" prefWidth="108.0" text="ApellidoPaterno" />
+            <TableColumn fx:id="motherSurnameColumn" prefWidth="115.0" text="ApellidoMaterno" />
+            <TableColumn fx:id="shiftColumn" prefWidth="81.0" text="Turno" />
+            <TableColumn fx:id="personalProfessorNumberColumn" prefWidth="106.0" text="NumeroPersonalProfesor" />
+        </columns>
+      </TableView>
+      <Button fx:id="deletePractitionerButton" layoutX="510.0" layoutY="361.0" mnemonicParsing="false" onAction="#deletePractitioner" prefHeight="25.0" prefWidth="76.0" text="Eliminar" />
+      <Button fx:id="cancelButton" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="76.0" text="Cancelar" />
+   </children>
+</AnchorPane>

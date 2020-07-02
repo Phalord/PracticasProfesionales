@@ -48,8 +48,13 @@ public class Professor extends User {
 
     @Override
     public String toString() {
-        return getProfessorNames() + "("+getUserName()+")";
+        return getUserName();
     }
+    
+    /*@Override
+    public String toString() {
+        return getProfessorNames() + "("+getUserName()+")";
+    }*/
 }
     
  

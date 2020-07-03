@@ -254,12 +254,12 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   7. [CU-C-13: Actualizar Proyecto][RACPO]
 
 [RREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob1.png "Registrar Proyecto"
-[RREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob2.png "Asignar Proyecto"
-[RREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob3.png "Eliminar Proyecto"
-[RREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob4.png "Generar Reporte de Indicadores"
-[RREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob5.png "Eliminar Practicante"
-[RREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob6.png "Registrar Practicante"
-[RREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob7.png "Actualizar Proyecto"
+[RASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob2.png "Asignar Proyecto"
+[RELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob3.png "Eliminar Proyecto"
+[RELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob4.png "Generar Reporte de Indicadores"
+[RGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob5.png "Eliminar Practicante"
+[RREPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob6.png "Registrar Practicante"
+[RACPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob7.png "Actualizar Proyecto"
 
 #### Robustez: Profesor
   1. [CU-PF-14: Generar Actividad][RGEAC]
@@ -286,16 +286,16 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   11. [CU-PR-28: Añadir Plan de Actividades][RAPAC]
 
 [RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob1.png "Solicitar Proyecto"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob2.png "Añadir Horario"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob3.png "Generar Reporte Parcial"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob4.png "Añadir Reporte Parcial"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob5.png "Generar Reporte Mensual"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob6.png "Añadir Reporte Mensual"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob7.png "Generar Autoevaluación"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob8.png "Añadir Autoevaluación"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob9.png "Añadir Actividad"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob10.png "Añadir Bitácora Personal"
-[RSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob11.png "Añadir Plan de Actividades"
+[RANHO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob2.png "Añadir Horario"
+[RGRPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob3.png "Generar Reporte Parcial"
+[RARPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob4.png "Añadir Reporte Parcial"
+[RGRME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob5.png "Generar Reporte Mensual"
+[RARME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob6.png "Añadir Reporte Mensual"
+[RGAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob7.png "Generar Autoevaluación"
+[RAAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob8.png "Añadir Autoevaluación"
+[RAACT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob9.png "Añadir Actividad"
+[RAPSP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob10.png "Añadir Bitácora Personal"
+[RAPAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob11.png "Añadir Plan de Actividades"
 
 ## 4. Prototipos de Interfaz
 ### Prototipos: Usuario

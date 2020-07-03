@@ -4,6 +4,13 @@ title: "CU-PR-9: Añadir Actividad"
 permalink: /design-specification/uc-descriptions/practitioner/cu-pr-9/
 hide_hero: true
 ---
+<style>
+   a.disabled {
+      color: #03989E;
+      pointer-events: none;
+      cursor: default;
+   }
+</style>
 
 **ID:** CU-PR-9
 
@@ -29,34 +36,38 @@ Pre-1. El *Practicante* debe tener, al menos, una **`ACTIVITY`** asignada sin en
 
 **Flujo Normal:**
   1. El *SPP* muestra la interfaz [`View_UploadDocument`][VUDT], con los botones "Seleccionar Archivo", "Subir" y "Regresar".
-  2. El *Practicante* da clic al botón "Seleccionar Archivo". FA-1
-  3. El *SPP* abre el explorador de archivos del Sistema Operativo (SO).
-  4. El *Practicante* busca su **`ACTIVITY`** en el explorador de archivos, lo selecciona y da clic en "Cargar". FA-2
-  5. El *SPP* carga la **`ACTIVITY`**. EX-1
-  6. El *Practiante* da clic en el botón "Subir".
+  2. El <a id="fn_2"></a> *Practicante* da clic al botón "Seleccionar Archivo". <a href="#fa_1">FA-1</a> <a href="#fa_4">FA-4</a>
+  3. El *SPP* abre el Seleccionador de Archivos.
+  4. El *Practicante* busca su **`ACTIVITY`** en el seleccionador de archivos, lo selecciona y da clic en "Cargar". <a href="fa_2">FA-2</a>
+  5. El *SPP* carga el archivo del **`ACTIVITY`** y muestra el nombre del archivo. <a href="ex_1">EX-1</a>
+  6. El <a id="fn_6"></a> *Practicante* da clic en el botón "Subir". <a href="#fa_1">FA-1</a>
   7. El *SPP* muestra un diálogo [`Dialog_Confirmation`][DLCO] con dos botones "Cancelar" y "Confirmar".
-  8. El *Practicante* da clic en el botón "Confirmar". FA-3
-  9. El *SPP* guarda la **`ACTIVITY`** en la Base de Datos y muestra un [`Dialog_Succes`][DLSU]. EX-2
+  8. El *Practicante* da clic en el botón "Confirmar". <a href="#fa_3">FA-3</a>
+  9. El *SPP* guarda el **`ACTIVITY`** en la Base de Datos y muestra un [`Dialog_Success`][DLSU]. <a href="#ex_2">EX-2</a>
+  10. El *Practicante* da clic en el botón "Aceptar".
+  11. Termina el Caso de Uso.
 
 **Flujos Alternos:**
-  1. *Cancelar Caso de Uso*
+  1. <a id="fa_1" class="disabled"><i>Cancelar Caso de Uso</i></a>
      1. El *Practicante* da clic en el botón "Atrás".
-     2. El *SPP* regresa a la [`View_UploadDocumentation`][VUDC]
+     2. El *SPP* regresa a la [`View_UploadDocumentation`][VUDC].
      3. Termina el Caso de Uso.
-  2. *Cancelar Cargar Documento*
-     1. El *Practicante* da clic al botón "Cancelar" del explorador de archivos.
-     2. El *SO* cierra el explorador de archivos y regresa el enfoque al *SPP*, regresando al FN-2.
-  3. *Cancelar Confirmación*
+  2. <a id="fa_2" class="disabled"><i>Cancelar Cargar Documento</i></a>
+     1. El *Practicante* da clic al botón "Cancelar" del seleccionador de archivos.
+     2. El *SPP* cierra el seleccionador de archivos y regresa al <a href="#fn_2">FN-2</a>.
+  3. <a id="fa_3" class="disabled"><i>Cancelar Confirmación</i></a>
      1. El *Practicante* da clic en el botón "Cancelar".
-     2. El *SPP* cierra el [`Dialog_Confirmation`][DLCO] y regresa al FN-2.
+     2. El *SPP* cierra el [`Dialog_Confirmation`][DLCO] y regresa al <a href="#fn_6">FN-6</a>.
 
 **Excepciones:**
-   1. *Error al cargar la **`ACTIVITY`***
-      1. El *SPP* muestra un [`Dialog_Error`][DLER] y regresa al FN-2
-   2. *Error al conectar con Base de Datos*
-      1. El *SPP* muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
+   1. <a id="ex_1" class="disabled"><i>Error al cargar archivo</i></a>
+      1. El *SPP* carga el archivo del **`ACTIVITY`** y muestra un [`Dialog_Error`][DLER].
       2. El *Practicante* da clic en el botón "Aceptar".
-      3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y regresa al FN-6
+      3. El *SPP* regresa al <a href="#fn_2">FN-2</a>.
+   2. <a id="ex_2" class="disabled"><i>Error al conectar con Base de Datos</i></a>
+      1. El *SPP* guarda el **`ACTIVITY`** en la Base de Datos y muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
+      2. El *Practicante* da clic en el botón "Aceptar".
+      3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y regresa al <a href="#fn_6">FN-6</a>.
 
 **Postcondiciones:**  
 Post-1. La **`ACTIVITY`** se guardó en la Base de Datos.

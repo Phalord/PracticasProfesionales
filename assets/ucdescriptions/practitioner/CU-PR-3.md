@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-3  
+**ID:** CU-PR-20  
 
 **Nombre:** Generar Reporte Parcial
 

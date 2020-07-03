@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-11
+**ID:** CU-PR-28
 
 **Nombre:** Añadir Plan de Actividades
 

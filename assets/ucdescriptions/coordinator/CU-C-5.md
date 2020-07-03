@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/coordinator/cu-c-5/
 hide_hero: true
 ---
 
-**ID:** CU-C-5
+**ID:** CU-C-11
 
 **Nombre:** Generar Reporte de Indicadores
 

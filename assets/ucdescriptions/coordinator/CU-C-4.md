@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/coordinator/cu-c-4/
 hide_hero: true
 ---
 
-**ID:** CU-C-4
+**ID:** CU-C-10
 
 **Nombre:** Eliminar Practicante
 

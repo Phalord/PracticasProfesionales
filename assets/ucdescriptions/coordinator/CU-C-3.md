@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/coordinator/cu-c-3/
 hide_hero: true
 ---
 
-**ID:** CU-C-3
+**ID:** CU-C-9
 
 **Nombre:** Eliminar Proyecto
 

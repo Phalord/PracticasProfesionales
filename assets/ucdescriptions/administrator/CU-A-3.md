@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/administrator/cu-a-3/
 hide_hero: true
 ---
 
-**ID:** CU-A-3
+**ID:** CU-A-5
 
 **Nombre:** Eliminar Cordinador
 

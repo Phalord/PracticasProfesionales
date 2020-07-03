@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-10
+**ID:** CU-PR-27
 
 **Nombre:** Añadir Bitácora Personal
 

@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/coordinator/cu-c-1/
 hide_hero: true 
 ---
 
-**ID:** CU-C-1
+**ID:** CU-C-7
 
 **Nombre:** Registrar Proyecto
 

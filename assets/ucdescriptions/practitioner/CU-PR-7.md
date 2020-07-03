@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/practitioner/cu-pr-7/
 hide_hero: true 
 ---
 
-**ID:** CU-PR-7  
+**ID:** CU-PR-24  
 
 **Nombre:** Generar Autoevaluación  
 

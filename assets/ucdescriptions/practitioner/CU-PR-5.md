@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/practitioner/cu-pr-5/
 hide_hero: true
 ---
 
-**ID:** CU-PR-5
+**ID:** CU-PR-22
 
 **Nombre:** Generar Reporte Mensual
 

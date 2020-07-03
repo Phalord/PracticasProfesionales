@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-6
+**ID:** CU-PR-23
 
 **Nombre:** Añadir Reporte Mensual
 

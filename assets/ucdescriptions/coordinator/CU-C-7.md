@@ -4,7 +4,7 @@ title: "CU-C-7: Actualizar proyecto"
 permalink: /design-specification/uc-descriptions/coordinator/cu-c-7/ 
 hide_hero: true 
 ---
-**ID:** CU-C-7
+**ID:** CU-C-13
 
 **Nombre:** Actualizar Proyecto  
 

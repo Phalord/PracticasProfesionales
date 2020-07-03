@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-4
+**ID:** CU-PR-21
 
 **Nombre:** Añadir Reporte Parcial
 

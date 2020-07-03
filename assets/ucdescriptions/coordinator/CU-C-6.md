@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/coordinator/cu-c-6/
 hide_hero: true
 ---
 
-**ID:** CU-C-6
+**ID:** CU-C-12
 
 **Nombre:** Registrar Practicante
 

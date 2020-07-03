@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/administrator/cu-a-1/
 hide_hero: true
 ---
 
-**ID:** CU-A-1
+**ID:** CU-A-3
 
 **Nombre:** Registrar Coordinador
 

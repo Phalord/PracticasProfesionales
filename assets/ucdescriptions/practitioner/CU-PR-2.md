@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-2
+**ID:** CU-PR-19
 
 **Nombre:** Añadir Horario
 

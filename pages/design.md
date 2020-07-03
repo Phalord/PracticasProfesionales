@@ -161,15 +161,19 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [AELPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/administrator/act4.jpg "Eliminar Profesor"
 
 #### Actividad: Coordinador
-  1. [CU-C-7: Registrar Proyecto][AREPR]
-  2. [CU-C-8: Asignar Proyecto][AASPR]
-  3. [CU-C-9: Eliminar Proyecto][AELPO]
-  4. [CU-C-10: Eliminar Practicante][AELPE]
-  5. [CU-C-11: Generar Reporte de Indicadores][AGRDI]
-  6. [CU-C-12: Registrar Practicante][AREPE]
+  1. [CU-C-7: Registrar Proyecto pt.1][AREPR]
+  2. [CU-C-7: Registrar Proyecto pt.2][AREPR1]
+  3. [CU-C-7: Registrar Proyecto pt.3][AREPR2]
+  4. [CU-C-8: Asignar Proyecto][AASPR]
+  5. [CU-C-9: Eliminar Proyecto][AELPO]
+  6. [CU-C-10: Eliminar Practicante][AELPE]
+  7. [CU-C-11: Generar Reporte de Indicadores][AGRDI]
+  8. [CU-C-12: Registrar Practicante][AREPE]
   7. [CU-C-13: Actualizar Proyecto][AACPO]
 
-[AREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act1.jpg "Registrar Proyecto"
+[AREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act1.jpg "Registrar Proyecto pt.1"
+[AREPR1]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act1_1.jpg "Registrar Proyecto pt.2"
+[AREPR2]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act1_2.jpg "Registrar Proyecto pt.3"
 [AASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act2.png "Asignar Proyecto"
 [AELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act3.jpg "Eliminar Proyecto"
 [AELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act4.jpg "Eliminar Practicante"

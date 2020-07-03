@@ -331,10 +331,11 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   4. [View_AssignationConfirmation][VACO]
   5. [View_AddProject][VAPT]
   6. [View_DeleteProject][VDPT]
-  7. [View_DeletePractitioner][VDPI]
-  8. [View_IndicatorsReport][VIRP]
-  9. [View_ChooseProject][VCPT]
-  10. [Dialog_ProjectAlreadyAssigned][DLAA]
+  7. [View_AddPractitioner][VAPR] 
+  8. [View_DeletePractitioner][VDPI]
+  9. [View_IndicatorsReport][VIRP]
+  10. [View_ChooseProject][VCPT]
+  11. [Dialog_ProjectAlreadyAssigned][DLAA]
 
 [VCMN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_CoordinatorMenu.png "`View_CoordinatorMenu` Prototype"
 [VPSE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_PractitionerSection.png "`View_PractitionerSection` Prototype"
@@ -346,6 +347,7 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [VIRP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_IndicatorsReport.png "`View_IndicatorsReport` Prototype"
 [VCPT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_ChooseProject.png "`View_ChooseProject` Prototype"
 [DLAA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/Dialog_ProjectAlreadyAssigned.png "`Dialog_ProjectAlreadyAssigned` Prototype"
+[VAPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_AddPractitioner.png "`View_AddPractitioner` Prototype"
 
 ### Prototipos: Profesor
   1. [View_ActivitySection][VASN]

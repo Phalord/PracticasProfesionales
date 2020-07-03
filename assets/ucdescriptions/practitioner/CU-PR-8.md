@@ -36,7 +36,7 @@ Pre-1. El *Practicante* debe tener las 200hrs de servicio reportadas en los **`R
 
 **Flujo Normal:**
   1. El *SPP* muestra la interfaz [`View_UploadDocument`][VUDT], con los botones "Seleccionar Archivo", "Subir" y "Regresar".
-  2. El <a id="fn_2"></a> *Practicante* da clic al botón "Seleccionar Archivo". <a href="#fa_1">FA-1</a> <a href="#fa_4">FA-4</a>
+  2. El <a id="fn_2"></a> *Practicante* da clic al botón "Seleccionar Archivo". <a href="#fa_1">FA-1</a>
   3. El *SPP* abre el Seleccionador de Archivos.
   4. El *Practicante* busca su **`SELF APPRAISAL`** en el seleccionador de archivos, lo selecciona y da clic en "Cargar". <a href="fa_2">FA-2</a>
   5. El *SPP* carga el archivo del **`SELF APPRAISAL`** y muestra el nombre del archivo. <a href="ex_1">EX-1</a>

@@ -142,10 +142,10 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 
 ### 2.4. Diagramas de Actividades por Caso de Uso
 #### Actividad: Administrador
-  1. [Registrar Coordinador][ARECO]
-  2. [Registrar Profesor][AREPS]
-  3. [Eliminar Coordinador][AELCO]
-  4. [Eliminar Profesor][AELPR]
+  1. [CU-A-: Registrar Coordinador][ARECO]
+  2. [CU-A-: Registrar Profesor][AREPS]
+  3. [CU-A-: Eliminar Coordinador][AELCO]
+  4. [CU-A-: Eliminar Profesor][AELPR]
 
 [ARECO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/administrator/act1.jpg "Registrar Coordinador"
 [AREPS]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/administrator/act2.jpg "Registrar Profesor"
@@ -153,13 +153,13 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [AELPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/administrator/act4.jpg "Eliminar Profesor"
 
 #### Actividad: Coordinador
-  1. [Registrar Proyecto][AREPR]
-  2. [Asignar Proyecto][AASPR]
-  3. [Eliminar Proyecto][AELPO]
-  4. [Eliminar Practicante][AELPE]
-  5. [Generar Reporte de Indicadores][AGRDI]
-  6. [Registrar Practicante][AREPE]
-  7. [Actualizar Proyecto][AACPO]
+  1. [CU-C-: Registrar Proyecto][AREPR]
+  2. [CU-C-: Asignar Proyecto][AASPR]
+  3. [CU-C-: Eliminar Proyecto][AELPO]
+  4. [CU-C-: Eliminar Practicante][AELPE]
+  5. [CU-C-: Generar Reporte de Indicadores][AGRDI]
+  6. [CU-C-: Registrar Practicante][AREPE]
+  7. [CU-C-: Actualizar Proyecto][AACPO]
 
 [AREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act1.jpg "Registrar Proyecto"
 [AASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act2.png "Asignar Proyecto"
@@ -170,10 +170,10 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [AACPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/coordinator/act7.jpg "Actualizar Proyecto"
 
 #### Actividad: Profesor
-  1. [Generar Actividad][AGEAC]
-  2. [Añadir Formato de Presentación][AAFPR]
-  3. [Evaluar Reporte Parcial][AERPA]
-  4. [Evaluar Reporte Mensual][AERME]
+  1. [CU-PF-: Generar Actividad][AGEAC]
+  2. [CU-PF-: Añadir Formato de Presentación][AAFPR]
+  3. [CU-PF-: Evaluar Reporte Parcial][AERPA]
+  4. [CU-PF-: Evaluar Reporte Mensual][AERME]
 
 [AGEAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/professor/act1.jpg "Generar Actividad"
 [AAFPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/professor/act2.jpg "Añadir Formato de Presentación"
@@ -181,17 +181,17 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [AERME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/professor/act4.jpg "Evaluar Reporte Mensual"
 
 #### Actividad: Practicante
-  1. [Solicitar Proyecto][ASOPR]
-  2. [Añadir Horario][AANHO]
-  3. [Generar Reporte Parcial][AGRPA]
-  4. [Añadir Reporte Parcial][AARPA]
-  5. [Generar Reporte Mensual][AGRME]
-  6. [Añadir Reporte Mensual][AARME]
-  7. [Generar Autoevaluación][AGAUT]
-  8. [Añadir Autoevaluación][AAAUT]
-  9. [Añadir Actividad][AAACT]
-  10. [Añadir Bitácora Personal][AAPSP]
-  11. [Añadir Plan de Actividades][AAPAC]
+  1. [CU-PR-: Solicitar Proyecto][ASOPR]
+  2. [CU-PR-: Añadir Horario][AANHO]
+  3. [CU-PR-: Generar Reporte Parcial][AGRPA]
+  4. [CU-PR-: Añadir Reporte Parcial][AARPA]
+  5. [CU-PR-: Generar Reporte Mensual][AGRME]
+  6. [CU-PR-: Añadir Reporte Mensual][AARME]
+  7. [CU-PR-: Generar Autoevaluación][AGAUT]
+  8. [CU-PR-: Añadir Autoevaluación][AAAUT]
+  9. [CU-PR-: Añadir Actividad][AAACT]
+  10. [CU-PR-: Añadir Bitácora Personal][AAPSP]
+  11. [CU-PR-: Añadir Plan de Actividades][AAPAC]
 
 [ASOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act1.png "Solicitar Proyecto"
 [AANHO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act2.png "Añadir Horario"
@@ -206,8 +206,8 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [AAPAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/practitioner/act11.png "Añadir Plan de Actividades"
 
 #### Actividad: Usuario
-  1. [Consultar Buzón][ACOBU]
-  2. [Enviar Mensaje][AENME]
+  1. [CU-U-: Consultar Buzón][ACOBU]
+  2. [CU-U-: Enviar Mensaje][AENME]
 
 [ACOBU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act1.jpg "Consultar Buzón"
 [AENME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/activities/user/act2.jpg "Enviar Mensaje"
@@ -219,7 +219,7 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [MDD]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/domain/domain_model.jpg
 
 ### 3.2. Diagramas de Robustez
-  1. [CU-C-1][ROB1]
+  1. [CU-A-: ][ROB1]
 
 [ROB1]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob1.jpg
 

@@ -5,7 +5,7 @@ permalink: /design-specification/
 toc: true
 ---
 
-## Datos escorlares
+## Datos escolares
 **Docente:** Dr. Jorge Octavio Ocharán Hernández
 
 **Experiencia Educativa:** Principios de Diseño de Software
@@ -33,7 +33,7 @@ Equipo 2(TMNT). (2019). *Especificación de Requerimientos de Software para Sist
 ### Situación actual
 Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por parte de los alumnos toman mucho tiempo y pueden ser entorpecidos. Algunas actividades que el Coordinador de la EE realiza son exhaustivas y, en promedio, se pierden hasta dos días por corregir errores inesperados. Estas situaciones llevan a la necesidad de un nuevo sistema con el cual se puedan gestionar los datos y proceso adecuadamente y, de esta manera, facilitarlos.
 
-### Clases de usuario y características**  
+### Clases de usuario y características  
 **Administrador**  
 Un *Administrador* se encarga de registrar y llevar el control de *Coordinadores* y *Profesores*, así mismo tiene la capacidad de darlos de baja y poder mantener un historial para consultas posteriores.
 

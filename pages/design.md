@@ -16,12 +16,38 @@ toc: true
   * Tapia Cruz Abner Jeffrey
 
 ## 1. Introducción
-El objetivo principal del *Sistema para Prácticas Profesionales* es proporcionar apoyo a los actores más frecuentes de esta experiencia educativa (EE), los cuales son: el Coordinador de las Prácticas Profesionales, los docentes que imparten la EE y los alumnos que la cursan; buscando, principalmente, reducir el tiempo de trabajo del coordinador y otorgar la posibilidad de realizar todo el proceso de una manera más rápida y eficaz.
+El objetivo principal del *Sistema para Prácticas Profesionales* es proporcionar apoyo a los actores más frecuentes de esta experiencia educativa (EE), los cuales son: el Coordinador de las Prácticas Profesionales, los docentes que imparten la EE y los alumnos que la cursan; buscando, principalmente, reducir el tiempo de trabajo del coordinador y otorgar la posibilidad de realizar todo el proceso de una manera más rápida y eficaz. Así mismo, el propósito de la *Especificación de Diseño* es obtener una visión detallada del funcionamiento que tendrá el sistema, planificando una solución de software para el problema a tratar cumpliendo con los requisitos funcionales y no funcionales establecidos.
 
-El contenido de esta *Especificación de Diseño* comienza con el [planteamiento del problema](#situación-actual), sobre cómo se lleva, actualmente, el proceso de las Prácticas Profesionales. Después pasamos a la [definición de requerimientos](#definición-de-requerimientos), sección dividida en las siguientes secciones: [diagramas de paquetes de Casos de uso](#diagrama-de-paquetes-de-casos-de-uso), [diagramas de casos de uso por paquetes](#diagramas-de-casos-de-uso-por-paquetes), [descripciones de casos de uso](#descripción-de-casos-de-uso) y [diagramas de actividades por caso de uso](#diagramas-de-actividades-por-caso-de-uso). Continuando con el [apartado de diseño](#diseño), donde incorporamos el [Modelo de Dominio](#diagrama-de-clases-del-modelo-de-dominio), como diagrama de clases, del Sistema.
+El contenido de esta *Especificación de Diseño* comienza con el [planteamiento del problema](#situación-actual), sobre cómo se lleva, actualmente, el proceso de las Prácticas Profesionales. Después pasamos a la [definición de requerimientos](#definición-de-requerimientos), sección dividida en las siguientes secciones: [diagramas de paquetes de Casos de uso](#diagrama-de-paquetes-de-casos-de-uso), [diagramas de casos de uso por paquetes](#diagramas-de-casos-de-uso-por-paquetes), [descripciones de casos de uso](#descripción-de-casos-de-uso) y [diagramas de actividades por caso de uso](#diagramas-de-actividades-por-caso-de-uso). Continuando con el [apartado de diseño](#diseño), donde incorporamos el [Modelo de Dominio](#diagrama-de-clases-del-modelo-de-dominio), como diagrama de clases, del Sistema. También se definen la arquitectura del sistema, el diseño de interfaces 
+
+**Convenciones**
+A continuación se muestran los diferentes identificadores con su descripción que fueron utilizados.
+
+* SPP: Sistema para Prácticas profesionales.
+* EE: Experiencia Educativa.
+* CU-X-00: Identificador para los casos de uso. Donde "CU" es la abreviación de ‘Casos de Uso’, la "X" indica la inicial del actor de dicho caso de uso y los números indican el número de caso de uso.
+
+**Referencias**
+Equipo 2(TMNT).(2019).*Especificación de Requerimientos de Software para Sistema web para las Prácticas Profesionales (Versión 0.3 propuesta).*Universidad Veracruzana, Xalapa, Veracruz.
 
 ### Situación actual
 Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por parte de los alumnos toman mucho tiempo y pueden ser entorpecidos. Algunas actividades que el Coordinador de la EE realiza son exhaustivas y, en promedio, se pierden hasta dos días por corregir errores inesperados. Estas situaciones llevan a la necesidad de un nuevo sistema con el cual se puedan gestionar los datos y proceso adecuadamente y, de esta manera, facilitarlos.
+
+**Clases de usuario y características**
+**Administrador**
+Un *Administrador* se encarga de registrar y llevar el control de *Coordinadores* y *Profesores*, así mismo tiene la capacidad de darlos de baja y poder mantener un historial para consultas posteriores.
+
+**Coordinador**
+Un *Coordinador* es aquel que se encarga de registrar a los practicantes así como de las asignaciones de proyectos. La persona que lleve a cabo este rol debe tener conocimiento de del estado de los practicantes y profesores, además de la capacidad de generar reportes de indicadores basados en las estadísticas de los usuarios del sistema.
+
+**Profesor**
+Un *Profesor* se encarga de evalúar al grupo de practicantes asiganados a él, así como de generar actividades para estos.
+
+**Practicante**
+Un *Practicante* es quien accede al Sistema para consultar información que le concierna, actividades pendientes, realizar reportes, entregar documentos, consultar fechas importantes, entre otras funcionalidades.
+
+**Usuario**
+Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 
 ## 2. Definición de Requerimientos
 ### 2.1. Diagrama de paquetes de Casos de Uso

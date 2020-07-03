@@ -13,7 +13,7 @@ hide_hero: true
 
 **Fecha de creación:** 27 de marzo de 2020
 
-**Fecha de actualización:** 5 de Junio de 2020
+**Fecha de actualización:** 2 de Julio de 2020
 
 **Descripción:**  
 El *Coordinador* registra un nuevo **`PRACTITIONER`** en el sistema dándole un usuario y contraseña para que este pueda acceder al *SPP* y tener un registro de ellos.
@@ -28,35 +28,34 @@ El *Coordinador* da clic en el botón “Registrar Practicante” en la vista [`
 No tiene precondiciones.
 
 **Flujo Normal:**  
-  1. El *SPP* despliega la vista de registro [`View_AddPractitioner`][VAPT] y solicita la matricula, nombre, apellido paterno, apellido materno, tipo de usuario y turno del **`PRACTITIONER`**. También se muestran los botones “Registrar” y “Cancelar” en la parte inferior de la ventana.
-  2. El *Coordinador* ingresa la información solicitada y da clic en el botón “Registrar”. (Ver FA 1) (Ver FA 3).
+  1. <a id="FN1"><i></i></a>El *SPP* despliega la vista de registro [`View_AddPractitioner`][VAPT] y solicita la matricula, nombre, apellido paterno, apellido materno, id del professor personal que se quiera asignar y turno del **`PRACTITIONER`**. También se muestran los botones “Registrar” y “Cancelar” en la parte inferior de la ventana.
+  2. <a id="FN2"><i></i></a>El *Coordinador* ingresa la información solicitada y da clic en el botón “Registrar”. (Ver <a href="#FA1">FA 1</a>) (Ver <a href="#FA3">FA 3</a>).
   3. El *SPP* muestra el diálogo [`Dialog_Confirmation`][DLCO] para validar que los datos introducidos sean los correctos, el diálogo muestra el mensaje “¿Seguro que desea registrar el Practicante con esos datos?” y los botones “Sí” y “Cancelar”.
-  4. El *Coordinador* da clic en el botón “Sí”. (Ver FA 2)
-  5. EL *SPP* genera el username del **`USER`** con la matrícula y muestra el diálogo `Dialog_Information` con el nombre de usuario y el botón “Aceptar”.
+  4. El *Coordinador* da clic en el botón “Sí”. (Ver <a href="#FA2">FA 2</a>)
+  5. EL *SPP* genera el username del **`USER`** con la matrícula y muestra el diálogo [`Dialog_Information`][DLI] con el nombre de usuario y el botón “Aceptar”.
   6. El *Coordinador* da clic en el botón “Aceptar”.
-  7. El *SPP* guarda un **`PRACTITIONER`** en la base de datos, le asigna una contraseña generada aleatoriamente y muestra el diálogo [`Dialog_Success`][DLSU] con el botón “Aceptar”. (Ver EX 1)
+  7. <a id="FN7"><i></i></a>El *SPP* guarda un **`PRACTITIONER`** en la base de datos, le asigna una contraseña generada aleatoriamente y muestra el diálogo [`Dialog_Success`][DLSU] con el botón “Aceptar”. (Ver <a href="#EX1">EX 1</a>)
   8. El *Coordinador* da clic en el botón “Aceptar”.
   9. Fin del caso de uso.
 
 **Flujos Alternos:**  
-   1. *Cancelar registro*
+   1. <a id="FA1"><i></i></a>*Cancelar registro*
       1. El *Coordinador* da clic en el botón “Cancelar”
       2. El *SPP* muestra el diálogo [`Dialog_Confirmation`][DLCO] con el mensaje “¿Seguro desea cancelar?” con los botones “Sí” y “No”
-      3. Si el *Coordinador* da clic en el botón “Sí”, termina el caso de uso, si selecciona el botón “No” entonces regresa al paso 2 del flujo normal con la información ya ingresada anteriormente.
-   2. *Cancelar confirmación*
+      3. Si el *Coordinador* da clic en el botón “Sí”, termina el caso de uso, si selecciona el botón “No” entonces regresa al <a href="#FN2">FN-2</a> con la información ya ingresada anteriormente.
+   2. <a id="FA2"><i></i></a>*Cancelar confirmación*
       1. El *Coordinador* da clic en el botón “Cancelar”
-      2. El *SPP* regresa al flujo normal con la información ya ingresada anteriormente.
-   3. *Información inválida.*
+      2. El *SPP* regresa al <a href="#FN1">FN-1</a> con la información ya ingresada anteriormente.
+   3. <a id="FA3"><i></i></a>*Información inválida.*
       1. El *Coordinador* ingresa información inválida en los campos que se solicita
       2.  El *SPP* muestra el diálogo [`Dialog_InvalidInformation`][DLII] con el mensaje "Se ha ingresado información no válida, por favor ingrese los datos correctamente". junto con el botón "Aceptar".
       3.  El *Coordinador* da clic en el botón "Aceptar".
-      4.  El *SPP* regresa al paso 2 del flujo normal.
+      4.  El *SPP* regresa al <a href="#FN1">FN-1</a>.
 
 **Excepciones:**  
-   1. *Error al conectar con Base de Datos*
-      1. El *SPP* muestra un diálogo de mensaje [`Dialog_ConnectionError`][DLCE].
-      1. El *Coordinador* da clic en el botón “Aceptar”
-      2. Termina el caso de uso.
+   1. <a id="EX1"><i></i></a>*Error al concectar con la base de datos y guardar la información.*
+      1. El *SPP* muestra el diálogo [`Dialog_ConnectionError`][DLCE] con el mensaje “No se pudo registrar el Practicante. Intente de nuevo.” y los botones “Cancelar registro” e “Intentar de nuevo”.
+      2. Si el *Coordinador* da clic en el botón “Cancelar registro” termina el caso de uso, si selecciona la opción “Intentar de nuevo” el *SPP* regresa al <a href="#FN7">FN-7</a>.
 
 **Postcondiciones:**  
 Post-1. El *SPP* guardó un **`PRACTITIONER`** en el sistema y la base de datos.
@@ -73,3 +72,4 @@ No extiende.
 [DLSU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Success.png "`Dialog_Success` Prototype"
 [DLCE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_ConnectionError.png "`Dialog_ConnectionError` Prototype"
 [DLII]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_InvalidInformation.png "`Dialog_InvalidInformation` Prototype"
+[DLI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Information.png "`Dialog_Information` Prototype"

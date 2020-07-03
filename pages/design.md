@@ -28,12 +28,12 @@ A continuación se muestran los diferentes identificadores con su descripción q
 * CU-X-00: Identificador para los casos de uso. Donde "CU" es la abreviación de ‘Casos de Uso’, la "X" indica la inicial del actor de dicho caso de uso y los números indican el número de caso de uso.
 
 **Referencias**  
-Equipo 2(TMNT).(2019).*Especificación de Requerimientos de Software para Sistema web para las Prácticas Profesionales (Versión 0.3 propuesta).*Universidad Veracruzana, Xalapa, Veracruz.
+Equipo 2(TMNT). (2019). *Especificación de Requerimientos de Software para Sistema web para las Prácticas Profesionales (Versión 0.3 propuesta. *Universidad Veracruzana, Xalapa, Veracruz.
 
 ### Situación actual
 Los proceso de la EE Prácticas Profesionales, como la entrega de documentos por parte de los alumnos toman mucho tiempo y pueden ser entorpecidos. Algunas actividades que el Coordinador de la EE realiza son exhaustivas y, en promedio, se pierden hasta dos días por corregir errores inesperados. Estas situaciones llevan a la necesidad de un nuevo sistema con el cual se puedan gestionar los datos y proceso adecuadamente y, de esta manera, facilitarlos.
 
-**Clases de usuario y características**  
+### Clases de usuario y características**  
 **Administrador**  
 Un *Administrador* se encarga de registrar y llevar el control de *Coordinadores* y *Profesores*, así mismo tiene la capacidad de darlos de baja y poder mantener un historial para consultas posteriores.
 
@@ -41,7 +41,7 @@ Un *Administrador* se encarga de registrar y llevar el control de *Coordinadores
 Un *Coordinador* es aquel que se encarga de registrar a los practicantes así como de las asignaciones de proyectos. La persona que lleve a cabo este rol debe tener conocimiento de del estado de los practicantes y profesores, además de la capacidad de generar reportes de indicadores basados en las estadísticas de los usuarios del sistema.
 
 **Profesor**  
-Un *Profesor* se encarga de evalúar al grupo de practicantes asiganados a él, así como de generar actividades para estos.
+Un *Profesor* se encarga de evaluar al grupo de practicantes asiganados a él, así como de generar actividades para estos.
 
 **Practicante**  
 Un *Practicante* es quien accede al Sistema para consultar información que le concierna, actividades pendientes, realizar reportes, entregar documentos, consultar fechas importantes, entre otras funcionalidades.

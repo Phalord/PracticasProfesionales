@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/professor/cu-pf-1/
 hide_hero: true 
 ---
 
-**ID:** CU-PF-14  
+**ID:** CU-PF-1  
 
 **Nombre:** Generar actividad  
 
@@ -29,7 +29,7 @@ PRE-1. Debe existir al menos un **`PROFESSOR`** en el sistema.
 PRE-2. El **`PROFESSOR`** debe tener asignado como mínimo un **`PRACTICING`**.   
 
 **Flujo Normal:**  
-  1. El *SPP* despliega la ventana [`View_AddActivity`][VAAC] y muestra 3 etiquetas: Titulo, Descripción y Fecha de entrega. Las primeras dos etiquetas tienen campos de texto a sus costados mientras que la última tiene un `DatePicker` debajo donde se puede seleccionar una fecha en específico. Por último, se muestran 2 botones “Publicar” y “Cancelar”. 
+  1. El *SPP* despliega la ventana [`View_AddActivity`][VAAC] y muestra 5 etiquetas: Titulo, Descripción, Horas actuales, Horas estimadas y Fecha de entrega. Las primeras 4 etiquetas tienen campos de texto a sus costados mientras que la última tiene un `DatePicker` debajo donde se puede seleccionar una fecha en específico. Por último, se muestran 2 botones “Publicar” y “Cancelar”. 
   2. <a id="fn-2"><i></i></a>El *Profesor* ingresa un título y descripción para la **`ACTIVITY`**, selecciona una fecha límite de entrega haciendo clic en un día cualquiera y da clic el botón “Publicar”. (Ver <a href="#cancelar_accion">FA-1</a>).
   3.  El *SPP* muestra un [`Dialog_Confirmation`][DLCO] junto con los botones “Confirmar” y “Cancelar”. 
   4. El *Profesor* selecciona la opción “Confirmar”. (Ver <a href="#cancelar_confirm">FA-2</a>)

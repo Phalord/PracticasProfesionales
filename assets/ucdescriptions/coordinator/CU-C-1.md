@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/coordinator/cu-c-1/
 hide_hero: true 
 ---
 
-**ID:** CU-C-7
+**ID:** CU-C-1
 
 **Nombre:** Registrar Proyecto
 
@@ -54,7 +54,7 @@ PRE-1. Debe haber al menos un **`COORDINATOR`** registrado en el sistema.
 	  3. El *Coordinador* completa todos los campos y da clic en "Registrar" y el *SPP* registra la nueva **`RELATED COMPANY`** en la base de datos, despliega un [`Dialog_Success`][DLSU], despliega la ventana [`View_AddProject`][VAPT] y continua el proceso en el <a href="#fn-2">FN-2</a>; si el *Coordinador* selecciona la opción "Cancelar", el *SPP* solo despliega la ventana [`View_AddProject`][VAPT] y continua el proceso en el <a href="#fn-2">FN-2</a>. (Ver <a href="#info_invalida">FA-3</a>, <a href="#error_conexion">EX-1</a>)
   5. <a id="añadir_responsable"><i></i></a>*Agregar responsable del proyecto*
 	  1. El *Coordinador* hace clic en el botón "Agregar" de la sección Responsable del proyecto.
-	  2. El *SPP* despliega la ventana [`View_AddResponsible`][VARE] la cual contiene una etiqueta con la leyenda "Datos del responsable del proyecto", otras etiquetas y cuadros de texto para ingresar información del **`PROJECT RESPONSIBLE`** (Nombre, correo electronico y teléfono); al final, se encuentran los botones "Registrar" y "Cancelar". 
+	  2. El *SPP* despliega la ventana [`View_AddResponsible`][VARE] la cual contiene una etiqueta con la leyenda "Datos del responsable del proyecto", otras etiquetas y cuadros de texto para ingresar información del **`PROJECT RESPONSIBLE`** (Nombre, apellidos, correo electronico y teléfono); al final, se encuentran los botones "Registrar" y "Cancelar". 
 	  3. El *Coordinador* completa todos los campos y da clic en "Registrar" y el *SPP* registra el nuevo **`PROJECT RESPONSIBLE`** en la base de datos, despliega un [`Dialog_Success`][DLSU], despliega la ventana [`View_AddProject`][VAPT] y continua el proceso en el <a href="#fn-2">FN-2</a>; si el *Coordinador* selecciona la opción "Cancelar", el *SPP* solo despliega la ventana [`View_AddProject`][VAPT] y continua el proceso en el <a href="#fn-2">FN-2</a>. (Ver <a href="#info_invalida">FA-3</a>, <a href="#error_conexion">EX-1</a>)
 
 **Excepciones (EX):**  

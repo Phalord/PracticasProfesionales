@@ -280,8 +280,74 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [RAPAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob26.png "Añadir Plan de Actividades"
 
 ### 3.3. Diagramas de Secuencia  
+#### Secuencia: Administrador
+  1. [CU-A-1: Registrar Coordinador][SRECO]
+  2. [CU-A-2: Registrar Profesor][SREPS]
+  3. [CU-A-3: Eliminar Coordinador][SELCO]
+  4. [CU-A-4: Eliminar Profesor][SELPR]
+
+[SRECO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/administrator/seq1.png "Registrar Coordinador"
+[SREPS]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/administrator/seq2.png "Registrar Profesor"
+[SELCO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/administrator/seq3.png "Eliminar Coordinador"
+[SELPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/administrator/seq4.png "Eliminar Profesor"
+
+#### Secuencia: Coordinador
+  1. [CU-C-5: Registrar Proyecto][SREPR]
+  2. [CU-C-6: Asignar Proyecto][SASPR]
+  3. [CU-C-7: Eliminar Proyecto][SELPO]
+  4. [CU-C-8: Eliminar Practicante][SELPE]
+  5. [CU-C-9: Generar Reporte de Indicadores][SGRDI]
+  6. [CU-C-10: Registrar Practicante][SREPE]
+  7. [CU-C-11: Actualizar Proyecto][SACPO]
+
+[SREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq5.png "Registrar Proyecto"
+[SASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq6.png "Asignar Proyecto"
+[SELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq7.png "Eliminar Proyecto"
+[SELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq8.png "Generar Reporte de Indicadores"
+[SGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq9.png "Eliminar Practicante"
+[SREPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq10.png "Registrar Practicante"
+[SACPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq11.png "Actualizar Proyecto"
+
+#### Secuencia: Profesor
+  1. [CU-PF-12: Generar Actividad][SGEAC]
+  2. [CU-PF-13: Añadir Formato de Presentación][SAFPR]
+  3. [CU-PF-14: Evaluar Reporte Parcial][SERPA]
+  4. [CU-PF-15: Evaluar Reporte Mensual][SERME]
+
+[SGEAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/professor/seq12.png "Generar Actividad"
+[SAFPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/professor/seq13.png "Añadir Formato de Presentación"
+[SERPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/professor/seq14.png "Evaluar Reporte Parcial"
+[SERME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/professor/seq15.png "Evaluar Reporte Mensual"
+
+#### Secuencia: Practicante
+  1. [CU-PR-16: Solicitar Proyecto][SSOPR]
+  2. [CU-PR-17: Añadir Horario][SANHO]
+  3. [CU-PR-18: Generar Reporte Parcial][SGRPA]
+  4. [CU-PR-19: Añadir Reporte Parcial][SARPA]
+  5. [CU-PR-20: Generar Reporte Mensual][SGRME]
+  6. [CU-PR-21: Añadir Reporte Mensual][SARME]
+  7. [CU-PR-22: Generar Autoevaluación][SGAUT]
+  8. [CU-PR-23: Añadir Autoevaluación][SAAUT]
+
+[SSOPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/practitioner/seq16.png "Solicitar Proyecto"
+[SANHO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/practitioner/seq17.png "Añadir Horario"
+[SGRPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/practitioner/seq18.png "Generar Reporte Parcial"
+[SARPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/practitioner/seq19.png "Añadir Reporte Parcial"
+[SGRME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/practitioner/seq20.png "Generar Reporte Mensual"
+[SARME]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/practitioner/seq21.png "Añadir Reporte Mensual"
+[SGAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/practitioner/seq22.png "Generar Autoevaluación"
+[SAAUT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/practitioner/seq23.png "Añadir Autoevaluación"
 
 ### 3.4. Diagramas de comunicación  
+
+#### Comunicación: Practicante
+  1. [CU-PR-24: Añadir Actividad][CAACT]
+  2. [CU-PR-25: Añadir Bitácora Personal][CAPSP]
+  3. [CU-PR-26: Añadir Plan de Actividades][CAPAC]
+
+[CAACT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob24.png "Añadir Actividad"
+[CAPSP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob25.png "Añadir Bitácora Personal"
+[CAPAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob26.png "Añadir Plan de Actividades"
 
 ### 3.5. Diagramas de máquina de estado  
 

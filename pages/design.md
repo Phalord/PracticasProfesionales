@@ -307,7 +307,7 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 
 [SREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq5.png "Registrar Proyecto"
 [SASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq6.png "Asignar Proyecto"
-[SELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/coordinator/com8.png "Eliminar Practicante"
+[SELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq8.png "Eliminar Practicante"
 [SREPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq10.png "Registrar Practicante"
 [SACPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq11.png "Actualizar Proyecto"
 

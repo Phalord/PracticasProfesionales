@@ -279,6 +279,12 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [RAPSP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob25.png "Añadir Bitácora Personal"
 [RAPAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/practitioner/rob26.png "Añadir Plan de Actividades"
 
+### 3.3. Diagramas de Secuencia  
+
+### 3.4. Diagramas de comunicación  
+
+### 3.5. Diagramas de máquina de estado  
+
 ## 4. Prototipos de Interfaz
 ### Prototipos: Administrador
   1. [View_AddCoordinator][VACR]

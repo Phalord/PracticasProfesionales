@@ -28,13 +28,13 @@ El *Coordinador* da clic en el botón “Registrar Practicante” en la vista [`
 No tiene precondiciones.
 
 **Flujo Normal:**  
-  1. <a id="FN1"><i></i></a>El *SPP* despliega la vista de registro [`View_AddPractitioner`][VAPT] y solicita la matricula, nombre, apellido paterno, apellido materno, id del professor personal que se quiera asignar y turno del **`PRACTITIONER`**. También se muestran los botones “Registrar” y “Cancelar” en la parte inferior de la ventana.
+  1. <a id="FN1"><i></i></a>El *SPP* despliega la vista de registro [`View_AddPractitioner`][VAPT] y solicita la matricula, nombre, apellidos, y turno del **`PRACTITIONER`**. También se muestran los botones “Registrar” y “Cancelar” en la parte inferior de la ventana.
   2. <a id="FN2"><i></i></a>El *Coordinador* ingresa la información solicitada y da clic en el botón “Registrar”. (Ver <a href="#FA1">FA 1</a>) (Ver <a href="#FA3">FA 3</a>).
   3. El *SPP* muestra el diálogo [`Dialog_Confirmation`][DLCO] para validar que los datos introducidos sean los correctos, el diálogo muestra el mensaje “¿Seguro que desea registrar el Practicante con esos datos?” y los botones “Sí” y “Cancelar”.
   4. El *Coordinador* da clic en el botón “Sí”. (Ver <a href="#FA2">FA 2</a>)
   5. EL *SPP* genera el username del **`USER`** con la matrícula y muestra el diálogo [`Dialog_Information`][DLI] con el nombre de usuario y el botón “Aceptar”.
   6. El *Coordinador* da clic en el botón “Aceptar”.
-  7. <a id="FN7"><i></i></a>El *SPP* guarda un **`PRACTITIONER`** en la base de datos, le asigna una contraseña generada aleatoriamente y muestra el diálogo [`Dialog_Success`][DLSU] con el botón “Aceptar”. (Ver <a href="#EX1">EX 1</a>)
+  7. <a id="FN7"><i></i></a>El *SPP* guarda un **`PRACTITIONER`** en la base de datos, cambia su estado a "Activo", le asigna una contraseña generada aleatoriamente y muestra el diálogo [`Dialog_Success`][DLSU] con el botón “Aceptar”. (Ver <a href="#EX1">EX 1</a>)
   8. El *Coordinador* da clic en el botón “Aceptar”.
   9. Fin del caso de uso.
 
@@ -58,7 +58,7 @@ No tiene precondiciones.
       2. Si el *Coordinador* da clic en el botón “Cancelar registro” termina el caso de uso, si selecciona la opción “Intentar de nuevo” el *SPP* regresa al <a href="#FN7">FN-7</a>.
 
 **Postcondiciones:**  
-Post-1. El *SPP* guardó un **`PRACTITIONER`** en el sistema y la base de datos.
+Post-1. El *SPP* guardó un **`PRACTITIONER`** en la base de datos y se cambió su estado a “activo”.
 
 **Incluye (Relación Include):**  
 No incluye.

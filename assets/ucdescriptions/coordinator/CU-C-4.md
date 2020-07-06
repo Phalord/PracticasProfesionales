@@ -32,7 +32,7 @@ Pre-1. PRE-1. Debe existir al menos un **`PRACTITIONER`** registrado.
   2. El *Coordinador* selecciona el Practicante deseado y da clic en “Eliminar”. (Ver <a href="#FA1">FA 1</a>).
   3. El *SPP* muestra el diálogo [`Dialog_Confirmation`][DLCO] para validar con el mensaje “¿Seguro desea eliminar el Practicante seleccionado?” y los botones “Sí” y “Cancelar”.
   4. El *Coordinador* da clic en el botón “Sí”. (Ver <a href="#FA2">FA 2</a>).
-  5. <a id="FN5"><i></i></a>El *SPP* elimina el **`PRACTITIONER`** del sistema y de la base de datos y muestra el diálogo [`Dialog_Success`][DLSU] con el mensaje “Se ha eliminado el practicante exitosamente” y el botón “Aceptar”. (Ver <a href="#EX2">EX 2</a>)
+  5. <a id="FN5"><i></i></a>El *SPP* cambia el estado del **`PRACTITIONER`** a "No activo" y muestra el diálogo [`Dialog_Success`][DLSU] con el mensaje “Se ha eliminado el practicante exitosamente” y el botón “Aceptar”. (Ver <a href="#EX2">EX 2</a>)
   6. El *Coordinador* da clic en el botón “Aceptar”.
   7. Termina caso de uso
 
@@ -55,7 +55,7 @@ Pre-1. PRE-1. Debe existir al menos un **`PRACTITIONER`** registrado.
       2. Si el *Coordinador* da clic en el botón Cancelar termina el caso de uso, sino, regresa al <a href="#FN5">FN-5</a>. 
 
 **Postcondiciones:**  
-Post-1. Se eliminó un **`PRACTITIONER`** del *SPP* y de la base de datos.
+Post-1. El SPP cambió un **`PRACTITIONER`** a estado “no activo”.
 
 **Incluye (Relación Include):**  
 No incluye.

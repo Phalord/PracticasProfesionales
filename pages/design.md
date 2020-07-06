@@ -49,7 +49,12 @@ Un *Practicante* es quien accede al Sistema para consultar información que le c
 **Usuario**  
 Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 
+### [Justificaciones de Diseño][DESP]
+[DESP]: https://phalord.github.io/PracticasProfesionales/design-justifications/ "Justificaciones de Diseño"
+
 ## 2. Definición de Requerimientos
+[Justificaciones de Definición de Requerimientos](https://phalord.github.io/PracticasProfesionales/design-justifications/#definicion-de-requerimientos)
+
 ### 2.1. Diagrama de paquetes de Casos de Uso
 ![Paquetes de Casos de Uso][PCU]
 

@@ -212,7 +212,7 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 
 [MDD]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/domain/domain_model.jpg "Modelo de Dominio"
 
-[DDC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/domain/class_diagram.jpg
+[DDC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/domain/class_diagram.png "Diagrama de Clases"
 
 ### 3.2. Diagramas de Robustez
 #### Robustez: Administrador

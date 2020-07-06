@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-PR-1: Solicitar Proyecto"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-1/
+title: "CU-PR-16: Solicitar Proyecto"
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-16/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-18
+**ID:** CU-PR-16
 
 **Nombre:** Solicitar Proyecto
 

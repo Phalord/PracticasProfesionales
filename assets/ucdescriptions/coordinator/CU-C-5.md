@@ -1,11 +1,11 @@
 ﻿---
 layout: page
-title: "CU-C-5: Generar reporte de indicadores"
-permalink: /design-specification/uc-descriptions/coordinator/cu-c-5/
+title: "CU-C-9: Generar reporte de indicadores"
+permalink: /design-specification/uc-descriptions/coordinator/cu-c-9/
 hide_hero: true
 ---
 
-**ID:** CU-C-11
+**ID:** CU-C-9
 
 **Nombre:** Generar Reporte de Indicadores
 

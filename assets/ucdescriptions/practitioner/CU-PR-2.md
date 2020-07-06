@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-PR-2: Añadir Horario"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-2/
+title: "CU-PR-17: Añadir Horario"
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-17/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-19
+**ID:** CU-PR-17
 
 **Nombre:** Añadir Horario
 

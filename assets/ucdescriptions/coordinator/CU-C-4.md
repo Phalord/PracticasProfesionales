@@ -1,11 +1,11 @@
 ﻿---
 layout: page
-title: "CU-C-4: Eliminar Practicante"
-permalink: /design-specification/uc-descriptions/coordinator/cu-c-4/
+title: "CU-C-8: Eliminar Practicante"
+permalink: /design-specification/uc-descriptions/coordinator/cu-c-8/
 hide_hero: true
 ---
 
-**ID:** CU-C-10
+**ID:** CU-C-8
 
 **Nombre:** Eliminar Practicante
 

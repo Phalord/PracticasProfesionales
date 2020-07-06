@@ -1,11 +1,11 @@
 ﻿---
 layout: page
-title: "CU-C-6: Registrar Practicante"
-permalink: /design-specification/uc-descriptions/coordinator/cu-c-6/
+title: "CU-C-10: Registrar Practicante"
+permalink: /design-specification/uc-descriptions/coordinator/cu-c-10/
 hide_hero: true
 ---
 
-**ID:** CU-C-12
+**ID:** CU-C-10
 
 **Nombre:** Registrar Practicante
 

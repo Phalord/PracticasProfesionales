@@ -89,13 +89,13 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   6. [CU-C-10: Registrar Practicante][REPE]
   7. [CU-C-11: Actualizar Proyecto][ACPO]
 
-[REPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-1/ "Descripción de CU-C-5"
-[ASPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-2/ "Descripción de CU-C-6"
-[ELPO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-3/ "Descripción de CU-C-7"
-[ELPE]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-4/ "Descripción de CU-C-8"
-[GRDI]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-5/ "Descripción de CU-C-9"
-[REPE]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-6/ "Descripción de CU-C-10"
-[ACPO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-7/ "Descripción de CU-C-11"
+[REPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-5/ "Descripción de CU-C-5"
+[ASPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-6/ "Descripción de CU-C-6"
+[ELPO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-7/ "Descripción de CU-C-7"
+[ELPE]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-8/ "Descripción de CU-C-8"
+[GRDI]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-9/ "Descripción de CU-C-9"
+[REPE]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-10/ "Descripción de CU-C-10"
+[ACPO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/coordinator/cu-c-11/ "Descripción de CU-C-11"
 
 #### Descripción: Profesor
   1. [CU-PF-12: Generar Actividad][GEAC]
@@ -103,10 +103,10 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   3. [CU-PF-14: Evaluar Reporte Parcial][ERPA]
   4. [CU-PF-15: Evaluar Reporte Mensual][ERME]
 
-[GEAC]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-1/ "Descripción de CU-PF-12"
-[AFPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-2/ "Descripción de CU-PF-13"
-[ERPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-3/ "Descripción de CU-PF-14"
-[ERME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-4/ "Descripción de CU-PF-15"
+[GEAC]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-12/ "Descripción de CU-PF-12"
+[AFPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-13/ "Descripción de CU-PF-13"
+[ERPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-14/ "Descripción de CU-PF-14"
+[ERME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/professor/cu-pf-15/ "Descripción de CU-PF-15"
 
 #### Descripción: Practicante
   1. [CU-PR-16: Solicitar Proyecto][SOPR]
@@ -121,17 +121,17 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   10. [CU-PR-25: Añadir Bitácora Personal][APSP]
   11. [CU-PR-26: Añadir Plan de Actividades][APAC]
 
-[SOPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-1/ "Descripción de CU-PR-16"
-[ANHO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-2/ "Descripción de CU-PR-17"
-[GRPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-3/ "Descripción de CU-PR-18"
-[ARPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-4/ "Descripción de CU-PR-19"
-[GRME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-5/ "Descripción de CU-PR-20"
-[ARME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-6/ "Descripción de CU-PR-21"
-[GAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-7/ "Descripción de CU-PR-22"
-[AAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-8/ "Descripción de CU-PR-23"
-[AACT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-9/ "Descripción de CU-PR-24"
-[APSP]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-10/ "Descripción de CU-PR-25"
-[APAC]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-11/ "Descripción de CU-PR-26"
+[SOPR]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-16/ "Descripción de CU-PR-16"
+[ANHO]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-17/ "Descripción de CU-PR-17"
+[GRPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-18/ "Descripción de CU-PR-18"
+[ARPA]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-19/ "Descripción de CU-PR-19"
+[GRME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-20/ "Descripción de CU-PR-20"
+[ARME]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-21/ "Descripción de CU-PR-21"
+[GAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-22/ "Descripción de CU-PR-22"
+[AAUT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-23/ "Descripción de CU-PR-23"
+[AACT]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-24/ "Descripción de CU-PR-24"
+[APSP]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-25/ "Descripción de CU-PR-25"
+[APAC]: https://phalord.github.io/PracticasProfesionales/design-specification/uc-descriptions/practitioner/cu-pr-26/ "Descripción de CU-PR-26"
 
 ### 2.4. Diagramas de Actividades por Caso de Uso
 #### Actividad: Administrador

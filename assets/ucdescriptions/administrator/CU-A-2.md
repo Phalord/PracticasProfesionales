@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/administrator/cu-a-2/
 hide_hero: true
 ---
 
-**ID:** CU-A-4
+**ID:** CU-A-2
 
 **Nombre:** Registrar Profesor
 

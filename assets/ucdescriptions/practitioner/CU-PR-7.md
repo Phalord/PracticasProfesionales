@@ -1,11 +1,11 @@
 ﻿--- 
 layout: page 
-title: "CU-PR-7: Generar autoevaluación" 
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-7/ 
+title: "CU-PR-22: Generar autoevaluación" 
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-22/ 
 hide_hero: true 
 ---
 
-**ID:** CU-PR-24  
+**ID:** CU-PR-22 
 
 **Nombre:** Generar Autoevaluación  
 

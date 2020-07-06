@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-C-2: Asignar Proyecto"
-permalink: /design-specification/uc-descriptions/coordinator/cu-c-2/
+title: "CU-C-6: Asignar Proyecto"
+permalink: /design-specification/uc-descriptions/coordinator/cu-c-6/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-C-8
+**ID:** CU-C-6
 
 **Nombre:** Asignar Proyecto
 

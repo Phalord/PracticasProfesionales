@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-PR-8: Añadir Autoevaluación"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-8/
+title: "CU-PR-23: Añadir Autoevaluación"
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-23/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-25
+**ID:** CU-PR-23
 
 **Nombre:** Añadir Autoevaluación
 

@@ -1,11 +1,11 @@
 ﻿--- 
 layout: page 
-title: "CU-PF-1: Generar actividad" 
-permalink: /design-specification/uc-descriptions/professor/cu-pf-1/ 
+title: "CU-PF-12: Generar actividad" 
+permalink: /design-specification/uc-descriptions/professor/cu-pf-12/ 
 hide_hero: true 
 ---
 
-**ID:** CU-PF-1  
+**ID:** CU-PF-12   
 
 **Nombre:** Generar actividad  
 

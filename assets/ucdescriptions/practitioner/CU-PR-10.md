@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-PR-10: Añadir Bitácora Personal"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-10/
+title: "CU-PR-25: Añadir Bitácora Personal"
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-25/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-27
+**ID:** CU-PR-25
 
 **Nombre:** Añadir Bitácora Personal
 

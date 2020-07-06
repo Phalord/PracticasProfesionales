@@ -1,11 +1,11 @@
 ﻿---
 layout: page
-title: "CU-PR-5: Generar Reporte Mensual"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-5/
+title: "CU-PR-20: Generar Reporte Mensual"
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-20/
 hide_hero: true
 ---
 
-**ID:** CU-PR-22
+**ID:** CU-PR-20
 
 **Nombre:** Generar Reporte Mensual
 

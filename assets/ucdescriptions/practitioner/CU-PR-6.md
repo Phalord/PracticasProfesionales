@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-PR-6: Añadir Reporte Mensual"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-6/
+title: "CU-PR-21: Añadir Reporte Mensual"
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-21/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-23
+**ID:** CU-PR-21
 
 **Nombre:** Añadir Reporte Mensual
 

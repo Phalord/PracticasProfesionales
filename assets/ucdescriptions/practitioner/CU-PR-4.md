@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-PR-4: Añadir Reporte Parcial"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-4/
+title: "CU-PR-19: Añadir Reporte Parcial"
+permalink: /desin-specification/uc-descriptions/practitioner/cu-pr-19/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-21
+**ID:** CU-PR-19
 
 **Nombre:** Añadir Reporte Parcial
 

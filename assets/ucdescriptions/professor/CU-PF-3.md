@@ -1,11 +1,11 @@
 ﻿--- 
 layout: page 
-title: "CU-PF-3: Evaluar reporte parcial" 
-permalink: /design-specification/uc-descriptions/professor/cu-pf-3/ 
+title: "CU-PF-14: Evaluar reporte parcial" 
+permalink: /design-specification/uc-descriptions/professor/cu-pf-14/ 
 hide_hero: true 
 ---
 
-**ID:** CU-PF-16  
+**ID:** CU-PF-14  
 
 **Nombre:** Evaluar Reporte Parcial  
 

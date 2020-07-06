@@ -1,10 +1,10 @@
 ﻿--- 
 layout: page 
-title: "CU-C-7: Actualizar proyecto" 
-permalink: /design-specification/uc-descriptions/coordinator/cu-c-7/ 
+title: "CU-C-11: Actualizar proyecto" 
+permalink: /design-specification/uc-descriptions/coordinator/cu-c-11/ 
 hide_hero: true 
 ---
-**ID:** CU-C-13
+**ID:** CU-C-11
 
 **Nombre:** Actualizar Proyecto  
 

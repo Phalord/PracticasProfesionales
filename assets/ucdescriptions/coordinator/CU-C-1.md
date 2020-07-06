@@ -1,11 +1,11 @@
 ﻿--- 
 layout: page 
-title: "CU-C-1: Registrar Proyecto" 
-permalink: /design-specification/uc-descriptions/coordinator/cu-c-1/ 
+title: "CU-C-5: Registrar Proyecto" 
+permalink: /design-specification/uc-descriptions/coordinator/cu-c-5/ 
 hide_hero: true 
 ---
 
-**ID:** CU-C-1
+**ID:** CU-C-5
 
 **Nombre:** Registrar Proyecto
 

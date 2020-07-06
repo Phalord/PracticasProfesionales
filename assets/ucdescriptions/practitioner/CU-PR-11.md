@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-PR-11: Añadir Plan de Actividades"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-11/
+title: "CU-PR-26: Añadir Plan de Actividades"
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-26/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-28
+**ID:** CU-PR-26
 
 **Nombre:** Añadir Plan de Actividades
 

@@ -1,11 +1,11 @@
 ﻿---
 layout: page
-title: "CU-C-3: Eliminar Proyecto"
-permalink: /design-specification/uc-descriptions/coordinator/cu-c-3/
+title: "CU-C-7: Eliminar Proyecto"
+permalink: /design-specification/uc-descriptions/coordinator/cu-c-7/
 hide_hero: true
 ---
 
-**ID:** CU-C-9
+**ID:** CU-C-7
 
 **Nombre:** Eliminar Proyecto
 

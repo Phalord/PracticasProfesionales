@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-PR-3: Generar Reporte Parcial"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-3/
+title: "CU-PR-18: Generar Reporte Parcial"
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-18/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-20  
+**ID:** CU-PR-18 
 
 **Nombre:** Generar Reporte Parcial
 

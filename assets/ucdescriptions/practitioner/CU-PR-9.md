@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "CU-PR-9: Añadir Actividad"
-permalink: /design-specification/uc-descriptions/practitioner/cu-pr-9/
+title: "CU-PR-24: Añadir Actividad"
+permalink: /design-specification/uc-descriptions/practitioner/cu-pr-24/
 hide_hero: true
 ---
 <style>
@@ -12,7 +12,7 @@ hide_hero: true
    }
 </style>
 
-**ID:** CU-PR-26
+**ID:** CU-PR-24
 
 **Nombre:** Añadir Actividad
 

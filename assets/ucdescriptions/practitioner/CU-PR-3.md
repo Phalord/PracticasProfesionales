@@ -23,7 +23,7 @@ hide_hero: true
 **Fecha de actualización:** 27 de junio de 2020
 
 **Descripción:**  
-El *Practicante* deberá poder generar su **`REPORT`** y registrar las **`ACTIVITY`** que haya realizado durante un tiempo determinado para que pueda ser consultado y calificado, posteriormente, por un *Profesor*.
+El *Practicante* deberá poder generar su **`PARTIAL REPORT`** y registrar las **`ACTIVITY`** que haya realizado durante un tiempo determinado para que pueda ser consultado y calificado, posteriormente, por un *Profesor*.
 
 **Actor:**  
 *Practicante*
@@ -40,7 +40,7 @@ Pre-2. El *Practicante* debe tener asignada al menos 1 **`ACTIVITY`** sin comple
   2. El <a id="fn_2"></a> *Practicante*, escribe la información solicitada por el *SPP* y da clic en el botón `Generar`. <a href="#fa_2">FA-1</a> <a href="#fa_3">FA-3</a>
   3. El *SPP* verifica que los campos de información sean válidos (<a href="#fa_4">FA-4</a>) y muestra un diálogo de alerta [`Dialog_Confirmation`][DLCO]
   4. El *Practicante* da clic en el botón "Confirmar". <a href="#fa_2">FA-2</a>
-  5. El <a id="fn_5"></a> *SPP* guarda el **`REPORT`** en la base de datos y cierra el diálogo de Alerta; y muestra un [`Dialog_Succes`][DLSU]. <a href="#ex_1">EX-1</a>
+  5. El <a id="fn_5"></a> *SPP* genera el archivo PDF del **`PARTIAL REPORT`** guarda el **`PARTIAL REPORT`** en la base de datos y cierra el diálogo de Alerta; y muestra un [`Dialog_Succes`][DLSU]. <a href="#ex_1">EX-1</a> <a href="#ex_2">EX-2</a>
   6. Termina el Caso de Uso.
 
 **Flujos Alternos:**
@@ -59,12 +59,16 @@ Pre-2. El *Practicante* debe tener asignada al menos 1 **`ACTIVITY`** sin comple
 
 **Excepciones:**
    1. <a id="ex_1" class="disabled">Error al conectar con Base de Datos</a>
-      1. El *SPP* muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
+      1. El *SPP* guarda el **`PARTIAL REPORT`** en la base de datos y muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
       2. El *Practicante* da clic en el botón "Aceptar".
       3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y [<a href="#fn_1">FN-1</a>]: despliega la ventana sin la los cuadros para solicitar; [<a href="#fn_5">FN-5</a>]: regresa al <a href="#fn_2">FN-2</a>.
+   2. <a id="ex_2" class="disabled">Error al crear el archivo PDF</a>
+      1. El *SPP* genera el archivo pdf del **`PARTIAL REPORT`** y muestra un [`Dialog_FileCreationError`][FLCE] con el botón "Aceptar".
+      2. El *Practicante* da clic en el botón "Aceptar".
+      3. El *SPP* cierra el [`Dialog_FileCreationError`][FLCE].
 
 **Postcondiciones:**  
-Post-1. El **`REPORT`** se guardó exitosamente en la Base de Datos.
+Post-1. El **`PARTIAL REPORT`** se guardó exitosamente en la Base de Datos.
 
 **Incluye (Relación Include):**  
 No incluye.
@@ -78,3 +82,4 @@ No extiende.
 [DLCO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Confirmation.png "`Dialog_Confirmation` Prototype"
 [DLCE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_ConnectionError.png "`Dialog_ConnectionError` Prototype"
 [DLII]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_InvalidInformation.png "`Dialog_InvalidInformation` Prototype"
+[FLCE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_FileCreationError.png "`Dialog_FileCreationError` Prototype"

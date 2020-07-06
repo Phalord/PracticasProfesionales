@@ -35,8 +35,8 @@ El *Practicante* da clic al botón "Añadir Actividad" en la interfaz [`View_Upl
 Pre-1. El *Practicante* debe tener, al menos, una **`ACTIVITY`** asignada sin entregar.
 
 **Flujo Normal:**
-  1. El *SPP* muestra la interfaz [`View_UploadDocument`][VUDT], con los botones "Seleccionar Archivo", "Subir" y "Regresar".
-  2. El <a id="fn_2"></a> *Practicante* da clic al botón "Seleccionar Archivo". <a href="#fa_1">FA-1</a>
+  1. El *SPP* recupera las **`ACTIVITY`** asignadas por el *Profesor* y muestra la interfaz [`View_UploadActivity`][VUDT], con los botones "Seleccionar Archivo", "Subir" y "Regresar". EX-1
+  2. El <a id="fn_2"></a> *Practicante* selecciona la **`ACTIVITY`** a subir y da clic al botón "Seleccionar Archivo". <a href="#fa_1">FA-1</a>
   3. El *SPP* abre el Seleccionador de Archivos.
   4. El *Practicante* busca su **`ACTIVITY`** en el seleccionador de archivos, lo selecciona y da clic en "Cargar". <a href="fa_2">FA-2</a>
   5. El *SPP* carga el archivo del **`ACTIVITY`** y muestra el nombre del archivo. <a href="ex_1">EX-1</a>

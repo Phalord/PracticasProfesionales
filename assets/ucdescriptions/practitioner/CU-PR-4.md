@@ -23,7 +23,7 @@ hide_hero: true
 **Fecha de actualización:** 02 de julio de 2020
 
 **Descripción:**  
-El *Practicante* deberá poder subir una versión PDF de su **`REPORT`** parcial.
+El *Practicante* deberá poder subir una versión PDF de su **`PARTIAL REPORT`** parcial.
 
 **Actor:**  
 *Practicante*
@@ -39,12 +39,12 @@ Pre-2. El *Practicante* debe tener asignada al menos 1 **`ACTIVITY`** sin comple
   1. El *SPP* muestra la interfaz [`View_UploadDocument`][VUDT], con los botones "Seleccionar Archivo", "Subir" y "Regresar".
   2. El <a id="fn_2"></a> *Practicante* da clic al botón "Seleccionar Archivo". <a href="#fa_1">FA-1</a>
   3. El *SPP* abre el Seleccionador de Archivos.
-  4. El *Practicante* busca su **`REPORT`** en el seleccionador de archivos, lo selecciona y da clic en "Cargar". <a href="fa_2">FA-2</a>
-  5. El *SPP* carga el archivo del **`REPORT`** y muestra el nombre del archivo. <a href="ex_1">EX-1</a>
+  4. El *Practicante* busca su **`PARTIAL REPORT`** en el seleccionador de archivos, lo selecciona y da clic en "Cargar". <a href="fa_2">FA-2</a>
+  5. El *SPP* carga el archivo del **`PARTIAL REPORT`** y muestra el nombre del archivo. <a href="ex_1">EX-1</a>
   6. El <a id="fn_6"></a> *Practicante* da clic en el botón "Subir". <a href="#fa_1">FA-1</a>
   7. El *SPP* muestra un diálogo [`Dialog_Confirmation`][DLCO] con dos botones "Cancelar" y "Confirmar".
   8. El *Practicante* da clic en el botón "Confirmar". <a href="#fa_3">FA-3</a>
-  9. El *SPP* guarda el **`REPORT`** en la Base de Datos y muestra un [`Dialog_Success`][DLSU]. <a href="#ex_2">EX-2</a>
+  9. El *SPP* guarda el **`PARTIAL REPORT`** en la Base de Datos y muestra un [`Dialog_Success`][DLSU]. <a href="#ex_2">EX-2</a>
   10. El *Practicante* da clic en el botón "Aceptar".
   11. Termina el Caso de Uso.
 
@@ -62,16 +62,16 @@ Pre-2. El *Practicante* debe tener asignada al menos 1 **`ACTIVITY`** sin comple
 
 **Excepciones:**
    1. <a id="ex_1" class="disabled"><i>Error al cargar archivo</i></a>
-      1. El *SPP* carga el archivo del **`REPORT`** y muestra un [`Dialog_Error`][DLER].
+      1. El *SPP* carga el archivo del **`PARTIAL REPORT`** y muestra un [`Dialog_Error`][DLER].
       2. El *Practicante* da clic en el botón "Aceptar".
       3. El *SPP* regresa al <a href="#fn_2">FN-2</a>.
    2. <a id="ex_2" class="disabled"><i>Error al conectar con Base de Datos</i></a>
-      1. El *SPP* guarda el **`REPORT`** en la Base de Datos y muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
+      1. El *SPP* guarda el **`PARTIAL REPORT`** en la Base de Datos y muestra un [`Dialog_ConnectionError`][DLCE] con el botón "Aceptar".
       2. El *Practicante* da clic en el botón "Aceptar".
       3. El *SPP* cierra el [`Dialog_ConnectionError`][DLCE] y regresa al <a href="#fn_6">FN-6</a>.
 
 **Postcondiciones:**  
-Post-1. El **`REPORT`** se guardó en la Base de Datos.
+Post-1. El **`PARTIAL REPORT`** se guardó en la Base de Datos.
 
 **Incluye (Relación Include):**  
 No incluye.

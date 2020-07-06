@@ -28,11 +28,11 @@ El *Administrador* da clic en el botón “Registrar profesor” en la vista [`V
 Pre-1. Si ya existen **`PROFESSOR`** registrados, a lo más uno debe de estar en el estado “Activo”.
 
 **Flujo Normal:**  
-  1. <a id="FN1"><i></i></a>El *SPP* despliega la vista de registro [`View_AddProfessor`][VAPR] donde solicita el nombre, apellido paterno, apellido materno, número de personal, turno, contraseña del **`PROFESSOR`** y muestra los botones “Registrar” y “Cancelar”.
-  2. <a id="FN2"><i></i></a>El *Administrador* ingresa el nombre, apellido paterno, apellido materno, número de personal, turno, contraseña del **`PROFESOR`** y selecciona el botón “Registrar”. (Ver <a href="#FA1">FA 1</a>) (Ver <a href="#FA3">FA 3</a>).
+  1. <a id="FN1"><i></i></a>El *SPP* despliega la vista de registro [`View_AddProfessor`][VAPR] donde solicita el nombre, apellidos, número de personal, contraseña del **`PROFESSOR`** y muestra los botones “Registrar” y “Cancelar”.
+  2. <a id="FN2"><i></i></a>El *Administrador* ingresa el nombre, apellidos, número de personal, contraseña del **`PROFESSOR`** y selecciona el botón “Registrar”. (Ver <a href="#FA1">FA 1</a>) (Ver <a href="#FA3">FA 3</a>).
   3. El *SPP* muestra el diálogo [`Dialog_Confirmation`][DLCO] para validar que los datos introducidos sean los correctos, el diálogo muestra el mensaje “¿Seguro que desea registrar el Profesor con esos datos?” con los botones “Sí” y “Cancelar”.
   4. El *Administrador* da clic en el botón “Sí”. (Ver <a href="#FA2">FA 2</a>)
-  5. EL *SPP* genera el username del **`USER`** con el número de personal añadiendo una “p” antes del número y muestra el diálogo [`Dialog_Information`][DLI] con el nombre de usuario y el botón “Aceptar”.
+  5. EL *SPP* genera el username del **`USER`** y muestra el diálogo [`Dialog_Information`][DLI] con el nombre de usuario y el botón “Aceptar”.
   6. El *Administrador* da clic en el botón “Aceptar”.
   7. <a id="FN7"><i></i></a>El *SPP* guarda un **`PROFESSOR`** en la base de datos, cambia su estado a “activo” y muestra el diálogo [`Dialog_Success`][DLSU] con el botón “Aceptar”. (Ver <a href="#EX1">EX 1</a>)
   8. El *Administrador* da clic en el botón “Aceptar”.

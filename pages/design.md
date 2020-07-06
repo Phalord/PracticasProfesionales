@@ -378,7 +378,11 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   8. [View_DeletePractitioner][VDPI]
   9. [View_IndicatorsReport][VIRP]
   10. [View_ChooseProject][VCPT]
-  11. [Dialog_ProjectAlreadyAssigned][DLAA]
+  11. [View_AddCompany][VACY]
+  12. [View_AddResponsible][VARE]
+  13. [View_PractitionerInformation][VPRI]
+  14. [View_ProjectSection][VPRS]
+  15. [Dialog_ProjectAlreadyAssigned][DLAA]
 
 [VCMN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_CoordinatorMenu.png "`View_CoordinatorMenu` Prototype"
 [VPSE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_PractitionerSection.png "`View_PractitionerSection` Prototype"
@@ -391,6 +395,10 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [VCPT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_ChooseProject.png "`View_ChooseProject` Prototype"
 [DLAA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/Dialog_ProjectAlreadyAssigned.png "`Dialog_ProjectAlreadyAssigned` Prototype"
 [VAPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_AddPractitioner.png "`View_AddPractitioner` Prototype"
+[VACY]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_AddCompany.png "`View_AddCompany` Prototype"
+[VARE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_AddResponsible.png "`View_AddResponsible` Prototype"
+[VPRI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_PractitionerInformation.png "`View_PractitionerInformation` Prototype"
+[VPRS]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/coordinator/View_ProjectSection.png "`View_ProjectSection` Prototype"
 
 ### Prototipos: Profesor
   1. [View_ActivitySection][VASN]
@@ -416,6 +424,8 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   6. [View_ProjectRequest][VPRQ]
   7. [View_ProjectSection][VPSC]
   8. [View_UploadDocumentation][VUDC]
+  9. [View_SelfAppraisal][VSAP]
+  10. [View_UploadActivity][VUPA]
 
 [VPHO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_PractitionerHome.png "`View_PractitionerHome` Prototype"
 [VGDN]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_GenerateDocumentation.png "`View_GenerateDocumentation` Prototype"
@@ -425,6 +435,8 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [VPRQ]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_ProjectRequest.png "`View_ProjectRequest` Prototype"
 [VPSC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_ProjectSection.png "`View_ProjectSection` Prototype"
 [VUDC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_UploadDocumentation.png "`View_UploadDocumentation` Prototype"
+[VSAP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_SelfAppraisal.png "`View_SelfAppraisal` Prototype"
+[VUPA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/practitioner/View_UploadActivity.png "`View_UploadActivity` Prototype"
 
 ### Prototipos comunes
   1. [Dialog_Confirmation][DLCO]
@@ -435,6 +447,10 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   6. [Dialog_InvalidInformation][DLII]
   7. [View_UploadDocument][VUDT]
   8. [Dialog_Information][DLI]
+  9. [Dialog_EmptyTextBox][DLEB]
+  10. [Dialog_NoOptionSelected][DLNS]
+  11. [Dialog_Warning][DLWA]
+  12. [View_LogIn][VLGI]
 
 [DLCO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Confirmation.png "`Dialog_Confirmation` Prototype"
 [DLSU]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Success.png "`Dialog_Success` Prototype"
@@ -444,6 +460,10 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [DLER]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Error.png "`Dialog_Error` Prototype"
 [VUDT]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/View_UploadDocument.png "`View_UploadDocument` Prototype"
 [DLI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Information.png "`Dialog_Information` Prototype"
+[DLEB]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_EmptyTextBox.png "`Dialog_EmptyTextBox` Prototype"
+[DLNS]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_NoOptionSelected.png "`Dialog_NoOptionSelected` Prototype"
+[DLWA]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/Dialog_Warning.png "`Dialog_Warning` Prototype"
+[VLGI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/prototypes/generals/View_LogIn.png "`View_LogIn` Prototype"
 
 
 ## 5. Conclusiones

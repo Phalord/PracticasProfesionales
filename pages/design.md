@@ -245,8 +245,8 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [RREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob5.png "Registrar Proyecto"
 [RASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob6.png "Asignar Proyecto"
 [RELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob7.png "Eliminar Proyecto"
-[RELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob8.png "Generar Reporte de Indicadores"
-[RGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob9.png "Eliminar Practicante"
+[RELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob8.png "Eliminar Practicante"
+[RGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob9.png "Generar Reporte de Indicadores"
 [RREPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob10.png "Registrar Practicante"
 [RACPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/robustness/coordinator/rob11.png "Actualizar Proyecto"
 
@@ -307,7 +307,7 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 
 [SREPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq5.png "Registrar Proyecto"
 [SASPR]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq6.png "Asignar Proyecto"
-[SELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq7.png "Eliminar Proyecto"
+[SELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/coordinator/com8.png "Eliminar Practicante"
 [SREPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq10.png "Registrar Practicante"
 [SACPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq11.png "Actualizar Proyecto"
 
@@ -343,8 +343,8 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   1. [CU-C-7: Eliminar Proyecto][CELPO]
   2. [CU-C-9: Generar Reporte de Indicadores][CGRDI]
 
-[CELPE]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/coordinator/com8.png "Generar Reporte de Indicadores"
-[CGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/coordinator/com9.png "Eliminar Practicante"
+[CELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq7.png "Eliminar Proyecto"
+[CGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/coordinator/com9.png "Generar Reporte de Indicadores"
 
 #### Comunicación: Profesor
   1. [CU-PF-12: Generar Actividad][CGEAC]

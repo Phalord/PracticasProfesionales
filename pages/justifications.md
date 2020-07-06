@@ -16,5 +16,5 @@ Hemos decidio eliminar al Actor *Usuario* pues solo existía por el sistema de m
 ### Actividades Por Caso de Uso
 
 #### CU-C-5
-Al elaborar la descripción de este Caso de Uso, se identificaron los flujos alternos *Agregar Empresa* y *Agregar responsable del del proyecto*. Estos flujos, al ser amplios, se ha decidido separarlos del Diagrama de Actividad principal y elaborar un Diagrama por cada uno de los dos flujos alternos.
+Al elaborar la descripción de este Caso de Uso, se identificaron los flujos alternos *Agregar Empresa* y *Agregar responsable del Proyecto*. Estos flujos, al ser amplios, se ha decidido separarlos del Diagrama de Actividad principal y elaborar un Diagrama por cada uno de los dos flujos alternos.
 

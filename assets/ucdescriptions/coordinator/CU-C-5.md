@@ -39,7 +39,7 @@ Pre-1. Debe existir al menos un **`PRACTITIONER`** registrado.
 **Flujos Alternos:**  
   1. <a id="FA1"><i></i></a>*Cancelar acción*  
     1. El *Coordinador* da clic en el botón “Cancelar”    
-    2. El *SPP* muestra el diálogo [`Dialog_Confirmation`][DLCO] con el mensaje “¿Seguro desea cancelar?” y los botones “Sí” y “No”.
+    2. El *SPP* muestra el diálogo [`Dialog_Confirmation`][DLCO] con el mensaje “¿Seguro desea cancelar?” y los botones “Sí” y “No”.  
     3. Si el *Coordinador* da clic en el botón “Sí”, termina caso de uso, sino, el *SPP* regresa al <a href="#FN1">FN-1</a> con la información ya ingresada anteriormente. 
 
 **Excepciones:**  

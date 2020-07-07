@@ -31,7 +31,7 @@ Consideramos las clases que conforman el dominio del sistema, es decir, las clas
 
 ### Diagramas de Robustez Por Caso de Uso
 
-Pese a no formar parte de UML, el análisis de robustez pertence al modelo ICONIX por lo que se realizaron los diagramas por caso de uso. Para realizar dicho análisis, identificamos los elementos frontera, objetos entidad y controladores. De esta manera podímos identificar inconsistencias en las descripciones de casos de uso, así como nuevas relaciones en el diagrama de clases.
+Pese a no formar parte de UML, el análisis de robustez pertence al modelo ICONIX por lo que se realizaron los diagramas por caso de uso. Para realizar dicho análisis, identificamos los elementos frontera, objetos entidad y controladores. De esta manera logramos identificar inconsistencias en las descripciones de casos de uso, así como nuevas relaciones en el diagrama de clases.
 
 ### Diagramas de Secuencia Por Caso de Uso
 

@@ -360,7 +360,16 @@ Un *Practicante* es quien accede al Sistema para consultar información que le c
 [CAPSP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/practitioner/com25.png "Añadir Bitácora Personal"
 [CAPAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/practitioner/com26.png "Añadir Plan de Actividades"
 
-### 3.5. Diagramas de máquina de estado  
+### 3.5. Diagramas de máquina de estado
+  1. [**`ACTIVITY`**][MS_1]  
+  2. [**`PROJECT`**][MS_2]
+  3. [**`PROJECT ASSIGNATION`**][MS_3]
+  4. [**`PROJECT REQUEST`**][MS_4]
+
+[MS_1]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/state-machine/sm1.png "Máquina de Estados de Objeto1"
+[MS_2]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/state-machine/sm2.png "Máquina de Estados de Objeto1"
+[MS_3]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/state-machine/sm3.png "Máquina de Estados de Objeto1"
+[MS_4]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/state-machine/sm4.png "Máquina de Estados de Objeto1"
 
 ## 4. Prototipos de Interfaz
 ### Prototipos: Administrador

@@ -11,7 +11,7 @@ Realizar este tipo de documentación en un procesador de texto puede volverse al
 ## Definición de Requerimientos
 
 ### 2.1. Diagrama de paquetes
-Hemos decidio eliminar al Actor *Usuario* pues solo existía por el sistema de mensajería; el cual, al encontrarse con una prioridad baja, hemos decidido omitirla para la primera versión del sistema. Por otro lado comtemplamos a los Actores *Administrador*, *Coodinador*, *Practicante* y *Profesor* como los actores para el diagrama de paquetes, agrupando los casos de uso por Actor y dándoles una numeración coninúa del 1 al 26, sin embargo consideramos que agrupar por funcionalidad es una mejor opción a tomar en cuenta par futuros diseños.
+Hemos decidio eliminar al Actor *Usuario* pues solo existía por el sistema de mensajería; el cual, al encontrarse con una prioridad baja, optamos por omitirla para la primera versión del sistema. Por otro lado comtemplamos a los Actores *Administrador*, *Coodinador*, *Practicante* y *Profesor* como los actores para el diagrama de paquetes, agrupando los casos de uso por Actor y dándoles una numeración coninúa del 1 al 26, sin embargo, consideramos que agrupar por funcionalidad es una mejor opción a tomar en cuenta par futuros diseños.
 
 ### Diagrama de Casos de Uso por paquete
 Diseñamos los diagramas de casos de uso por paquete, agrupando los casos de uso por Actor. Por lo que en los diagramas mostramos los casos de uso que realiza cada actor con su respectiva numeración, junto con los límites del sistema.
@@ -31,7 +31,7 @@ Consideramos las clases que conforman el dominio del sistema, es decir, las clas
 
 ### Diagramas de Robustez Por Caso de Uso
 
-Pese a no formar parte de UML, el análisis de robustez pertence al modelo ICONIX por lo que se realizaron los diagramas por caso de uso. Para realizar dicho análisis, identificamos los elementos frontera, objetos entidad y controladores. De esta manera podímos identificar inconsistencias en las descripciones de casos de uso, así como nuevas relaciones en el diagrama de clases.
+Pese a no formar parte de UML, el análisis de robustez pertence al modelo ICONIX por lo que se realizaron los diagramas por caso de uso. Para realizar dicho análisis, identificamos los elementos frontera, objetos entidad y controladores. De esta manera logramos identificar inconsistencias en las descripciones de casos de uso, así como nuevas relaciones en el diagrama de clases.
 
 ### Diagramas de Secuencia Por Caso de Uso
 

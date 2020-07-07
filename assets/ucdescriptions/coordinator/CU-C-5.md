@@ -37,7 +37,7 @@ Pre-1. Debe existir al menos un **`PRACTITIONER`** registrado.
   7. Termina el caso el uso.
 
 **Flujos Alternos:**  
-  1. <a id="FA1"><i></i></a>*Cancelar acción*
+  1. <a id="FA1"><i></i></a>*Cancelar acción*  
     1. El *Coordinador* da clic en el botón “Cancelar”
     2. El *SPP* muestra el diálogo [`Dialog_Confirmation`][DLCO] con el mensaje “¿Seguro desea cancelar?” y los botones “Sí” y “No”.
     3. Si el *Coordinador* da clic en el botón “Sí”, termina caso de uso, sino, el *SPP* regresa al <a href="#FN1">FN-1</a> con la información ya ingresada anteriormente. 
@@ -47,7 +47,7 @@ Pre-1. Debe existir al menos un **`PRACTITIONER`** registrado.
     1. El *SPP* muestra el diálogo [`Dialog_ConnectionError`][DLCE] con el mensaje “No se pudo filtrar los indicadores del proyecto. Intente de nuevo.” y el botón "Aceptar".
     2. El *Coordinador* da clic en el botón “Aceptar."
     3. Termina el caso de uso.
-  2. <a id="EX2"><i></i></a>*Falta de espacio en disco*
+  2. <a id="EX2"><i></i></a>*Falta de espacio en disco*  
     1. El *SPP* muestra el diálogo [`Dialog_Error`][DLER] con el mensaje “No hay suficiente espacio de almacenamiento para generar el pdf” y el botón “Aceptar”
     2. El *Coordinador* da clic en el botón “Aceptar”
     3. Termina el caso de uso.

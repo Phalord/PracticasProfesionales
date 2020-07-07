@@ -343,7 +343,7 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
   1. [CU-C-7: Eliminar Proyecto][CELPO]
   2. [CU-C-9: Generar Reporte de Indicadores][CGRDI]
 
-[CELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/com_7.png "Eliminar Proyecto"
+[CELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communiaction/coordinator/com_7.png "Eliminar Proyecto"
 [CGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/coordinator/com_9.png "Generar Reporte de Indicadores"
 
 #### Comunicación: Profesor

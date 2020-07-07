@@ -5,7 +5,7 @@ permalink: /design-specification/uc-descriptions/professor/cu-pf-12/
 hide_hero: true 
 ---
 
-**ID:** CU-PF-12   
+**ID:** CU-PF-12  
 
 **Nombre:** Generar actividad  
 

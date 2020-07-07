@@ -3,6 +3,7 @@ layout: page
 title: Especificación de Diseño
 permalink: /design-specification/
 toc: true
+toc_title: "Índice"
 ---
 
 ## Datos escolares
@@ -45,9 +46,6 @@ Un *Profesor* se encarga de evaluar al grupo de practicantes asiganados a él, a
 
 **Practicante**  
 Un *Practicante* es quien accede al Sistema para consultar información que le concierna, actividades pendientes, realizar reportes, entregar documentos, consultar fechas importantes, entre otras funcionalidades.
-
-**Usuario**  
-Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 
 ### [Justificaciones de Diseño][DESP]
 [DESP]: https://phalord.github.io/PracticasProfesionales/design-justifications/ "Justificaciones de Diseño"
@@ -362,7 +360,16 @@ Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 [CAPSP]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/practitioner/com25.png "Añadir Bitácora Personal"
 [CAPAC]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/practitioner/com26.png "Añadir Plan de Actividades"
 
-### 3.5. Diagramas de máquina de estado  
+### 3.5. Diagramas de máquina de estado
+  1. [**`ACTIVITY`**][MS_1]  
+  2. [**`PROJECT`**][MS_2]
+  3. [**`PROJECT ASSIGNATION`**][MS_3]
+  4. [**`PROJECT REQUEST`**][MS_4]
+
+[MS_1]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/state/sm1.png "Máquina de Estados de Objeto1"
+[MS_2]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/state/sm2.png "Máquina de Estados de Objeto1"
+[MS_3]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/state/sm3.png "Máquina de Estados de Objeto1"
+[MS_4]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/state/sm4.png "Máquina de Estados de Objeto1"
 
 ## 4. Prototipos de Interfaz
 ### Prototipos: Administrador

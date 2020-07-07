@@ -341,8 +341,8 @@ Un *Practicante* es quien accede al Sistema para consultar información que le c
   1. [CU-C-7: Eliminar Proyecto][CELPO]
   2. [CU-C-9: Generar Reporte de Indicadores][CGRDI]
 
-[CELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/sequence/coordinator/seq7.png "Eliminar Proyecto"
-[CGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/coordinator/com9.png "Generar Reporte de Indicadores"
+[CELPO]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communiaction/coordinator/com_7.png "Eliminar Proyecto"
+[CGRDI]: https://raw.githubusercontent.com/Phalord/PracticasProfesionales/gh-pages/assets/imgs/communication/coordinator/com_9.png "Generar Reporte de Indicadores"
 
 #### Comunicación: Profesor
   1. [CU-PF-12: Generar Actividad][CGEAC]

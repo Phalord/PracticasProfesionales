@@ -40,17 +40,8 @@ Pese a no formar parte de UML, el análisis de robustez pertence al modelo ICONI
 
 Se modeló la interacción entre los objetos del sistema, por medio de mensajes. Presentamos los objetos por orden de aparción y se implementó el patrón de diseño DAO en el modelado.
 
-### Diagramas de Comunicación por Caso de Uso
-
-
-
 ### Diagramas de máquinas de estados
 
-Diseñamos los diagramas de acuerdo a los objetos que consideramos que podrían cambiar de su "estado" dentro del sistema.
+Diseñamos los diagramas de acuerdo a los objetos que consideramos que podrían cambiar su "estado" dentro del sistema, estos objetos son `Activity`, `Project`, `ProjectRequest` y `ProjectAssignment`.
 
-Para los estados de los objetos de la Clase ProjectRequest decidimos utilizar "activo, "inconcluso", y "concluido", porque en caso de que termine el semestre, si la materia es concluida de forma satsifactoria con el proyecto asigando, entonces cambia a "concluido". En caso de que tuviera un mal desempeño sería el estado "inconcluso", en el caso del estado "activo", se refiere al estado en que se encuentra en el transcurso del proyecto.
-
-
-
-
-
+Para los estados de los objetos de la Clase ProjectAssignment decidímos utilizar "activo, "inconcluso", y "concluido", porque en caso de que termine el semestre, si la materia es concluida de forma satsifactoria con el proyecto asigando, entonces cambia a "concluido". En caso de que tuviera un mal desempeño sería el estado "inconcluso", en el caso del estado "activo", se refiere al estado en que se encuentra en el transcurso del proyecto.

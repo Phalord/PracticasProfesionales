@@ -42,8 +42,3 @@ Se modeló la interacción entre los objetos del sistema, por medio de mensajes.
 Diseñamos los diagramas de acuerdo a los objetos que consideramos que podrían cambiar su "estado" dentro del sistema, estos objetos son `Activity`, `Project`, `ProjectRequest` y `ProjectAssignment`.
 
 Para los estados de los objetos de la Clase ProjectAssignment decidímos utilizar "activo, "inconcluso", y "concluido", porque en caso de que termine el semestre, si la materia es concluida de forma satsifactoria con el proyecto asigando, entonces cambia a "concluido". En caso de que tuviera un mal desempeño sería el estado "inconcluso", en el caso del estado "activo", se refiere al estado en que se encuentra en el transcurso del proyecto.
-
-
-
-
-

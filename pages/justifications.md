@@ -24,7 +24,10 @@ Al elaborar la descripción de este Caso de Uso en particular, se identificaron 
 
 ## Diseño
 
-Diseñamos con base en el modelo ICONIX, > ICONIX Process, as shown in the chapter’s opening figure, is a minimalist, streamlined approach that focuses on that area that lies in between use cases and code. Its emphasis is on what needs to happen at that point in the life cycle where you’re starting out: < , por lo que las desiciones tomadas fueron tomadas de esta metodología. Los diagramas fueron realizados con la herramienta de modelado Enterprise Architect.
+Diseñamos con base en el modelo ICONIX,
+> ICONIX Process, as shown in the chapter’s opening figure, is a minimalist, streamlined approach that focuses on that area that lies in between use cases and code. Its emphasis is on what needs to happen at that point in the life cycle where you’re starting out.
+ 
+por lo que las desiciones tomadas fueron tomadas de esta metodología. Los diagramas fueron realizados con la herramienta de modelado Enterprise Architect.
 
 ### Diagrama de clases del modelo de Domino
 Consideramos las clases que conforman el dominio del sistema, es decir, las clases más significativas dentro del dominio del problema. De esta manera realizamos un análisis orientado a objetos, haciendo también uso de la abstración y vocabulario del dominio. 

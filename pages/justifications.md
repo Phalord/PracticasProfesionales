@@ -10,7 +10,7 @@ Realizar este tipo de documentación en un procesador de texto puede volverse al
 
 ## Definición de Requerimientos
 
-### 2.1. Diagrama de paquetes
+### Diagrama de paquetes
 Hemos decidio eliminar al Actor *Usuario* pues solo existía por el sistema de mensajería; el cual, al encontrarse con una prioridad baja, optamos por omitirla para la primera versión del sistema. Por otro lado comtemplamos a los Actores *Administrador*, *Coodinador*, *Practicante* y *Profesor* como los actores para el diagrama de paquetes, agrupando los casos de uso por Actor y dándoles una numeración coninúa del 1 al 26, sin embargo, consideramos que agrupar por funcionalidad es una mejor opción a tomar en cuenta par futuros diseños.
 
 ### Diagrama de Casos de Uso por paquete

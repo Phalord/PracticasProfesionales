@@ -3,6 +3,7 @@ layout: page
 title: Especificación de Diseño
 permalink: /design-specification/
 toc: true
+toc_title: "Índice"
 ---
 
 ## Datos escolares
@@ -45,9 +46,6 @@ Un *Profesor* se encarga de evaluar al grupo de practicantes asiganados a él, a
 
 **Practicante**  
 Un *Practicante* es quien accede al Sistema para consultar información que le concierna, actividades pendientes, realizar reportes, entregar documentos, consultar fechas importantes, entre otras funcionalidades.
-
-**Usuario**  
-Un *Usuario* es aquel que tiene una cuenta activa en el *SPP*.
 
 ### [Justificaciones de Diseño][DESP]
 [DESP]: https://phalord.github.io/PracticasProfesionales/design-justifications/ "Justificaciones de Diseño"

@@ -50,11 +50,11 @@ Las llaves serán usadas siempre, así sea opcional su uso, como en el caso del 
 
 ````java
 //Incorrect
-if(isThisTrue())
+if (isThisTrue())
     ejecutar();
 
 //Correct
-if(isThisTrue()) {
+if (isThisTrue()) {
     ejecutar();
 }
 ````
@@ -108,8 +108,9 @@ Cada declaración es seguida de un salto de línea
 El código Java tiene un límite de columna de 100 caracteres. Un "carácter" es cualquier punto de código Unicode. A excepción de lo mostrado abajo, cualquier línea que pueda exceder este límite debe ser ajustada de acuerdo con este estándar.
 
 Excepciones:
-  * Líneas donde sea imposible obedecer el límite \(por ejemplo, un método de referencia JSNI largo)
+  * Líneas donde sea imposible obedecer el límite (por ejemplo, un método de referencia JSNI largo)
   * Declaraciones package e import
+  * Sentencias que puedan ser copiadas y pegadas como un URL, un comando de terminal o un query para una base de datos.
 
 ### Envoltura de línea
 **Nota de Terminología:** cuando código que puede, legalmente, ocupar una sola línea de código es dividida en múltiples líneas, se llama *Envoltura de línea*
@@ -307,9 +308,9 @@ Los identificadores solo usarán caracteres de `ASCII` y, en unos cuantos casos 
 #### Clases
 Los nombres de las clases se escriben en `PascalCase`. Normalmente se utilizan sustantivos o frases nominales. Por ejemplo, `Character` o `ImmutableList`.
 
-Las interfaces también se pueden nombrar con sustantivos o frases nominales (por ejemplo `IList`), pero en ocasiones pueden ser adjetivos o frases adjetivas (por ejemplo, `IReadable`). Todas las interfaces comenzarán su nombre con una `I`.
+Las interfaces **también** se pueden nombrar con sustantivos o frases nominales (por ejemplo `IList`), pero en ocasiones pueden ser adjetivos o frases adjetivas (por ejemplo, `IReadable`). Todas las interfaces comenzarán su nombre con una `I` como prefijo.
 
-Las clases de prueba se nombran iniciando con el prefijo `Test`, seguido del nombre de la clase, por ejemplo: `TestHash` o `TestHashIntegration`.
+Las clases de prueba se nombran con el sufijo `Test`, posterior al nombre de la clase, por ejemplo: `HashTest` o `HashIntegrationTest`.
 
 Se les puede agregar un guion bajo entre los prefijos de los componentes y el nombre de la clase para tener una partición más gráfica.
 
